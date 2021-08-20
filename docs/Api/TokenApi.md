@@ -1,0 +1,112 @@
+# Swagger\Client\TokenApi
+
+All URIs are relative to *https://localhost:5001*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**apiV3TokenRefreshPost**](TokenApi.md#apiv3tokenrefreshpost) | **POST** /api/v3/Token/Refresh | 
+[**apiV3TokenRefreshTokenDelete**](TokenApi.md#apiv3tokenrefreshtokendelete) | **DELETE** /api/v3/Token/{refreshToken} | 
+
+# **apiV3TokenRefreshPost**
+> \Swagger\Client\Model\AuthenticationResponse apiV3TokenRefreshPost($body)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+    // Configure HTTP bearer authorization: JWT_Bearer_Token
+    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Swagger\Client\Api\TokenApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \Swagger\Client\Model\RefreshTokenRequest(); // \Swagger\Client\Model\RefreshTokenRequest | 
+
+try {
+    $result = $apiInstance->apiV3TokenRefreshPost($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling TokenApi->apiV3TokenRefreshPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Swagger\Client\Model\RefreshTokenRequest**](../Model/RefreshTokenRequest.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\AuthenticationResponse**](../Model/AuthenticationResponse.md)
+
+### Authorization
+
+[JWT_Bearer_Token](../../README.md#JWT_Bearer_Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **apiV3TokenRefreshTokenDelete**
+> apiV3TokenRefreshTokenDelete($refresh_token)
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+    // Configure HTTP bearer authorization: JWT_Bearer_Token
+    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    ->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Swagger\Client\Api\TokenApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$refresh_token = "refresh_token_example"; // string | 
+
+try {
+    $apiInstance->apiV3TokenRefreshTokenDelete($refresh_token);
+} catch (Exception $e) {
+    echo 'Exception when calling TokenApi->apiV3TokenRefreshTokenDelete: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **refresh_token** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[JWT_Bearer_Token](../../README.md#JWT_Bearer_Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
