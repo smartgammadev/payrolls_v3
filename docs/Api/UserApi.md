@@ -1,4 +1,4 @@
-# Swagger\Client\UserApi
+# EvoliaV3\UserApi
 
 All URIs are relative to *https://localhost:5001*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**apiV3UserUserNameDelete**](UserApi.md#apiv3userusernamedelete) | **DELETE** /api/v3/User/{userName} | 
 
 # **apiV3UserLoginPost**
-> \Swagger\Client\Model\AuthenticationResponse apiV3UserLoginPost($body)
+> \EvoliaV3\Model\AuthenticationResponse apiV3UserLoginPost($body)
 
 
 
@@ -18,17 +18,17 @@ Method | HTTP request | Description
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: JWT_Bearer_Token
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = EvoliaV3\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\UserApi(
+$apiInstance = new EvoliaV3\SDK\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\UserLoginRequest(); // \Swagger\Client\Model\UserLoginRequest | 
+$body = new \EvoliaV3\Model\UserLoginRequest(); // \EvoliaV3\Model\UserLoginRequest | 
 
 try {
     $result = $apiInstance->apiV3UserLoginPost($body);
@@ -43,11 +43,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\UserLoginRequest**](../Model/UserLoginRequest.md)|  | [optional]
+ **body** | [**\EvoliaV3\Model\UserLoginRequest**](../Model/UserLoginRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\AuthenticationResponse**](../Model/AuthenticationResponse.md)
+[**\EvoliaV3\Model\AuthenticationResponse**](../Model/AuthenticationResponse.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **apiV3UserRegisterPost**
-> \Swagger\Client\Model\AuthenticationResponse apiV3UserRegisterPost($body)
+> \EvoliaV3\Model\AuthenticationResponse apiV3UserRegisterPost($body)
 
 
 
@@ -70,17 +70,17 @@ Name | Type | Description  | Notes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: JWT_Bearer_Token
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = EvoliaV3\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\UserApi(
+$apiInstance = new EvoliaV3\SDK\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\UserRegistrationRequest(); // \Swagger\Client\Model\UserRegistrationRequest | 
+$body = new \EvoliaV3\Model\UserRegistrationRequest(); // \EvoliaV3\Model\UserRegistrationRequest | 
 
 try {
     $result = $apiInstance->apiV3UserRegisterPost($body);
@@ -95,11 +95,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\UserRegistrationRequest**](../Model/UserRegistrationRequest.md)|  | [optional]
+ **body** | [**\EvoliaV3\Model\UserRegistrationRequest**](../Model/UserRegistrationRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\AuthenticationResponse**](../Model/AuthenticationResponse.md)
+[**\EvoliaV3\Model\AuthenticationResponse**](../Model/AuthenticationResponse.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **apiV3UserUserNameDelete**
-> apiV3UserUserNameDelete($user_name, $body)
+> apiV3UserUserNameDelete($user_name)
 
 
 
@@ -122,21 +122,20 @@ Name | Type | Description  | Notes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: JWT_Bearer_Token
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = EvoliaV3\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\UserApi(
+$apiInstance = new EvoliaV3\SDK\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_name = "user_name_example"; // string | 
-$body = "body_example"; // string | 
 
 try {
-    $apiInstance->apiV3UserUserNameDelete($user_name, $body);
+    $apiInstance->apiV3UserUserNameDelete($user_name);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->apiV3UserUserNameDelete: ', $e->getMessage(), PHP_EOL;
 }
@@ -148,7 +147,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_name** | **string**|  |
- **body** | [**string**](../Model/string.md)|  | [optional]
 
 ### Return type
 
@@ -160,7 +158,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

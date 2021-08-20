@@ -1,4 +1,4 @@
-# Swagger\Client\SiretApi
+# EvoliaV3\SiretApi
 
 All URIs are relative to *https://localhost:5001*
 
@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**apiV3SiretSearchPost**](SiretApi.md#apiv3siretsearchpost) | **POST** /api/v3/Siret/Search | This endpoint is used to search the siret in the DB from the NIC and the Siret
 
 # **apiV3SiretSearchPost**
-> \Swagger\Client\Model\SiretQueryResult[] apiV3SiretSearchPost($body)
+> \EvoliaV3\Model\SiretQueryResult[] apiV3SiretSearchPost($body)
 
 This endpoint is used to search the siret in the DB from the NIC and the Siret
 
@@ -18,17 +18,17 @@ Sample request:  POST /GetAccessToken  {  \"siren\": \"00000\",  \"nic\": \"1234
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: JWT_Bearer_Token
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = EvoliaV3\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\SiretApi(
+$apiInstance = new EvoliaV3\SDK\SiretApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\SiretRequest(); // \Swagger\Client\Model\SiretRequest | 
+$body = new \EvoliaV3\Model\SiretRequest(); // \EvoliaV3\Model\SiretRequest | 
 
 try {
     $result = $apiInstance->apiV3SiretSearchPost($body);
@@ -43,11 +43,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\SiretRequest**](../Model/SiretRequest.md)|  | [optional]
+ **body** | [**\EvoliaV3\Model\SiretRequest**](../Model/SiretRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\SiretQueryResult[]**](../Model/SiretQueryResult.md)
+[**\EvoliaV3\Model\SiretQueryResult[]**](../Model/SiretQueryResult.md)
 
 ### Authorization
 

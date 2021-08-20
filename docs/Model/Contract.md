@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **id_client** | **int** |  | [optional] 
 **code_mission** | **string** |  | [optional] 
 **ordre_client** | **string** |  | [optional] 
-**lieuxde_mission** | [**\Swagger\Client\Model\MissionPlace**](MissionPlace.md) |  | [optional] 
+**lieuxde_mission** | [**\EvoliaV3\Model\MissionPlace**](MissionPlace.md) |  | [optional] 
 **adresse1** | **string** |  | [optional] 
 **cp** | **string** |  | [optional] 
 **commune** | **string** |  | [optional] 
@@ -38,7 +38,7 @@ Name | Type | Description | Notes
 **reference_analytique** | **string** |  | [optional] 
 **retour_signature_interimaire** | **bool** |  | [optional] 
 **retour_signature_client** | **bool** |  | [optional] 
-**rubriques_contratctuelles** | [**\Swagger\Client\Model\ContractualData[]**](ContractualData.md) |  | [optional] 
+**rubriques_contratctuelles** | [**\EvoliaV3\Model\ContractualData[]**](ContractualData.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

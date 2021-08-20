@@ -1,4 +1,4 @@
-# Swagger\Client\CustomerApi
+# EvoliaV3\CustomerApi
 
 All URIs are relative to *https://localhost:5001*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**apiV3CustomerUpdatePost**](CustomerApi.md#apiv3customerupdatepost) | **POST** /api/v3/Customer/update | update the Customer
 
 # **apiV3CustomerImportPut**
-> \Swagger\Client\Model\SuccessResponse apiV3CustomerImportPut($body)
+> \EvoliaV3\Model\SuccessResponse apiV3CustomerImportPut($body)
 
 Import the Customer
 
@@ -18,17 +18,17 @@ Import the Customer
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: JWT_Bearer_Token
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = EvoliaV3\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\CustomerApi(
+$apiInstance = new EvoliaV3\SDK\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Customer(); // \Swagger\Client\Model\Customer | 
+$body = new \EvoliaV3\Model\Customer(); // \EvoliaV3\Model\Customer | 
 
 try {
     $result = $apiInstance->apiV3CustomerImportPut($body);
@@ -43,11 +43,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Customer**](../Model/Customer.md)|  | [optional]
+ **body** | [**\EvoliaV3\Model\Customer**](../Model/Customer.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\SuccessResponse**](../Model/SuccessResponse.md)
+[**\EvoliaV3\Model\SuccessResponse**](../Model/SuccessResponse.md)
 
 ### Authorization
 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **apiV3CustomerReturnSignaturePut**
-> \Swagger\Client\Model\SuccessResponse apiV3CustomerReturnSignaturePut($body)
+> \EvoliaV3\Model\SuccessResponse apiV3CustomerReturnSignaturePut($body)
 
 Update the Candidate with ReturnSignature information
 
@@ -72,17 +72,17 @@ Sample request:  POST {  \"IdContract\": \"1848\",  \"IdContractOrd\": 0,  \"IdP
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: JWT_Bearer_Token
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = EvoliaV3\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\CustomerApi(
+$apiInstance = new EvoliaV3\SDK\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\ContractSignUpdate(); // \Swagger\Client\Model\ContractSignUpdate | 
+$body = new \EvoliaV3\Model\ContractSignUpdate(); // \EvoliaV3\Model\ContractSignUpdate | 
 
 try {
     $result = $apiInstance->apiV3CustomerReturnSignaturePut($body);
@@ -97,11 +97,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\ContractSignUpdate**](../Model/ContractSignUpdate.md)|  | [optional]
+ **body** | [**\EvoliaV3\Model\ContractSignUpdate**](../Model/ContractSignUpdate.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\SuccessResponse**](../Model/SuccessResponse.md)
+[**\EvoliaV3\Model\SuccessResponse**](../Model/SuccessResponse.md)
 
 ### Authorization
 
@@ -115,7 +115,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **apiV3CustomerUpdatePost**
-> \Swagger\Client\Model\SuccessResponse apiV3CustomerUpdatePost($body)
+> \EvoliaV3\Model\SuccessResponse apiV3CustomerUpdatePost($body)
 
 update the Customer
 
@@ -124,17 +124,17 @@ update the Customer
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: JWT_Bearer_Token
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = EvoliaV3\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\CustomerApi(
+$apiInstance = new EvoliaV3\SDK\CustomerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Customer(); // \Swagger\Client\Model\Customer | 
+$body = new \EvoliaV3\Model\Customer(); // \EvoliaV3\Model\Customer | 
 
 try {
     $result = $apiInstance->apiV3CustomerUpdatePost($body);
@@ -149,11 +149,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Customer**](../Model/Customer.md)|  | [optional]
+ **body** | [**\EvoliaV3\Model\Customer**](../Model/Customer.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\SuccessResponse**](../Model/SuccessResponse.md)
+[**\EvoliaV3\Model\SuccessResponse**](../Model/SuccessResponse.md)
 
 ### Authorization
 

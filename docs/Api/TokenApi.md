@@ -1,4 +1,4 @@
-# Swagger\Client\TokenApi
+# EvoliaV3\TokenApi
 
 All URIs are relative to *https://localhost:5001*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**apiV3TokenRefreshTokenDelete**](TokenApi.md#apiv3tokenrefreshtokendelete) | **DELETE** /api/v3/Token/{refreshToken} | 
 
 # **apiV3TokenRefreshPost**
-> \Swagger\Client\Model\AuthenticationResponse apiV3TokenRefreshPost($body)
+> \EvoliaV3\Model\AuthenticationResponse apiV3TokenRefreshPost($body)
 
 
 
@@ -17,17 +17,17 @@ Method | HTTP request | Description
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: JWT_Bearer_Token
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = EvoliaV3\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TokenApi(
+$apiInstance = new EvoliaV3\SDK\TokenApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\RefreshTokenRequest(); // \Swagger\Client\Model\RefreshTokenRequest | 
+$body = new \EvoliaV3\Model\RefreshTokenRequest(); // \EvoliaV3\Model\RefreshTokenRequest | 
 
 try {
     $result = $apiInstance->apiV3TokenRefreshPost($body);
@@ -42,11 +42,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\RefreshTokenRequest**](../Model/RefreshTokenRequest.md)|  | [optional]
+ **body** | [**\EvoliaV3\Model\RefreshTokenRequest**](../Model/RefreshTokenRequest.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\AuthenticationResponse**](../Model/AuthenticationResponse.md)
+[**\EvoliaV3\Model\AuthenticationResponse**](../Model/AuthenticationResponse.md)
 
 ### Authorization
 
@@ -69,11 +69,11 @@ Name | Type | Description  | Notes
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
     // Configure HTTP bearer authorization: JWT_Bearer_Token
-    $config = Swagger\Client\Configuration::getDefaultConfiguration()
+    $config = EvoliaV3\Configuration::getDefaultConfiguration()
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Swagger\Client\Api\TokenApi(
+$apiInstance = new EvoliaV3\SDK\TokenApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
