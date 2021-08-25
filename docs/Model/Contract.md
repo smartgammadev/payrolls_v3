@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id_contrat** | **string** |  | [optional] 
+**id_contract** | **string** |  | [optional] 
 **id_personne** | **string** |  | [optional] 
 **id_client** | **int** |  | [optional] 
 **code_mission** | **string** |  | [optional] 
