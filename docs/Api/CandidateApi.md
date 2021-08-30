@@ -1,6 +1,6 @@
 # EvoliaV3\CandidateApi
 
-All URIs are relative to *https://localhost:5001*
+All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/PayrollV3/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **apiV3CandidatePost**
-> \EvoliaV3\Model\Candidate apiV3CandidatePost($body)
+> \EvoliaV3\Model\SuccessResponse apiV3CandidatePost($body)
 
 Import the Candidate
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\EvoliaV3\Model\Candidate**](../Model/Candidate.md)
+[**\EvoliaV3\Model\SuccessResponse**](../Model/SuccessResponse.md)
 
 ### Authorization
 

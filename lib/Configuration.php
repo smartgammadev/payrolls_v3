@@ -80,7 +80,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'https://localhost:5001';
+    protected $host = 'https://virtserver.swaggerhub.com/smartgammadev/PayrollV3/v3';
 
     /**
      * User agent of the HTTP request, set to "PHP-Swagger" by default
