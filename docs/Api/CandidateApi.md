@@ -5,7 +5,7 @@ All URIs are relative to *https://localhost:5001*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiV3CandidateAddDPAEPut**](CandidateApi.md#apiv3candidateadddpaeput) | **PUT** /api/v3/Candidate/AddDPAE | Update the Candidate with DPAE information
-[**apiV3CandidateIdRefPost**](CandidateApi.md#apiv3candidateidrefpost) | **POST** /api/v3/Candidate/{idRef} | Import the Candidate
+[**apiV3CandidatePost**](CandidateApi.md#apiv3candidatepost) | **POST** /api/v3/Candidate | Import the Candidate
 [**apiV3CandidatePut**](CandidateApi.md#apiv3candidateput) | **PUT** /api/v3/Candidate | Import the Candidate
 [**apiV3CandidateSearchPost**](CandidateApi.md#apiv3candidatesearchpost) | **POST** /api/v3/Candidate/Search | Test if the Candidate exists
 
@@ -63,8 +63,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **apiV3CandidateIdRefPost**
-> \EvoliaV3\Model\Candidate apiV3CandidateIdRefPost($id_ref, $body, $id_ref2)
+# **apiV3CandidatePost**
+> \EvoliaV3\Model\Candidate apiV3CandidatePost($body)
 
 Import the Candidate
 
@@ -85,15 +85,13 @@ $apiInstance = new EvoliaV3\SDK\CandidateApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id_ref = "id_ref_example"; // string | 
 $body = new \EvoliaV3\Model\Candidate(); // \EvoliaV3\Model\Candidate | 
-$id_ref2 = 56; // int | 
 
 try {
-    $result = $apiInstance->apiV3CandidateIdRefPost($id_ref, $body, $id_ref2);
+    $result = $apiInstance->apiV3CandidatePost($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CandidateApi->apiV3CandidateIdRefPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CandidateApi->apiV3CandidatePost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -102,9 +100,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id_ref** | **string**|  |
  **body** | [**\EvoliaV3\Model\Candidate**](../Model/Candidate.md)|  | [optional]
- **id_ref2** | **int**|  | [optional]
 
 ### Return type
 
@@ -180,7 +176,7 @@ Name | Type | Description  | Notes
 
 Test if the Candidate exists
 
-Sample request:  POST {  \"Code_agence\": \"02\",  \"Num_SS\": \"27411475669\",  \"Num_SSCle\": 41  }
+Sample request:  POST {  \"IdAgency\": \"02\",  \"NumSecu\": \"27411475669\",  \"NumSecuCle\": \"41\"  }
 
 ### Example
 ```php
@@ -197,7 +193,7 @@ $apiInstance = new EvoliaV3\SDK\CandidateApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \EvoliaV3\Model\CandidateExists(); // \EvoliaV3\Model\CandidateExists | 
+$body = new \EvoliaV3\Model\CandidateSearch(); // \EvoliaV3\Model\CandidateSearch | 
 
 try {
     $result = $apiInstance->apiV3CandidateSearchPost($body);
@@ -212,7 +208,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\EvoliaV3\Model\CandidateExists**](../Model/CandidateExists.md)|  | [optional]
+ **body** | [**\EvoliaV3\Model\CandidateSearch**](../Model/CandidateSearch.md)|  | [optional]
 
 ### Return type
 
