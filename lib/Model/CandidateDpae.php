@@ -59,7 +59,7 @@ class CandidateDpae implements ModelInterface, ArrayAccess
         'ref_candidate' => 'string',
 'ref_mission' => 'string',
 'agence' => 'string',
-'date_heure_prevue_embauche' => '\DateTime',
+'date_embauche' => '\DateTime',
 'num_dpae' => 'string',
 'date_envoi' => '\DateTime'    ];
 
@@ -72,7 +72,7 @@ class CandidateDpae implements ModelInterface, ArrayAccess
         'ref_candidate' => null,
 'ref_mission' => null,
 'agence' => null,
-'date_heure_prevue_embauche' => 'date-time',
+'date_embauche' => 'date-time',
 'num_dpae' => null,
 'date_envoi' => 'date-time'    ];
 
@@ -106,7 +106,7 @@ class CandidateDpae implements ModelInterface, ArrayAccess
         'ref_candidate' => 'refCandidate',
 'ref_mission' => 'refMission',
 'agence' => 'agence',
-'date_heure_prevue_embauche' => 'dateHeurePrevueEmbauche',
+'date_embauche' => 'dateEmbauche',
 'num_dpae' => 'numDpae',
 'date_envoi' => 'dateEnvoi'    ];
 
@@ -119,7 +119,7 @@ class CandidateDpae implements ModelInterface, ArrayAccess
         'ref_candidate' => 'setRefCandidate',
 'ref_mission' => 'setRefMission',
 'agence' => 'setAgence',
-'date_heure_prevue_embauche' => 'setDateHeurePrevueEmbauche',
+'date_embauche' => 'setDateEmbauche',
 'num_dpae' => 'setNumDpae',
 'date_envoi' => 'setDateEnvoi'    ];
 
@@ -132,7 +132,7 @@ class CandidateDpae implements ModelInterface, ArrayAccess
         'ref_candidate' => 'getRefCandidate',
 'ref_mission' => 'getRefMission',
 'agence' => 'getAgence',
-'date_heure_prevue_embauche' => 'getDateHeurePrevueEmbauche',
+'date_embauche' => 'getDateEmbauche',
 'num_dpae' => 'getNumDpae',
 'date_envoi' => 'getDateEnvoi'    ];
 
@@ -197,7 +197,7 @@ class CandidateDpae implements ModelInterface, ArrayAccess
         $this->container['ref_candidate'] = isset($data['ref_candidate']) ? $data['ref_candidate'] : null;
         $this->container['ref_mission'] = isset($data['ref_mission']) ? $data['ref_mission'] : null;
         $this->container['agence'] = isset($data['agence']) ? $data['agence'] : null;
-        $this->container['date_heure_prevue_embauche'] = isset($data['date_heure_prevue_embauche']) ? $data['date_heure_prevue_embauche'] : null;
+        $this->container['date_embauche'] = isset($data['date_embauche']) ? $data['date_embauche'] : null;
         $this->container['num_dpae'] = isset($data['num_dpae']) ? $data['num_dpae'] : null;
         $this->container['date_envoi'] = isset($data['date_envoi']) ? $data['date_envoi'] : null;
     }
@@ -211,6 +211,18 @@ class CandidateDpae implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['ref_candidate'] === null) {
+            $invalidProperties[] = "'ref_candidate' can't be null";
+        }
+        if ($this->container['ref_mission'] === null) {
+            $invalidProperties[] = "'ref_mission' can't be null";
+        }
+        if ($this->container['agence'] === null) {
+            $invalidProperties[] = "'agence' can't be null";
+        }
+        if ($this->container['num_dpae'] === null) {
+            $invalidProperties[] = "'num_dpae' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -299,25 +311,25 @@ class CandidateDpae implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets date_heure_prevue_embauche
+     * Gets date_embauche
      *
      * @return \DateTime
      */
-    public function getDateHeurePrevueEmbauche()
+    public function getDateEmbauche()
     {
-        return $this->container['date_heure_prevue_embauche'];
+        return $this->container['date_embauche'];
     }
 
     /**
-     * Sets date_heure_prevue_embauche
+     * Sets date_embauche
      *
-     * @param \DateTime $date_heure_prevue_embauche date_heure_prevue_embauche
+     * @param \DateTime $date_embauche date_embauche
      *
      * @return $this
      */
-    public function setDateHeurePrevueEmbauche($date_heure_prevue_embauche)
+    public function setDateEmbauche($date_embauche)
     {
-        $this->container['date_heure_prevue_embauche'] = $date_heure_prevue_embauche;
+        $this->container['date_embauche'] = $date_embauche;
 
         return $this;
     }

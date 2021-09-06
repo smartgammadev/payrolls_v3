@@ -4,8 +4,8 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Payrol
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV3TokenRefreshPost**](TokenApi.md#apiv3tokenrefreshpost) | **POST** /api/v3/Token/Refresh | 
-[**apiV3TokenRefreshTokenDelete**](TokenApi.md#apiv3tokenrefreshtokendelete) | **DELETE** /api/v3/Token/{refreshToken} | 
+[**apiV3TokenRefreshPost**](TokenApi.md#apiv3tokenrefreshpost) | **POST** /api/v3/token/refresh | 
+[**apiV3TokenRefreshTokenDelete**](TokenApi.md#apiv3tokenrefreshtokendelete) | **DELETE** /api/v3/token/{refreshToken} | 
 
 # **apiV3TokenRefreshPost**
 > \EvoliaV3\Model\AuthenticationResponse apiV3TokenRefreshPost($body)

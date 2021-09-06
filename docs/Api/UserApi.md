@@ -4,9 +4,9 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Payrol
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV3UserLoginPost**](UserApi.md#apiv3userloginpost) | **POST** /api/v3/User/Login | 
-[**apiV3UserRegisterPost**](UserApi.md#apiv3userregisterpost) | **POST** /api/v3/User/Register | 
-[**apiV3UserUserNameDelete**](UserApi.md#apiv3userusernamedelete) | **DELETE** /api/v3/User/{userName} | 
+[**apiV3UserLoginPost**](UserApi.md#apiv3userloginpost) | **POST** /api/v3/user/login | 
+[**apiV3UserRegisterPost**](UserApi.md#apiv3userregisterpost) | **POST** /api/v3/user/register | 
+[**apiV3UserUserNameDelete**](UserApi.md#apiv3userusernamedelete) | **DELETE** /api/v3/user/{userName} | 
 
 # **apiV3UserLoginPost**
 > \EvoliaV3\Model\AuthenticationResponse apiV3UserLoginPost($body)

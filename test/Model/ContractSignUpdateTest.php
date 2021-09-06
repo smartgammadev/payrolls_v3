@@ -76,13 +76,6 @@ class ContractSignUpdateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "id_contract"
-     */
-    public function testPropertyIdContract()
-    {
-    }
-
-    /**
      * Test attribute "id_contract_ord"
      */
     public function testPropertyIdContractOrd()

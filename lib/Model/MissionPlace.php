@@ -58,6 +58,8 @@ class MissionPlace implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'designation' => 'string',
 'adresse1' => 'string',
+'adresse2' => 'string',
+'adresse3' => 'string',
 'cp' => 'string',
 'commune' => 'string',
 'insee' => 'string',
@@ -77,6 +79,8 @@ class MissionPlace implements ModelInterface, ArrayAccess
     protected static $swaggerFormats = [
         'designation' => null,
 'adresse1' => null,
+'adresse2' => null,
+'adresse3' => null,
 'cp' => null,
 'commune' => null,
 'insee' => null,
@@ -117,6 +121,8 @@ class MissionPlace implements ModelInterface, ArrayAccess
     protected static $attributeMap = [
         'designation' => 'designation',
 'adresse1' => 'adresse1',
+'adresse2' => 'adresse2',
+'adresse3' => 'adresse3',
 'cp' => 'cp',
 'commune' => 'commune',
 'insee' => 'insee',
@@ -136,6 +142,8 @@ class MissionPlace implements ModelInterface, ArrayAccess
     protected static $setters = [
         'designation' => 'setDesignation',
 'adresse1' => 'setAdresse1',
+'adresse2' => 'setAdresse2',
+'adresse3' => 'setAdresse3',
 'cp' => 'setCp',
 'commune' => 'setCommune',
 'insee' => 'setInsee',
@@ -155,6 +163,8 @@ class MissionPlace implements ModelInterface, ArrayAccess
     protected static $getters = [
         'designation' => 'getDesignation',
 'adresse1' => 'getAdresse1',
+'adresse2' => 'getAdresse2',
+'adresse3' => 'getAdresse3',
 'cp' => 'getCp',
 'commune' => 'getCommune',
 'insee' => 'getInsee',
@@ -226,6 +236,8 @@ class MissionPlace implements ModelInterface, ArrayAccess
     {
         $this->container['designation'] = isset($data['designation']) ? $data['designation'] : null;
         $this->container['adresse1'] = isset($data['adresse1']) ? $data['adresse1'] : null;
+        $this->container['adresse2'] = isset($data['adresse2']) ? $data['adresse2'] : null;
+        $this->container['adresse3'] = isset($data['adresse3']) ? $data['adresse3'] : null;
         $this->container['cp'] = isset($data['cp']) ? $data['cp'] : null;
         $this->container['commune'] = isset($data['commune']) ? $data['commune'] : null;
         $this->container['insee'] = isset($data['insee']) ? $data['insee'] : null;
@@ -306,6 +318,54 @@ class MissionPlace implements ModelInterface, ArrayAccess
     public function setAdresse1($adresse1)
     {
         $this->container['adresse1'] = $adresse1;
+
+        return $this;
+    }
+
+    /**
+     * Gets adresse2
+     *
+     * @return string
+     */
+    public function getAdresse2()
+    {
+        return $this->container['adresse2'];
+    }
+
+    /**
+     * Sets adresse2
+     *
+     * @param string $adresse2 adresse2
+     *
+     * @return $this
+     */
+    public function setAdresse2($adresse2)
+    {
+        $this->container['adresse2'] = $adresse2;
+
+        return $this;
+    }
+
+    /**
+     * Gets adresse3
+     *
+     * @return string
+     */
+    public function getAdresse3()
+    {
+        return $this->container['adresse3'];
+    }
+
+    /**
+     * Sets adresse3
+     *
+     * @param string $adresse3 adresse3
+     *
+     * @return $this
+     */
+    public function setAdresse3($adresse3)
+    {
+        $this->container['adresse3'] = $adresse3;
 
         return $this;
     }

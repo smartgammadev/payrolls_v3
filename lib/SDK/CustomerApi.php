@@ -87,7 +87,7 @@ class CustomerApi
     }
 
     /**
-     * Operation apiV3CustomerIdRefPost
+     * Operation apiV3CustomerIdRefPut
      *
      * update the Customer
      *
@@ -98,14 +98,14 @@ class CustomerApi
      * @throws \InvalidArgumentException
      * @return \EvoliaV3\Model\SuccessResponse
      */
-    public function apiV3CustomerIdRefPost($id_ref, $body = null)
+    public function apiV3CustomerIdRefPut($id_ref, $body = null)
     {
-        list($response) = $this->apiV3CustomerIdRefPostWithHttpInfo($id_ref, $body);
+        list($response) = $this->apiV3CustomerIdRefPutWithHttpInfo($id_ref, $body);
         return $response;
     }
 
     /**
-     * Operation apiV3CustomerIdRefPostWithHttpInfo
+     * Operation apiV3CustomerIdRefPutWithHttpInfo
      *
      * update the Customer
      *
@@ -116,10 +116,10 @@ class CustomerApi
      * @throws \InvalidArgumentException
      * @return array of \EvoliaV3\Model\SuccessResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiV3CustomerIdRefPostWithHttpInfo($id_ref, $body = null)
+    public function apiV3CustomerIdRefPutWithHttpInfo($id_ref, $body = null)
     {
         $returnType = '\EvoliaV3\Model\SuccessResponse';
-        $request = $this->apiV3CustomerIdRefPostRequest($id_ref, $body);
+        $request = $this->apiV3CustomerIdRefPutRequest($id_ref, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -205,7 +205,7 @@ class CustomerApi
     }
 
     /**
-     * Operation apiV3CustomerIdRefPostAsync
+     * Operation apiV3CustomerIdRefPutAsync
      *
      * update the Customer
      *
@@ -215,9 +215,9 @@ class CustomerApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3CustomerIdRefPostAsync($id_ref, $body = null)
+    public function apiV3CustomerIdRefPutAsync($id_ref, $body = null)
     {
-        return $this->apiV3CustomerIdRefPostAsyncWithHttpInfo($id_ref, $body)
+        return $this->apiV3CustomerIdRefPutAsyncWithHttpInfo($id_ref, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -226,7 +226,7 @@ class CustomerApi
     }
 
     /**
-     * Operation apiV3CustomerIdRefPostAsyncWithHttpInfo
+     * Operation apiV3CustomerIdRefPutAsyncWithHttpInfo
      *
      * update the Customer
      *
@@ -236,10 +236,10 @@ class CustomerApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3CustomerIdRefPostAsyncWithHttpInfo($id_ref, $body = null)
+    public function apiV3CustomerIdRefPutAsyncWithHttpInfo($id_ref, $body = null)
     {
         $returnType = '\EvoliaV3\Model\SuccessResponse';
-        $request = $this->apiV3CustomerIdRefPostRequest($id_ref, $body);
+        $request = $this->apiV3CustomerIdRefPutRequest($id_ref, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -279,7 +279,7 @@ class CustomerApi
     }
 
     /**
-     * Create request for operation 'apiV3CustomerIdRefPost'
+     * Create request for operation 'apiV3CustomerIdRefPut'
      *
      * @param  int $id_ref (required)
      * @param  \EvoliaV3\Model\CustomerRequest $body (optional)
@@ -287,16 +287,16 @@ class CustomerApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function apiV3CustomerIdRefPostRequest($id_ref, $body = null)
+    protected function apiV3CustomerIdRefPutRequest($id_ref, $body = null)
     {
         // verify the required parameter 'id_ref' is set
         if ($id_ref === null || (is_array($id_ref) && count($id_ref) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_ref when calling apiV3CustomerIdRefPost'
+                'Missing the required parameter $id_ref when calling apiV3CustomerIdRefPut'
             );
         }
 
-        $resourcePath = '/api/v3/Customer/{idRef}';
+        $resourcePath = '/api/v3/customer/{idRef}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -377,7 +377,7 @@ class CustomerApi
 
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
-            'POST',
+            'PUT',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
@@ -385,7 +385,7 @@ class CustomerApi
     }
 
     /**
-     * Operation apiV3CustomerPut
+     * Operation apiV3CustomerPost
      *
      * Import the Customer
      *
@@ -395,14 +395,14 @@ class CustomerApi
      * @throws \InvalidArgumentException
      * @return \EvoliaV3\Model\SuccessResponse
      */
-    public function apiV3CustomerPut($body = null)
+    public function apiV3CustomerPost($body = null)
     {
-        list($response) = $this->apiV3CustomerPutWithHttpInfo($body);
+        list($response) = $this->apiV3CustomerPostWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation apiV3CustomerPutWithHttpInfo
+     * Operation apiV3CustomerPostWithHttpInfo
      *
      * Import the Customer
      *
@@ -412,10 +412,10 @@ class CustomerApi
      * @throws \InvalidArgumentException
      * @return array of \EvoliaV3\Model\SuccessResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiV3CustomerPutWithHttpInfo($body = null)
+    public function apiV3CustomerPostWithHttpInfo($body = null)
     {
         $returnType = '\EvoliaV3\Model\SuccessResponse';
-        $request = $this->apiV3CustomerPutRequest($body);
+        $request = $this->apiV3CustomerPostRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -493,7 +493,7 @@ class CustomerApi
     }
 
     /**
-     * Operation apiV3CustomerPutAsync
+     * Operation apiV3CustomerPostAsync
      *
      * Import the Customer
      *
@@ -502,9 +502,9 @@ class CustomerApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3CustomerPutAsync($body = null)
+    public function apiV3CustomerPostAsync($body = null)
     {
-        return $this->apiV3CustomerPutAsyncWithHttpInfo($body)
+        return $this->apiV3CustomerPostAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -513,7 +513,7 @@ class CustomerApi
     }
 
     /**
-     * Operation apiV3CustomerPutAsyncWithHttpInfo
+     * Operation apiV3CustomerPostAsyncWithHttpInfo
      *
      * Import the Customer
      *
@@ -522,10 +522,10 @@ class CustomerApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3CustomerPutAsyncWithHttpInfo($body = null)
+    public function apiV3CustomerPostAsyncWithHttpInfo($body = null)
     {
         $returnType = '\EvoliaV3\Model\SuccessResponse';
-        $request = $this->apiV3CustomerPutRequest($body);
+        $request = $this->apiV3CustomerPostRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -565,17 +565,17 @@ class CustomerApi
     }
 
     /**
-     * Create request for operation 'apiV3CustomerPut'
+     * Create request for operation 'apiV3CustomerPost'
      *
      * @param  \EvoliaV3\Model\CustomerRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function apiV3CustomerPutRequest($body = null)
+    protected function apiV3CustomerPostRequest($body = null)
     {
 
-        $resourcePath = '/api/v3/Customer';
+        $resourcePath = '/api/v3/customer';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -648,7 +648,7 @@ class CustomerApi
 
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
-            'PUT',
+            'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody

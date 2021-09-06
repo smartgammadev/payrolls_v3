@@ -66,10 +66,10 @@ $apiInstance = new EvoliaV3\SDK\AdminApi(
 );
 
 try {
-    $result = $apiInstance->apiV3AdminInitializationGet();
+    $result = $apiInstance->apiV3AdminInitializationPost();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AdminApi->apiV3AdminInitializationGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AdminApi->apiV3AdminInitializationPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -80,24 +80,23 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Payrol
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AdminApi* | [**apiV3AdminInitializationGet**](docs/Api/AdminApi.md#apiv3admininitializationget) | **GET** /api/v3/Admin/initialization | Used to create (if needed) the local SQLite Database  And create the default appID/appSecret
-*CandidateApi* | [**apiV3CandidateAddDPAEPut**](docs/Api/CandidateApi.md#apiv3candidateadddpaeput) | **PUT** /api/v3/Candidate/AddDPAE | Update the Candidate with DPAE information
-*CandidateApi* | [**apiV3CandidatePost**](docs/Api/CandidateApi.md#apiv3candidatepost) | **POST** /api/v3/Candidate | Import the Candidate
-*CandidateApi* | [**apiV3CandidatePut**](docs/Api/CandidateApi.md#apiv3candidateput) | **PUT** /api/v3/Candidate | Import the Candidate
-*CandidateApi* | [**apiV3CandidateSearchPost**](docs/Api/CandidateApi.md#apiv3candidatesearchpost) | **POST** /api/v3/Candidate/Search | Test if the Candidate exists
-*ContractApi* | [**apiV3ContractIdContractPost**](docs/Api/ContractApi.md#apiv3contractidcontractpost) | **POST** /api/v3/Contract/{idContract} | update the Contract
-*ContractApi* | [**apiV3ContractPut**](docs/Api/ContractApi.md#apiv3contractput) | **PUT** /api/v3/Contract | Import the Contract
-*ContractApi* | [**apiV3ContractReturnSignaturePut**](docs/Api/ContractApi.md#apiv3contractreturnsignatureput) | **PUT** /api/v3/Contract/ReturnSignature | Update the Contract information
-*CustomerApi* | [**apiV3CustomerIdRefPost**](docs/Api/CustomerApi.md#apiv3customeridrefpost) | **POST** /api/v3/Customer/{idRef} | update the Customer
-*CustomerApi* | [**apiV3CustomerPut**](docs/Api/CustomerApi.md#apiv3customerput) | **PUT** /api/v3/Customer | Import the Customer
+*AdminApi* | [**apiV3AdminInitializationPost**](docs/Api/AdminApi.md#apiv3admininitializationpost) | **POST** /api/v3/admin/initialization | Used to create (if needed) the local SQLite Database  And create the default appID/appSecret
+*CandidateApi* | [**apiV3CandidatesDpaesPut**](docs/Api/CandidateApi.md#apiv3candidatesdpaesput) | **PUT** /api/v3/candidates/dpaes | Update the Candidate with DPAE information
+*CandidateApi* | [**apiV3CandidatesIdAgencyNumSecuNumSecuClePost**](docs/Api/CandidateApi.md#apiv3candidatesidagencynumsecunumsecuclepost) | **POST** /api/v3/candidates/{idAgency}/{numSecu}/{numSecuCle} | Test if the Candidate exists
+*CandidateApi* | [**apiV3CandidatesPost**](docs/Api/CandidateApi.md#apiv3candidatespost) | **POST** /api/v3/candidates | Import the Candidate
+*CandidateApi* | [**apiV3CandidatesPut**](docs/Api/CandidateApi.md#apiv3candidatesput) | **PUT** /api/v3/candidates | Import the Candidate
+*ContractApi* | [**apiV3ContractContractIdPut**](docs/Api/ContractApi.md#apiv3contractcontractidput) | **PUT** /api/v3/contract/{contractId} | Update the Contract information
+*ContractApi* | [**apiV3ContractPost**](docs/Api/ContractApi.md#apiv3contractpost) | **POST** /api/v3/contract | Import the Contract
+*CustomerApi* | [**apiV3CustomerIdRefPut**](docs/Api/CustomerApi.md#apiv3customeridrefput) | **PUT** /api/v3/customer/{idRef} | update the Customer
+*CustomerApi* | [**apiV3CustomerPost**](docs/Api/CustomerApi.md#apiv3customerpost) | **POST** /api/v3/customer | Import the Customer
 *HomeApi* | [**healthGet**](docs/Api/HomeApi.md#healthget) | **GET** /health | This endpoint is used to test the server&#x27;s health
-*ReferencesApi* | [**apiV3ReferencesListGet**](docs/Api/ReferencesApi.md#apiv3referenceslistget) | **GET** /api/v3/References/List | Get all the references from the database
-*SiretApi* | [**apiV3SiretSearchPost**](docs/Api/SiretApi.md#apiv3siretsearchpost) | **POST** /api/v3/Siret/Search | This endpoint is used to search the siret in the DB from the NIC and the Siret
-*TokenApi* | [**apiV3TokenRefreshPost**](docs/Api/TokenApi.md#apiv3tokenrefreshpost) | **POST** /api/v3/Token/Refresh | 
-*TokenApi* | [**apiV3TokenRefreshTokenDelete**](docs/Api/TokenApi.md#apiv3tokenrefreshtokendelete) | **DELETE** /api/v3/Token/{refreshToken} | 
-*UserApi* | [**apiV3UserLoginPost**](docs/Api/UserApi.md#apiv3userloginpost) | **POST** /api/v3/User/Login | 
-*UserApi* | [**apiV3UserRegisterPost**](docs/Api/UserApi.md#apiv3userregisterpost) | **POST** /api/v3/User/Register | 
-*UserApi* | [**apiV3UserUserNameDelete**](docs/Api/UserApi.md#apiv3userusernamedelete) | **DELETE** /api/v3/User/{userName} | 
+*ReferencesApi* | [**apiV3ReferencesGet**](docs/Api/ReferencesApi.md#apiv3referencesget) | **GET** /api/v3/references | Get all the references from the database
+*SiretApi* | [**apiV3SiretSirenNicPost**](docs/Api/SiretApi.md#apiv3siretsirennicpost) | **POST** /api/v3/siret/{siren}/{nic} | This endpoint is used to search the siret in the DB from the NIC and the Siret
+*TokenApi* | [**apiV3TokenRefreshPost**](docs/Api/TokenApi.md#apiv3tokenrefreshpost) | **POST** /api/v3/token/refresh | 
+*TokenApi* | [**apiV3TokenRefreshTokenDelete**](docs/Api/TokenApi.md#apiv3tokenrefreshtokendelete) | **DELETE** /api/v3/token/{refreshToken} | 
+*UserApi* | [**apiV3UserLoginPost**](docs/Api/UserApi.md#apiv3userloginpost) | **POST** /api/v3/user/login | 
+*UserApi* | [**apiV3UserRegisterPost**](docs/Api/UserApi.md#apiv3userregisterpost) | **POST** /api/v3/user/register | 
+*UserApi* | [**apiV3UserUserNameDelete**](docs/Api/UserApi.md#apiv3userusernamedelete) | **DELETE** /api/v3/user/{userName} | 
 
 ## Documentation For Models
 
@@ -105,7 +104,6 @@ Class | Method | HTTP request | Description
  - [AuthenticationResponse](docs/Model/AuthenticationResponse.md)
  - [Candidate](docs/Model/Candidate.md)
  - [CandidateDpae](docs/Model/CandidateDpae.md)
- - [CandidateSearch](docs/Model/CandidateSearch.md)
  - [Contract](docs/Model/Contract.md)
  - [ContractSignUpdate](docs/Model/ContractSignUpdate.md)
  - [ContractualData](docs/Model/ContractualData.md)
@@ -118,7 +116,6 @@ Class | Method | HTTP request | Description
  - [ReferencesResponse](docs/Model/ReferencesResponse.md)
  - [RefreshTokenRequest](docs/Model/RefreshTokenRequest.md)
  - [SiretQueryResult](docs/Model/SiretQueryResult.md)
- - [SiretRequest](docs/Model/SiretRequest.md)
  - [SuccessResponse](docs/Model/SuccessResponse.md)
  - [User](docs/Model/User.md)
  - [UserLoginRequest](docs/Model/UserLoginRequest.md)

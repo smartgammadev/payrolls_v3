@@ -97,9 +97,9 @@ class CandidateDpaeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "date_heure_prevue_embauche"
+     * Test attribute "date_embauche"
      */
-    public function testPropertyDateHeurePrevueEmbauche()
+    public function testPropertyDateEmbauche()
     {
     }
 

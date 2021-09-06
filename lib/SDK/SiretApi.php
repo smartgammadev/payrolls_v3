@@ -87,37 +87,39 @@ class SiretApi
     }
 
     /**
-     * Operation apiV3SiretSearchPost
+     * Operation apiV3SiretSirenNicPost
      *
      * This endpoint is used to search the siret in the DB from the NIC and the Siret
      *
-     * @param  \EvoliaV3\Model\SiretRequest $body body (optional)
+     * @param  string $siren siren (required)
+     * @param  string $nic nic (required)
      *
      * @throws \EvoliaV3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \EvoliaV3\Model\SiretQueryResult[]
      */
-    public function apiV3SiretSearchPost($body = null)
+    public function apiV3SiretSirenNicPost($siren, $nic)
     {
-        list($response) = $this->apiV3SiretSearchPostWithHttpInfo($body);
+        list($response) = $this->apiV3SiretSirenNicPostWithHttpInfo($siren, $nic);
         return $response;
     }
 
     /**
-     * Operation apiV3SiretSearchPostWithHttpInfo
+     * Operation apiV3SiretSirenNicPostWithHttpInfo
      *
      * This endpoint is used to search the siret in the DB from the NIC and the Siret
      *
-     * @param  \EvoliaV3\Model\SiretRequest $body (optional)
+     * @param  string $siren (required)
+     * @param  string $nic (required)
      *
      * @throws \EvoliaV3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \EvoliaV3\Model\SiretQueryResult[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiV3SiretSearchPostWithHttpInfo($body = null)
+    public function apiV3SiretSirenNicPostWithHttpInfo($siren, $nic)
     {
         $returnType = '\EvoliaV3\Model\SiretQueryResult[]';
-        $request = $this->apiV3SiretSearchPostRequest($body);
+        $request = $this->apiV3SiretSirenNicPostRequest($siren, $nic);
 
         try {
             $options = $this->createHttpClientOption();
@@ -179,18 +181,19 @@ class SiretApi
     }
 
     /**
-     * Operation apiV3SiretSearchPostAsync
+     * Operation apiV3SiretSirenNicPostAsync
      *
      * This endpoint is used to search the siret in the DB from the NIC and the Siret
      *
-     * @param  \EvoliaV3\Model\SiretRequest $body (optional)
+     * @param  string $siren (required)
+     * @param  string $nic (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3SiretSearchPostAsync($body = null)
+    public function apiV3SiretSirenNicPostAsync($siren, $nic)
     {
-        return $this->apiV3SiretSearchPostAsyncWithHttpInfo($body)
+        return $this->apiV3SiretSirenNicPostAsyncWithHttpInfo($siren, $nic)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -199,19 +202,20 @@ class SiretApi
     }
 
     /**
-     * Operation apiV3SiretSearchPostAsyncWithHttpInfo
+     * Operation apiV3SiretSirenNicPostAsyncWithHttpInfo
      *
      * This endpoint is used to search the siret in the DB from the NIC and the Siret
      *
-     * @param  \EvoliaV3\Model\SiretRequest $body (optional)
+     * @param  string $siren (required)
+     * @param  string $nic (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3SiretSearchPostAsyncWithHttpInfo($body = null)
+    public function apiV3SiretSirenNicPostAsyncWithHttpInfo($siren, $nic)
     {
         $returnType = '\EvoliaV3\Model\SiretQueryResult[]';
-        $request = $this->apiV3SiretSearchPostRequest($body);
+        $request = $this->apiV3SiretSirenNicPostRequest($siren, $nic);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -251,17 +255,30 @@ class SiretApi
     }
 
     /**
-     * Create request for operation 'apiV3SiretSearchPost'
+     * Create request for operation 'apiV3SiretSirenNicPost'
      *
-     * @param  \EvoliaV3\Model\SiretRequest $body (optional)
+     * @param  string $siren (required)
+     * @param  string $nic (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function apiV3SiretSearchPostRequest($body = null)
+    protected function apiV3SiretSirenNicPostRequest($siren, $nic)
     {
+        // verify the required parameter 'siren' is set
+        if ($siren === null || (is_array($siren) && count($siren) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $siren when calling apiV3SiretSirenNicPost'
+            );
+        }
+        // verify the required parameter 'nic' is set
+        if ($nic === null || (is_array($nic) && count($nic) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $nic when calling apiV3SiretSirenNicPost'
+            );
+        }
 
-        $resourcePath = '/api/v3/Siret/Search';
+        $resourcePath = '/api/v3/siret/{siren}/{nic}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -269,12 +286,25 @@ class SiretApi
         $multipart = false;
 
 
+        // path params
+        if ($siren !== null) {
+            $resourcePath = str_replace(
+                '{' . 'siren' . '}',
+                ObjectSerializer::toPathValue($siren),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($nic !== null) {
+            $resourcePath = str_replace(
+                '{' . 'nic' . '}',
+                ObjectSerializer::toPathValue($nic),
+                $resourcePath
+            );
+        }
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
@@ -283,7 +313,7 @@ class SiretApi
         } else {
             $headers = $this->headerSelector->selectHeaders(
                 ['application/json'],
-                ['application/json']
+                []
             );
         }
 

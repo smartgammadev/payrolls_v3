@@ -71,42 +71,42 @@ class CandidateApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for apiV3CandidateAddDPAEPut
+     * Test case for apiV3CandidatesDpaesPut
      *
      * Update the Candidate with DPAE information.
      *
      */
-    public function testApiV3CandidateAddDPAEPut()
+    public function testApiV3CandidatesDpaesPut()
     {
     }
 
     /**
-     * Test case for apiV3CandidatePost
-     *
-     * Import the Candidate.
-     *
-     */
-    public function testApiV3CandidatePost()
-    {
-    }
-
-    /**
-     * Test case for apiV3CandidatePut
-     *
-     * Import the Candidate.
-     *
-     */
-    public function testApiV3CandidatePut()
-    {
-    }
-
-    /**
-     * Test case for apiV3CandidateSearchPost
+     * Test case for apiV3CandidatesIdAgencyNumSecuNumSecuClePost
      *
      * Test if the Candidate exists.
      *
      */
-    public function testApiV3CandidateSearchPost()
+    public function testApiV3CandidatesIdAgencyNumSecuNumSecuClePost()
+    {
+    }
+
+    /**
+     * Test case for apiV3CandidatesPost
+     *
+     * Import the Candidate.
+     *
+     */
+    public function testApiV3CandidatesPost()
+    {
+    }
+
+    /**
+     * Test case for apiV3CandidatesPut
+     *
+     * Import the Candidate.
+     *
+     */
+    public function testApiV3CandidatesPut()
     {
     }
 }

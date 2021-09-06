@@ -57,28 +57,38 @@ class Contract implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id_contract' => 'string',
-'id_personne' => 'string',
+'id_personne' => 'int',
 'id_client' => 'int',
 'code_mission' => 'string',
-'ordre_client' => 'string',
+'ordre_client' => 'int',
 'lieuxde_mission' => '\EvoliaV3\Model\MissionPlace',
+'designation' => 'string',
 'adresse1' => 'string',
+'adresse2' => 'string',
+'adresse3' => 'string',
 'cp' => 'string',
 'commune' => 'string',
 'insee' => 'string',
 'pays' => 'string',
 'agence' => 'string',
 'debut' => '\DateTime',
+'fin_reelle' => '\DateTime',
 'fin_prevue' => '\DateTime',
 'date_creation' => '\DateTime',
 'categorie_salariale' => 'string',
 'motif_embauche' => 'string',
 'justification' => 'string',
+'telephone' => 'string',
+'siren' => 'string',
+'nic' => 'string',
 'mission_a_risque_l23131' => 'bool',
 'heure_de_presentation' => 'int',
 'contract_order' => 'int',
+'id_metier' => 'int',
 'type_contrat' => 'int',
 'date_effet' => '\DateTime',
+'date_fin_avenant' => '\DateTime',
+'horaires_particulier' => 'string',
 'souplesse_debut' => '\DateTime',
 'souplesse_fin' => '\DateTime',
 'taux_paye' => 'float',
@@ -86,6 +96,7 @@ class Contract implements ModelInterface, ArrayAccess
 'lot_facture' => 'string',
 'duree_hebdo' => 'string',
 'metier' => 'string',
+'poste' => 'string',
 'seuil_et_decompte' => 'string',
 'code_pcs' => 'string',
 'reference_analytique' => 'string',
@@ -100,28 +111,38 @@ class Contract implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'id_contract' => null,
-'id_personne' => null,
+'id_personne' => 'int32',
 'id_client' => 'int32',
 'code_mission' => null,
-'ordre_client' => null,
+'ordre_client' => 'int32',
 'lieuxde_mission' => null,
+'designation' => null,
 'adresse1' => null,
+'adresse2' => null,
+'adresse3' => null,
 'cp' => null,
 'commune' => null,
 'insee' => null,
 'pays' => null,
 'agence' => null,
 'debut' => 'date-time',
+'fin_reelle' => 'date-time',
 'fin_prevue' => 'date-time',
 'date_creation' => 'date-time',
 'categorie_salariale' => null,
 'motif_embauche' => null,
 'justification' => null,
+'telephone' => null,
+'siren' => null,
+'nic' => null,
 'mission_a_risque_l23131' => null,
 'heure_de_presentation' => 'int32',
 'contract_order' => 'int32',
+'id_metier' => 'int32',
 'type_contrat' => 'int32',
 'date_effet' => 'date-time',
+'date_fin_avenant' => 'date-time',
+'horaires_particulier' => null,
 'souplesse_debut' => 'date-time',
 'souplesse_fin' => 'date-time',
 'taux_paye' => 'float',
@@ -129,6 +150,7 @@ class Contract implements ModelInterface, ArrayAccess
 'lot_facture' => null,
 'duree_hebdo' => null,
 'metier' => null,
+'poste' => null,
 'seuil_et_decompte' => null,
 'code_pcs' => null,
 'reference_analytique' => null,
@@ -169,23 +191,33 @@ class Contract implements ModelInterface, ArrayAccess
 'code_mission' => 'codeMission',
 'ordre_client' => 'ordreClient',
 'lieuxde_mission' => 'lieuxdeMission',
+'designation' => 'designation',
 'adresse1' => 'adresse1',
+'adresse2' => 'adresse2',
+'adresse3' => 'adresse3',
 'cp' => 'cp',
 'commune' => 'commune',
 'insee' => 'insee',
 'pays' => 'pays',
 'agence' => 'agence',
 'debut' => 'debut',
+'fin_reelle' => 'finReelle',
 'fin_prevue' => 'finPrevue',
 'date_creation' => 'dateCreation',
 'categorie_salariale' => 'categorieSalariale',
 'motif_embauche' => 'motifEmbauche',
 'justification' => 'justification',
+'telephone' => 'telephone',
+'siren' => 'siren',
+'nic' => 'nic',
 'mission_a_risque_l23131' => 'missionARisqueL23131',
 'heure_de_presentation' => 'heureDePresentation',
 'contract_order' => 'contractOrder',
+'id_metier' => 'idMetier',
 'type_contrat' => 'typeContrat',
 'date_effet' => 'dateEffet',
+'date_fin_avenant' => 'dateFinAvenant',
+'horaires_particulier' => 'horairesParticulier',
 'souplesse_debut' => 'souplesseDebut',
 'souplesse_fin' => 'souplesseFin',
 'taux_paye' => 'tauxPaye',
@@ -193,6 +225,7 @@ class Contract implements ModelInterface, ArrayAccess
 'lot_facture' => 'lotFacture',
 'duree_hebdo' => 'dureeHebdo',
 'metier' => 'metier',
+'poste' => 'poste',
 'seuil_et_decompte' => 'seuilEtDecompte',
 'code_pcs' => 'codePCS',
 'reference_analytique' => 'referenceAnalytique',
@@ -212,23 +245,33 @@ class Contract implements ModelInterface, ArrayAccess
 'code_mission' => 'setCodeMission',
 'ordre_client' => 'setOrdreClient',
 'lieuxde_mission' => 'setLieuxdeMission',
+'designation' => 'setDesignation',
 'adresse1' => 'setAdresse1',
+'adresse2' => 'setAdresse2',
+'adresse3' => 'setAdresse3',
 'cp' => 'setCp',
 'commune' => 'setCommune',
 'insee' => 'setInsee',
 'pays' => 'setPays',
 'agence' => 'setAgence',
 'debut' => 'setDebut',
+'fin_reelle' => 'setFinReelle',
 'fin_prevue' => 'setFinPrevue',
 'date_creation' => 'setDateCreation',
 'categorie_salariale' => 'setCategorieSalariale',
 'motif_embauche' => 'setMotifEmbauche',
 'justification' => 'setJustification',
+'telephone' => 'setTelephone',
+'siren' => 'setSiren',
+'nic' => 'setNic',
 'mission_a_risque_l23131' => 'setMissionARisqueL23131',
 'heure_de_presentation' => 'setHeureDePresentation',
 'contract_order' => 'setContractOrder',
+'id_metier' => 'setIdMetier',
 'type_contrat' => 'setTypeContrat',
 'date_effet' => 'setDateEffet',
+'date_fin_avenant' => 'setDateFinAvenant',
+'horaires_particulier' => 'setHorairesParticulier',
 'souplesse_debut' => 'setSouplesseDebut',
 'souplesse_fin' => 'setSouplesseFin',
 'taux_paye' => 'setTauxPaye',
@@ -236,6 +279,7 @@ class Contract implements ModelInterface, ArrayAccess
 'lot_facture' => 'setLotFacture',
 'duree_hebdo' => 'setDureeHebdo',
 'metier' => 'setMetier',
+'poste' => 'setPoste',
 'seuil_et_decompte' => 'setSeuilEtDecompte',
 'code_pcs' => 'setCodePcs',
 'reference_analytique' => 'setReferenceAnalytique',
@@ -255,23 +299,33 @@ class Contract implements ModelInterface, ArrayAccess
 'code_mission' => 'getCodeMission',
 'ordre_client' => 'getOrdreClient',
 'lieuxde_mission' => 'getLieuxdeMission',
+'designation' => 'getDesignation',
 'adresse1' => 'getAdresse1',
+'adresse2' => 'getAdresse2',
+'adresse3' => 'getAdresse3',
 'cp' => 'getCp',
 'commune' => 'getCommune',
 'insee' => 'getInsee',
 'pays' => 'getPays',
 'agence' => 'getAgence',
 'debut' => 'getDebut',
+'fin_reelle' => 'getFinReelle',
 'fin_prevue' => 'getFinPrevue',
 'date_creation' => 'getDateCreation',
 'categorie_salariale' => 'getCategorieSalariale',
 'motif_embauche' => 'getMotifEmbauche',
 'justification' => 'getJustification',
+'telephone' => 'getTelephone',
+'siren' => 'getSiren',
+'nic' => 'getNic',
 'mission_a_risque_l23131' => 'getMissionARisqueL23131',
 'heure_de_presentation' => 'getHeureDePresentation',
 'contract_order' => 'getContractOrder',
+'id_metier' => 'getIdMetier',
 'type_contrat' => 'getTypeContrat',
 'date_effet' => 'getDateEffet',
+'date_fin_avenant' => 'getDateFinAvenant',
+'horaires_particulier' => 'getHorairesParticulier',
 'souplesse_debut' => 'getSouplesseDebut',
 'souplesse_fin' => 'getSouplesseFin',
 'taux_paye' => 'getTauxPaye',
@@ -279,6 +333,7 @@ class Contract implements ModelInterface, ArrayAccess
 'lot_facture' => 'getLotFacture',
 'duree_hebdo' => 'getDureeHebdo',
 'metier' => 'getMetier',
+'poste' => 'getPoste',
 'seuil_et_decompte' => 'getSeuilEtDecompte',
 'code_pcs' => 'getCodePcs',
 'reference_analytique' => 'getReferenceAnalytique',
@@ -350,23 +405,33 @@ class Contract implements ModelInterface, ArrayAccess
         $this->container['code_mission'] = isset($data['code_mission']) ? $data['code_mission'] : null;
         $this->container['ordre_client'] = isset($data['ordre_client']) ? $data['ordre_client'] : null;
         $this->container['lieuxde_mission'] = isset($data['lieuxde_mission']) ? $data['lieuxde_mission'] : null;
+        $this->container['designation'] = isset($data['designation']) ? $data['designation'] : null;
         $this->container['adresse1'] = isset($data['adresse1']) ? $data['adresse1'] : null;
+        $this->container['adresse2'] = isset($data['adresse2']) ? $data['adresse2'] : null;
+        $this->container['adresse3'] = isset($data['adresse3']) ? $data['adresse3'] : null;
         $this->container['cp'] = isset($data['cp']) ? $data['cp'] : null;
         $this->container['commune'] = isset($data['commune']) ? $data['commune'] : null;
         $this->container['insee'] = isset($data['insee']) ? $data['insee'] : null;
         $this->container['pays'] = isset($data['pays']) ? $data['pays'] : null;
         $this->container['agence'] = isset($data['agence']) ? $data['agence'] : null;
         $this->container['debut'] = isset($data['debut']) ? $data['debut'] : null;
+        $this->container['fin_reelle'] = isset($data['fin_reelle']) ? $data['fin_reelle'] : null;
         $this->container['fin_prevue'] = isset($data['fin_prevue']) ? $data['fin_prevue'] : null;
         $this->container['date_creation'] = isset($data['date_creation']) ? $data['date_creation'] : null;
         $this->container['categorie_salariale'] = isset($data['categorie_salariale']) ? $data['categorie_salariale'] : null;
         $this->container['motif_embauche'] = isset($data['motif_embauche']) ? $data['motif_embauche'] : null;
         $this->container['justification'] = isset($data['justification']) ? $data['justification'] : null;
+        $this->container['telephone'] = isset($data['telephone']) ? $data['telephone'] : null;
+        $this->container['siren'] = isset($data['siren']) ? $data['siren'] : null;
+        $this->container['nic'] = isset($data['nic']) ? $data['nic'] : null;
         $this->container['mission_a_risque_l23131'] = isset($data['mission_a_risque_l23131']) ? $data['mission_a_risque_l23131'] : null;
         $this->container['heure_de_presentation'] = isset($data['heure_de_presentation']) ? $data['heure_de_presentation'] : null;
         $this->container['contract_order'] = isset($data['contract_order']) ? $data['contract_order'] : null;
+        $this->container['id_metier'] = isset($data['id_metier']) ? $data['id_metier'] : null;
         $this->container['type_contrat'] = isset($data['type_contrat']) ? $data['type_contrat'] : null;
         $this->container['date_effet'] = isset($data['date_effet']) ? $data['date_effet'] : null;
+        $this->container['date_fin_avenant'] = isset($data['date_fin_avenant']) ? $data['date_fin_avenant'] : null;
+        $this->container['horaires_particulier'] = isset($data['horaires_particulier']) ? $data['horaires_particulier'] : null;
         $this->container['souplesse_debut'] = isset($data['souplesse_debut']) ? $data['souplesse_debut'] : null;
         $this->container['souplesse_fin'] = isset($data['souplesse_fin']) ? $data['souplesse_fin'] : null;
         $this->container['taux_paye'] = isset($data['taux_paye']) ? $data['taux_paye'] : null;
@@ -374,6 +439,7 @@ class Contract implements ModelInterface, ArrayAccess
         $this->container['lot_facture'] = isset($data['lot_facture']) ? $data['lot_facture'] : null;
         $this->container['duree_hebdo'] = isset($data['duree_hebdo']) ? $data['duree_hebdo'] : null;
         $this->container['metier'] = isset($data['metier']) ? $data['metier'] : null;
+        $this->container['poste'] = isset($data['poste']) ? $data['poste'] : null;
         $this->container['seuil_et_decompte'] = isset($data['seuil_et_decompte']) ? $data['seuil_et_decompte'] : null;
         $this->container['code_pcs'] = isset($data['code_pcs']) ? $data['code_pcs'] : null;
         $this->container['reference_analytique'] = isset($data['reference_analytique']) ? $data['reference_analytique'] : null;
@@ -391,6 +457,36 @@ class Contract implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['id_personne'] === null) {
+            $invalidProperties[] = "'id_personne' can't be null";
+        }
+        if ($this->container['id_client'] === null) {
+            $invalidProperties[] = "'id_client' can't be null";
+        }
+        if ($this->container['code_mission'] === null) {
+            $invalidProperties[] = "'code_mission' can't be null";
+        }
+        if ($this->container['ordre_client'] === null) {
+            $invalidProperties[] = "'ordre_client' can't be null";
+        }
+        if ($this->container['agence'] === null) {
+            $invalidProperties[] = "'agence' can't be null";
+        }
+        if ($this->container['debut'] === null) {
+            $invalidProperties[] = "'debut' can't be null";
+        }
+        if ($this->container['categorie_salariale'] === null) {
+            $invalidProperties[] = "'categorie_salariale' can't be null";
+        }
+        if ($this->container['motif_embauche'] === null) {
+            $invalidProperties[] = "'motif_embauche' can't be null";
+        }
+        if ($this->container['contract_order'] === null) {
+            $invalidProperties[] = "'contract_order' can't be null";
+        }
+        if ($this->container['type_contrat'] === null) {
+            $invalidProperties[] = "'type_contrat' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -433,7 +529,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets id_personne
      *
-     * @return string
+     * @return int
      */
     public function getIdPersonne()
     {
@@ -443,7 +539,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets id_personne
      *
-     * @param string $id_personne id_personne
+     * @param int $id_personne id_personne
      *
      * @return $this
      */
@@ -505,7 +601,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets ordre_client
      *
-     * @return string
+     * @return int
      */
     public function getOrdreClient()
     {
@@ -515,7 +611,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets ordre_client
      *
-     * @param string $ordre_client ordre_client
+     * @param int $ordre_client ordre_client
      *
      * @return $this
      */
@@ -551,6 +647,30 @@ class Contract implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets designation
+     *
+     * @return string
+     */
+    public function getDesignation()
+    {
+        return $this->container['designation'];
+    }
+
+    /**
+     * Sets designation
+     *
+     * @param string $designation designation
+     *
+     * @return $this
+     */
+    public function setDesignation($designation)
+    {
+        $this->container['designation'] = $designation;
+
+        return $this;
+    }
+
+    /**
      * Gets adresse1
      *
      * @return string
@@ -570,6 +690,54 @@ class Contract implements ModelInterface, ArrayAccess
     public function setAdresse1($adresse1)
     {
         $this->container['adresse1'] = $adresse1;
+
+        return $this;
+    }
+
+    /**
+     * Gets adresse2
+     *
+     * @return string
+     */
+    public function getAdresse2()
+    {
+        return $this->container['adresse2'];
+    }
+
+    /**
+     * Sets adresse2
+     *
+     * @param string $adresse2 adresse2
+     *
+     * @return $this
+     */
+    public function setAdresse2($adresse2)
+    {
+        $this->container['adresse2'] = $adresse2;
+
+        return $this;
+    }
+
+    /**
+     * Gets adresse3
+     *
+     * @return string
+     */
+    public function getAdresse3()
+    {
+        return $this->container['adresse3'];
+    }
+
+    /**
+     * Sets adresse3
+     *
+     * @param string $adresse3 adresse3
+     *
+     * @return $this
+     */
+    public function setAdresse3($adresse3)
+    {
+        $this->container['adresse3'] = $adresse3;
 
         return $this;
     }
@@ -719,6 +887,30 @@ class Contract implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets fin_reelle
+     *
+     * @return \DateTime
+     */
+    public function getFinReelle()
+    {
+        return $this->container['fin_reelle'];
+    }
+
+    /**
+     * Sets fin_reelle
+     *
+     * @param \DateTime $fin_reelle fin_reelle
+     *
+     * @return $this
+     */
+    public function setFinReelle($fin_reelle)
+    {
+        $this->container['fin_reelle'] = $fin_reelle;
+
+        return $this;
+    }
+
+    /**
      * Gets fin_prevue
      *
      * @return \DateTime
@@ -839,6 +1031,78 @@ class Contract implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets telephone
+     *
+     * @return string
+     */
+    public function getTelephone()
+    {
+        return $this->container['telephone'];
+    }
+
+    /**
+     * Sets telephone
+     *
+     * @param string $telephone telephone
+     *
+     * @return $this
+     */
+    public function setTelephone($telephone)
+    {
+        $this->container['telephone'] = $telephone;
+
+        return $this;
+    }
+
+    /**
+     * Gets siren
+     *
+     * @return string
+     */
+    public function getSiren()
+    {
+        return $this->container['siren'];
+    }
+
+    /**
+     * Sets siren
+     *
+     * @param string $siren siren
+     *
+     * @return $this
+     */
+    public function setSiren($siren)
+    {
+        $this->container['siren'] = $siren;
+
+        return $this;
+    }
+
+    /**
+     * Gets nic
+     *
+     * @return string
+     */
+    public function getNic()
+    {
+        return $this->container['nic'];
+    }
+
+    /**
+     * Sets nic
+     *
+     * @param string $nic nic
+     *
+     * @return $this
+     */
+    public function setNic($nic)
+    {
+        $this->container['nic'] = $nic;
+
+        return $this;
+    }
+
+    /**
      * Gets mission_a_risque_l23131
      *
      * @return bool
@@ -911,6 +1175,30 @@ class Contract implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets id_metier
+     *
+     * @return int
+     */
+    public function getIdMetier()
+    {
+        return $this->container['id_metier'];
+    }
+
+    /**
+     * Sets id_metier
+     *
+     * @param int $id_metier id_metier
+     *
+     * @return $this
+     */
+    public function setIdMetier($id_metier)
+    {
+        $this->container['id_metier'] = $id_metier;
+
+        return $this;
+    }
+
+    /**
      * Gets type_contrat
      *
      * @return int
@@ -954,6 +1242,54 @@ class Contract implements ModelInterface, ArrayAccess
     public function setDateEffet($date_effet)
     {
         $this->container['date_effet'] = $date_effet;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_fin_avenant
+     *
+     * @return \DateTime
+     */
+    public function getDateFinAvenant()
+    {
+        return $this->container['date_fin_avenant'];
+    }
+
+    /**
+     * Sets date_fin_avenant
+     *
+     * @param \DateTime $date_fin_avenant date_fin_avenant
+     *
+     * @return $this
+     */
+    public function setDateFinAvenant($date_fin_avenant)
+    {
+        $this->container['date_fin_avenant'] = $date_fin_avenant;
+
+        return $this;
+    }
+
+    /**
+     * Gets horaires_particulier
+     *
+     * @return string
+     */
+    public function getHorairesParticulier()
+    {
+        return $this->container['horaires_particulier'];
+    }
+
+    /**
+     * Sets horaires_particulier
+     *
+     * @param string $horaires_particulier horaires_particulier
+     *
+     * @return $this
+     */
+    public function setHorairesParticulier($horaires_particulier)
+    {
+        $this->container['horaires_particulier'] = $horaires_particulier;
 
         return $this;
     }
@@ -1122,6 +1458,30 @@ class Contract implements ModelInterface, ArrayAccess
     public function setMetier($metier)
     {
         $this->container['metier'] = $metier;
+
+        return $this;
+    }
+
+    /**
+     * Gets poste
+     *
+     * @return string
+     */
+    public function getPoste()
+    {
+        return $this->container['poste'];
+    }
+
+    /**
+     * Sets poste
+     *
+     * @param string $poste poste
+     *
+     * @return $this
+     */
+    public function setPoste($poste)
+    {
+        $this->container['poste'] = $poste;
 
         return $this;
     }

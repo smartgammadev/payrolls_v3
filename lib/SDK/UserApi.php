@@ -273,7 +273,7 @@ class UserApi
     protected function apiV3UserLoginPostRequest($body = null)
     {
 
-        $resourcePath = '/api/v3/User/Login';
+        $resourcePath = '/api/v3/user/login';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -532,7 +532,7 @@ class UserApi
     protected function apiV3UserRegisterPostRequest($body = null)
     {
 
-        $resourcePath = '/api/v3/User/Register';
+        $resourcePath = '/api/v3/user/register';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -760,7 +760,7 @@ class UserApi
             );
         }
 
-        $resourcePath = '/api/v3/User/{userName}';
+        $resourcePath = '/api/v3/user/{userName}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

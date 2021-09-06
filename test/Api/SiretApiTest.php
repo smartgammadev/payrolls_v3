@@ -71,12 +71,12 @@ class SiretApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for apiV3SiretSearchPost
+     * Test case for apiV3SiretSirenNicPost
      *
      * This endpoint is used to search the siret in the DB from the NIC and the Siret.
      *
      */
-    public function testApiV3SiretSearchPost()
+    public function testApiV3SiretSirenNicPost()
     {
     }
 }

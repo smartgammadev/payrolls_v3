@@ -56,11 +56,10 @@ class ContractSignUpdate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id_contract' => 'string',
-'id_contract_ord' => 'int',
+        'id_contract_ord' => 'int',
 'id_person' => 'string',
-'sign_date_customer' => 'string',
-'sign_date_candidate' => 'string'    ];
+'sign_date_customer' => '\DateTime',
+'sign_date_candidate' => '\DateTime'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -68,11 +67,10 @@ class ContractSignUpdate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id_contract' => null,
-'id_contract_ord' => 'int32',
+        'id_contract_ord' => 'int32',
 'id_person' => null,
-'sign_date_customer' => null,
-'sign_date_candidate' => null    ];
+'sign_date_customer' => 'date-time',
+'sign_date_candidate' => 'date-time'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -101,8 +99,7 @@ class ContractSignUpdate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id_contract' => 'idContract',
-'id_contract_ord' => 'idContractOrd',
+        'id_contract_ord' => 'idContractOrd',
 'id_person' => 'idPerson',
 'sign_date_customer' => 'signDateCustomer',
 'sign_date_candidate' => 'signDateCandidate'    ];
@@ -113,8 +110,7 @@ class ContractSignUpdate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id_contract' => 'setIdContract',
-'id_contract_ord' => 'setIdContractOrd',
+        'id_contract_ord' => 'setIdContractOrd',
 'id_person' => 'setIdPerson',
 'sign_date_customer' => 'setSignDateCustomer',
 'sign_date_candidate' => 'setSignDateCandidate'    ];
@@ -125,8 +121,7 @@ class ContractSignUpdate implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id_contract' => 'getIdContract',
-'id_contract_ord' => 'getIdContractOrd',
+        'id_contract_ord' => 'getIdContractOrd',
 'id_person' => 'getIdPerson',
 'sign_date_customer' => 'getSignDateCustomer',
 'sign_date_candidate' => 'getSignDateCandidate'    ];
@@ -189,7 +184,6 @@ class ContractSignUpdate implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id_contract'] = isset($data['id_contract']) ? $data['id_contract'] : null;
         $this->container['id_contract_ord'] = isset($data['id_contract_ord']) ? $data['id_contract_ord'] : null;
         $this->container['id_person'] = isset($data['id_person']) ? $data['id_person'] : null;
         $this->container['sign_date_customer'] = isset($data['sign_date_customer']) ? $data['sign_date_customer'] : null;
@@ -205,6 +199,12 @@ class ContractSignUpdate implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['id_contract_ord'] === null) {
+            $invalidProperties[] = "'id_contract_ord' can't be null";
+        }
+        if ($this->container['id_person'] === null) {
+            $invalidProperties[] = "'id_person' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -219,30 +219,6 @@ class ContractSignUpdate implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets id_contract
-     *
-     * @return string
-     */
-    public function getIdContract()
-    {
-        return $this->container['id_contract'];
-    }
-
-    /**
-     * Sets id_contract
-     *
-     * @param string $id_contract id_contract
-     *
-     * @return $this
-     */
-    public function setIdContract($id_contract)
-    {
-        $this->container['id_contract'] = $id_contract;
-
-        return $this;
-    }
 
     /**
      * Gets id_contract_ord
@@ -295,7 +271,7 @@ class ContractSignUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets sign_date_customer
      *
-     * @return string
+     * @return \DateTime
      */
     public function getSignDateCustomer()
     {
@@ -305,7 +281,7 @@ class ContractSignUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets sign_date_customer
      *
-     * @param string $sign_date_customer sign_date_customer
+     * @param \DateTime $sign_date_customer sign_date_customer
      *
      * @return $this
      */
@@ -319,7 +295,7 @@ class ContractSignUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets sign_date_candidate
      *
-     * @return string
+     * @return \DateTime
      */
     public function getSignDateCandidate()
     {
@@ -329,7 +305,7 @@ class ContractSignUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets sign_date_candidate
      *
-     * @param string $sign_date_candidate sign_date_candidate
+     * @param \DateTime $sign_date_candidate sign_date_candidate
      *
      * @return $this
      */

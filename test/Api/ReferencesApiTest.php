@@ -71,12 +71,12 @@ class ReferencesApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for apiV3ReferencesListGet
+     * Test case for apiV3ReferencesGet
      *
      * Get all the references from the database.
      *
      */
-    public function testApiV3ReferencesListGet()
+    public function testApiV3ReferencesGet()
     {
     }
 }

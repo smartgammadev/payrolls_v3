@@ -273,7 +273,7 @@ class TokenApi
     protected function apiV3TokenRefreshPostRequest($body = null)
     {
 
-        $resourcePath = '/api/v3/Token/Refresh';
+        $resourcePath = '/api/v3/token/refresh';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -501,7 +501,7 @@ class TokenApi
             );
         }
 
-        $resourcePath = '/api/v3/Token/{refreshToken}';
+        $resourcePath = '/api/v3/token/{refreshToken}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

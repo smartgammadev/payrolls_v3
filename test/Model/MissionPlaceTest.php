@@ -90,6 +90,20 @@ class MissionPlaceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "adresse2"
+     */
+    public function testPropertyAdresse2()
+    {
+    }
+
+    /**
+     * Test attribute "adresse3"
+     */
+    public function testPropertyAdresse3()
+    {
+    }
+
+    /**
      * Test attribute "cp"
      */
     public function testPropertyCp()

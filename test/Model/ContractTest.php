@@ -118,9 +118,30 @@ class ContractTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "designation"
+     */
+    public function testPropertyDesignation()
+    {
+    }
+
+    /**
      * Test attribute "adresse1"
      */
     public function testPropertyAdresse1()
+    {
+    }
+
+    /**
+     * Test attribute "adresse2"
+     */
+    public function testPropertyAdresse2()
+    {
+    }
+
+    /**
+     * Test attribute "adresse3"
+     */
+    public function testPropertyAdresse3()
     {
     }
 
@@ -167,6 +188,13 @@ class ContractTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "fin_reelle"
+     */
+    public function testPropertyFinReelle()
+    {
+    }
+
+    /**
      * Test attribute "fin_prevue"
      */
     public function testPropertyFinPrevue()
@@ -202,6 +230,27 @@ class ContractTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "telephone"
+     */
+    public function testPropertyTelephone()
+    {
+    }
+
+    /**
+     * Test attribute "siren"
+     */
+    public function testPropertySiren()
+    {
+    }
+
+    /**
+     * Test attribute "nic"
+     */
+    public function testPropertyNic()
+    {
+    }
+
+    /**
      * Test attribute "mission_a_risque_l23131"
      */
     public function testPropertyMissionARisqueL23131()
@@ -223,6 +272,13 @@ class ContractTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "id_metier"
+     */
+    public function testPropertyIdMetier()
+    {
+    }
+
+    /**
      * Test attribute "type_contrat"
      */
     public function testPropertyTypeContrat()
@@ -233,6 +289,20 @@ class ContractTest extends \PHPUnit_Framework_TestCase
      * Test attribute "date_effet"
      */
     public function testPropertyDateEffet()
+    {
+    }
+
+    /**
+     * Test attribute "date_fin_avenant"
+     */
+    public function testPropertyDateFinAvenant()
+    {
+    }
+
+    /**
+     * Test attribute "horaires_particulier"
+     */
+    public function testPropertyHorairesParticulier()
     {
     }
 
@@ -282,6 +352,13 @@ class ContractTest extends \PHPUnit_Framework_TestCase
      * Test attribute "metier"
      */
     public function testPropertyMetier()
+    {
+    }
+
+    /**
+     * Test attribute "poste"
+     */
+    public function testPropertyPoste()
     {
     }
 

@@ -4,10 +4,10 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Payrol
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV3SiretSearchPost**](SiretApi.md#apiv3siretsearchpost) | **POST** /api/v3/Siret/Search | This endpoint is used to search the siret in the DB from the NIC and the Siret
+[**apiV3SiretSirenNicPost**](SiretApi.md#apiv3siretsirennicpost) | **POST** /api/v3/siret/{siren}/{nic} | This endpoint is used to search the siret in the DB from the NIC and the Siret
 
-# **apiV3SiretSearchPost**
-> \EvoliaV3\Model\SiretQueryResult[] apiV3SiretSearchPost($body)
+# **apiV3SiretSirenNicPost**
+> \EvoliaV3\Model\SiretQueryResult[] apiV3SiretSirenNicPost($siren, $nic)
 
 This endpoint is used to search the siret in the DB from the NIC and the Siret
 
@@ -28,13 +28,14 @@ $apiInstance = new EvoliaV3\SDK\SiretApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \EvoliaV3\Model\SiretRequest(); // \EvoliaV3\Model\SiretRequest | 
+$siren = "siren_example"; // string | 
+$nic = "nic_example"; // string | 
 
 try {
-    $result = $apiInstance->apiV3SiretSearchPost($body);
+    $result = $apiInstance->apiV3SiretSirenNicPost($siren, $nic);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SiretApi->apiV3SiretSearchPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SiretApi->apiV3SiretSirenNicPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -43,7 +44,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\EvoliaV3\Model\SiretRequest**](../Model/SiretRequest.md)|  | [optional]
+ **siren** | **string**|  |
+ **nic** | **string**|  |
 
 ### Return type
 
@@ -55,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)

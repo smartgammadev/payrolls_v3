@@ -5,6 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **designation** | **string** |  | [optional] 
 **adresse1** | **string** |  | [optional] 
+**adresse2** | **string** |  | [optional] 
+**adresse3** | **string** |  | [optional] 
 **cp** | **string** |  | [optional] 
 **commune** | **string** |  | [optional] 
 **insee** | **string** |  | [optional] 

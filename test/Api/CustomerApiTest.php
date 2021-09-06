@@ -71,22 +71,22 @@ class CustomerApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for apiV3CustomerIdRefPost
+     * Test case for apiV3CustomerIdRefPut
      *
      * update the Customer.
      *
      */
-    public function testApiV3CustomerIdRefPost()
+    public function testApiV3CustomerIdRefPut()
     {
     }
 
     /**
-     * Test case for apiV3CustomerPut
+     * Test case for apiV3CustomerPost
      *
      * Import the Customer.
      *
      */
-    public function testApiV3CustomerPut()
+    public function testApiV3CustomerPost()
     {
     }
 }

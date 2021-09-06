@@ -4,10 +4,10 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Payrol
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV3AdminInitializationGet**](AdminApi.md#apiv3admininitializationget) | **GET** /api/v3/Admin/initialization | Used to create (if needed) the local SQLite Database  And create the default appID/appSecret
+[**apiV3AdminInitializationPost**](AdminApi.md#apiv3admininitializationpost) | **POST** /api/v3/admin/initialization | Used to create (if needed) the local SQLite Database  And create the default appID/appSecret
 
-# **apiV3AdminInitializationGet**
-> \EvoliaV3\Model\User apiV3AdminInitializationGet()
+# **apiV3AdminInitializationPost**
+> \EvoliaV3\Model\User apiV3AdminInitializationPost()
 
 Used to create (if needed) the local SQLite Database  And create the default appID/appSecret
 
@@ -28,10 +28,10 @@ $apiInstance = new EvoliaV3\SDK\AdminApi(
 );
 
 try {
-    $result = $apiInstance->apiV3AdminInitializationGet();
+    $result = $apiInstance->apiV3AdminInitializationPost();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AdminApi->apiV3AdminInitializationGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AdminApi->apiV3AdminInitializationPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

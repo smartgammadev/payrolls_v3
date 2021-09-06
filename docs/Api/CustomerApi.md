@@ -4,11 +4,11 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Payrol
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV3CustomerIdRefPost**](CustomerApi.md#apiv3customeridrefpost) | **POST** /api/v3/Customer/{idRef} | update the Customer
-[**apiV3CustomerPut**](CustomerApi.md#apiv3customerput) | **PUT** /api/v3/Customer | Import the Customer
+[**apiV3CustomerIdRefPut**](CustomerApi.md#apiv3customeridrefput) | **PUT** /api/v3/customer/{idRef} | update the Customer
+[**apiV3CustomerPost**](CustomerApi.md#apiv3customerpost) | **POST** /api/v3/customer | Import the Customer
 
-# **apiV3CustomerIdRefPost**
-> \EvoliaV3\Model\SuccessResponse apiV3CustomerIdRefPost($id_ref, $body)
+# **apiV3CustomerIdRefPut**
+> \EvoliaV3\Model\SuccessResponse apiV3CustomerIdRefPut($id_ref, $body)
 
 update the Customer
 
@@ -31,10 +31,10 @@ $id_ref = 56; // int |
 $body = new \EvoliaV3\Model\CustomerRequest(); // \EvoliaV3\Model\CustomerRequest | 
 
 try {
-    $result = $apiInstance->apiV3CustomerIdRefPost($id_ref, $body);
+    $result = $apiInstance->apiV3CustomerIdRefPut($id_ref, $body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->apiV3CustomerIdRefPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomerApi->apiV3CustomerIdRefPut: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -61,8 +61,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **apiV3CustomerPut**
-> \EvoliaV3\Model\SuccessResponse apiV3CustomerPut($body)
+# **apiV3CustomerPost**
+> \EvoliaV3\Model\SuccessResponse apiV3CustomerPost($body)
 
 Import the Customer
 
@@ -84,10 +84,10 @@ $apiInstance = new EvoliaV3\SDK\CustomerApi(
 $body = new \EvoliaV3\Model\CustomerRequest(); // \EvoliaV3\Model\CustomerRequest | 
 
 try {
-    $result = $apiInstance->apiV3CustomerPut($body);
+    $result = $apiInstance->apiV3CustomerPost($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CustomerApi->apiV3CustomerPut: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CustomerApi->apiV3CustomerPost: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

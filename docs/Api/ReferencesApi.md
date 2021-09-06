@@ -4,10 +4,10 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Payrol
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV3ReferencesListGet**](ReferencesApi.md#apiv3referenceslistget) | **GET** /api/v3/References/List | Get all the references from the database
+[**apiV3ReferencesGet**](ReferencesApi.md#apiv3referencesget) | **GET** /api/v3/references | Get all the references from the database
 
-# **apiV3ReferencesListGet**
-> \EvoliaV3\Model\ReferencesResponse apiV3ReferencesListGet()
+# **apiV3ReferencesGet**
+> \EvoliaV3\Model\ReferencesResponse apiV3ReferencesGet()
 
 Get all the references from the database
 
@@ -28,10 +28,10 @@ $apiInstance = new EvoliaV3\SDK\ReferencesApi(
 );
 
 try {
-    $result = $apiInstance->apiV3ReferencesListGet();
+    $result = $apiInstance->apiV3ReferencesGet();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ReferencesApi->apiV3ReferencesListGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ReferencesApi->apiV3ReferencesGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
