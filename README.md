@@ -110,6 +110,7 @@ Class | Method | HTTP request | Description
  - [CustomerRequest](docs/Model/CustomerRequest.md)
  - [ErrorDetails](docs/Model/ErrorDetails.md)
  - [HealthCheck](docs/Model/HealthCheck.md)
+ - [InlineResponse200](docs/Model/InlineResponse200.md)
  - [MissionPlace](docs/Model/MissionPlace.md)
  - [ProblemDetails](docs/Model/ProblemDetails.md)
  - [ReferenceItem](docs/Model/ReferenceItem.md)

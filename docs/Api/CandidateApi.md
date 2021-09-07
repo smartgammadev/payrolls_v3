@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **apiV3CandidatesIdAgencyNumSecuNumSecuClePost**
-> \EvoliaV3\Model\Candidate apiV3CandidatesIdAgencyNumSecuNumSecuClePost($id_agency, $num_secu, $num_secu_cle)
+> \EvoliaV3\Model\InlineResponse200 apiV3CandidatesIdAgencyNumSecuNumSecuClePost($id_agency, $num_secu, $num_secu_cle)
 
 Test if the Candidate exists
 
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\EvoliaV3\Model\Candidate**](../Model/Candidate.md)
+[**\EvoliaV3\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 

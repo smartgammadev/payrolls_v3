@@ -376,7 +376,7 @@ class CandidateApi
      *
      * @throws \EvoliaV3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \EvoliaV3\Model\Candidate
+     * @return \EvoliaV3\Model\InlineResponse200
      */
     public function apiV3CandidatesIdAgencyNumSecuNumSecuClePost($id_agency, $num_secu, $num_secu_cle)
     {
@@ -395,11 +395,11 @@ class CandidateApi
      *
      * @throws \EvoliaV3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \EvoliaV3\Model\Candidate, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EvoliaV3\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV3CandidatesIdAgencyNumSecuNumSecuClePostWithHttpInfo($id_agency, $num_secu, $num_secu_cle)
     {
-        $returnType = '\EvoliaV3\Model\Candidate';
+        $returnType = '\EvoliaV3\Model\InlineResponse200';
         $request = $this->apiV3CandidatesIdAgencyNumSecuNumSecuClePostRequest($id_agency, $num_secu, $num_secu_cle);
 
         try {
@@ -451,7 +451,7 @@ class CandidateApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EvoliaV3\Model\Candidate',
+                        '\EvoliaV3\Model\InlineResponse200',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -521,7 +521,7 @@ class CandidateApi
      */
     public function apiV3CandidatesIdAgencyNumSecuNumSecuClePostAsyncWithHttpInfo($id_agency, $num_secu, $num_secu_cle)
     {
-        $returnType = '\EvoliaV3\Model\Candidate';
+        $returnType = '\EvoliaV3\Model\InlineResponse200';
         $request = $this->apiV3CandidatesIdAgencyNumSecuNumSecuClePostRequest($id_agency, $num_secu, $num_secu_cle);
 
         return $this->client
