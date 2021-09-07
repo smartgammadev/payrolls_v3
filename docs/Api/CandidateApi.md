@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **apiV3CandidatesPut**
-> \EvoliaV3\Model\Candidate apiV3CandidatesPut($body)
+> \EvoliaV3\Model\SuccessResponse apiV3CandidatesPut($body)
 
 Import the Candidate
 
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\EvoliaV3\Model\Candidate**](../Model/Candidate.md)
+[**\EvoliaV3\Model\SuccessResponse**](../Model/SuccessResponse.md)
 
 ### Authorization
 
