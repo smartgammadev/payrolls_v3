@@ -56,14 +56,15 @@ class SiretQueryResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'company_name' => 'string',
+        'client_id' => 'int',
+'site_ref' => 'int',
+'company_name' => 'string',
 'registration_number' => 'string',
 'site_name' => 'string',
 'address' => 'string',
 'zip_code' => 'string',
 'city' => 'string',
-'country' => 'string',
-'site_ref' => 'int'    ];
+'country' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -71,14 +72,15 @@ class SiretQueryResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'company_name' => null,
+        'client_id' => 'int32',
+'site_ref' => 'int32',
+'company_name' => null,
 'registration_number' => null,
 'site_name' => null,
 'address' => null,
 'zip_code' => null,
 'city' => null,
-'country' => null,
-'site_ref' => 'int32'    ];
+'country' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -107,14 +109,15 @@ class SiretQueryResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'company_name' => 'companyName',
+        'client_id' => 'clientId',
+'site_ref' => 'siteRef',
+'company_name' => 'companyName',
 'registration_number' => 'registrationNumber',
 'site_name' => 'siteName',
 'address' => 'address',
 'zip_code' => 'zipCode',
 'city' => 'city',
-'country' => 'country',
-'site_ref' => 'siteRef'    ];
+'country' => 'country'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -122,14 +125,15 @@ class SiretQueryResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'company_name' => 'setCompanyName',
+        'client_id' => 'setClientId',
+'site_ref' => 'setSiteRef',
+'company_name' => 'setCompanyName',
 'registration_number' => 'setRegistrationNumber',
 'site_name' => 'setSiteName',
 'address' => 'setAddress',
 'zip_code' => 'setZipCode',
 'city' => 'setCity',
-'country' => 'setCountry',
-'site_ref' => 'setSiteRef'    ];
+'country' => 'setCountry'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -137,14 +141,15 @@ class SiretQueryResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'company_name' => 'getCompanyName',
+        'client_id' => 'getClientId',
+'site_ref' => 'getSiteRef',
+'company_name' => 'getCompanyName',
 'registration_number' => 'getRegistrationNumber',
 'site_name' => 'getSiteName',
 'address' => 'getAddress',
 'zip_code' => 'getZipCode',
 'city' => 'getCity',
-'country' => 'getCountry',
-'site_ref' => 'getSiteRef'    ];
+'country' => 'getCountry'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -204,6 +209,8 @@ class SiretQueryResult implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['client_id'] = isset($data['client_id']) ? $data['client_id'] : null;
+        $this->container['site_ref'] = isset($data['site_ref']) ? $data['site_ref'] : null;
         $this->container['company_name'] = isset($data['company_name']) ? $data['company_name'] : null;
         $this->container['registration_number'] = isset($data['registration_number']) ? $data['registration_number'] : null;
         $this->container['site_name'] = isset($data['site_name']) ? $data['site_name'] : null;
@@ -211,7 +218,6 @@ class SiretQueryResult implements ModelInterface, ArrayAccess
         $this->container['zip_code'] = isset($data['zip_code']) ? $data['zip_code'] : null;
         $this->container['city'] = isset($data['city']) ? $data['city'] : null;
         $this->container['country'] = isset($data['country']) ? $data['country'] : null;
-        $this->container['site_ref'] = isset($data['site_ref']) ? $data['site_ref'] : null;
     }
 
     /**
@@ -237,6 +243,54 @@ class SiretQueryResult implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets client_id
+     *
+     * @return int
+     */
+    public function getClientId()
+    {
+        return $this->container['client_id'];
+    }
+
+    /**
+     * Sets client_id
+     *
+     * @param int $client_id client_id
+     *
+     * @return $this
+     */
+    public function setClientId($client_id)
+    {
+        $this->container['client_id'] = $client_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets site_ref
+     *
+     * @return int
+     */
+    public function getSiteRef()
+    {
+        return $this->container['site_ref'];
+    }
+
+    /**
+     * Sets site_ref
+     *
+     * @param int $site_ref site_ref
+     *
+     * @return $this
+     */
+    public function setSiteRef($site_ref)
+    {
+        $this->container['site_ref'] = $site_ref;
+
+        return $this;
+    }
 
     /**
      * Gets company_name
@@ -402,30 +456,6 @@ class SiretQueryResult implements ModelInterface, ArrayAccess
     public function setCountry($country)
     {
         $this->container['country'] = $country;
-
-        return $this;
-    }
-
-    /**
-     * Gets site_ref
-     *
-     * @return int
-     */
-    public function getSiteRef()
-    {
-        return $this->container['site_ref'];
-    }
-
-    /**
-     * Sets site_ref
-     *
-     * @param int $site_ref site_ref
-     *
-     * @return $this
-     */
-    public function setSiteRef($site_ref)
-    {
-        $this->container['site_ref'] = $site_ref;
 
         return $this;
     }

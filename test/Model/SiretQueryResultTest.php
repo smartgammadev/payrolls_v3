@@ -76,6 +76,20 @@ class SiretQueryResultTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "client_id"
+     */
+    public function testPropertyClientId()
+    {
+    }
+
+    /**
+     * Test attribute "site_ref"
+     */
+    public function testPropertySiteRef()
+    {
+    }
+
+    /**
      * Test attribute "company_name"
      */
     public function testPropertyCompanyName()
@@ -121,13 +135,6 @@ class SiretQueryResultTest extends \PHPUnit_Framework_TestCase
      * Test attribute "country"
      */
     public function testPropertyCountry()
-    {
-    }
-
-    /**
-     * Test attribute "site_ref"
-     */
-    public function testPropertySiteRef()
     {
     }
 }

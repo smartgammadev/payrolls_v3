@@ -56,7 +56,7 @@ class ReferenceItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'ref' => 'string',
+        'reference' => 'string',
 'title' => 'string',
 'billing_term' => 'string',
 'iso' => 'string',
@@ -70,7 +70,7 @@ class ReferenceItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'ref' => null,
+        'reference' => null,
 'title' => null,
 'billing_term' => null,
 'iso' => null,
@@ -105,9 +105,9 @@ class ReferenceItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'ref' => 'ref',
+        'reference' => 'reference',
 'title' => 'title',
-'billing_term' => 'billing_term',
+'billing_term' => 'billingTerm',
 'iso' => 'iso',
 'iso2' => 'iso2',
 'iso3' => 'iso3',
@@ -119,7 +119,7 @@ class ReferenceItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'ref' => 'setRef',
+        'reference' => 'setReference',
 'title' => 'setTitle',
 'billing_term' => 'setBillingTerm',
 'iso' => 'setIso',
@@ -133,7 +133,7 @@ class ReferenceItem implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'ref' => 'getRef',
+        'reference' => 'getReference',
 'title' => 'getTitle',
 'billing_term' => 'getBillingTerm',
 'iso' => 'getIso',
@@ -199,7 +199,7 @@ class ReferenceItem implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['ref'] = isset($data['ref']) ? $data['ref'] : null;
+        $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['billing_term'] = isset($data['billing_term']) ? $data['billing_term'] : null;
         $this->container['iso'] = isset($data['iso']) ? $data['iso'] : null;
@@ -233,25 +233,25 @@ class ReferenceItem implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets ref
+     * Gets reference
      *
      * @return string
      */
-    public function getRef()
+    public function getReference()
     {
-        return $this->container['ref'];
+        return $this->container['reference'];
     }
 
     /**
-     * Sets ref
+     * Sets reference
      *
-     * @param string $ref ref
+     * @param string $reference reference
      *
      * @return $this
      */
-    public function setRef($ref)
+    public function setReference($reference)
     {
-        $this->container['ref'] = $ref;
+        $this->container['reference'] = $reference;
 
         return $this;
     }

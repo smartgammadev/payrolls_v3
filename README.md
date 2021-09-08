@@ -104,6 +104,7 @@ Class | Method | HTTP request | Description
  - [AuthenticationResponse](docs/Model/AuthenticationResponse.md)
  - [Candidate](docs/Model/Candidate.md)
  - [CandidateDpae](docs/Model/CandidateDpae.md)
+ - [CandidateResult](docs/Model/CandidateResult.md)
  - [ClientRequest](docs/Model/ClientRequest.md)
  - [Contract](docs/Model/Contract.md)
  - [ContractChanges](docs/Model/ContractChanges.md)

@@ -76,9 +76,9 @@ class ReferenceItemTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "ref"
+     * Test attribute "reference"
      */
-    public function testPropertyRef()
+    public function testPropertyReference()
     {
     }
 

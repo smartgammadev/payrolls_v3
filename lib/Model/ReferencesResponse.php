@@ -56,7 +56,7 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'bookkeeping_variables' => '\EvoliaV3\Model\ReferenceItem[]',
+        'book_keeping_variables' => '\EvoliaV3\Model\ReferenceItem[]',
 'payroll_items' => '\EvoliaV3\Model\ReferenceItem[]',
 'countries' => '\EvoliaV3\Model\ReferenceItem[]',
 'billing_terms' => '\EvoliaV3\Model\ReferenceItem[]',
@@ -72,7 +72,7 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'bookkeeping_variables' => null,
+        'book_keeping_variables' => null,
 'payroll_items' => null,
 'countries' => null,
 'billing_terms' => null,
@@ -109,15 +109,15 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'bookkeeping_variables' => 'bookkeeping_variables',
-'payroll_items' => 'payroll_items',
+        'book_keeping_variables' => 'bookKeepingVariables',
+'payroll_items' => 'payrollItems',
 'countries' => 'countries',
-'billing_terms' => 'billing_terms',
-'employee_statuses' => 'employee_statuses',
+'billing_terms' => 'billingTerms',
+'employee_statuses' => 'employeeStatuses',
 'nationalities' => 'nationalities',
 'jobs' => 'jobs',
-'legal_reasons' => 'legal_reasons',
-'vat_rates' => 'vat_rates'    ];
+'legal_reasons' => 'legalReasons',
+'vat_rates' => 'vatRates'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -125,7 +125,7 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'bookkeeping_variables' => 'setBookkeepingVariables',
+        'book_keeping_variables' => 'setBookKeepingVariables',
 'payroll_items' => 'setPayrollItems',
 'countries' => 'setCountries',
 'billing_terms' => 'setBillingTerms',
@@ -141,7 +141,7 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'bookkeeping_variables' => 'getBookkeepingVariables',
+        'book_keeping_variables' => 'getBookKeepingVariables',
 'payroll_items' => 'getPayrollItems',
 'countries' => 'getCountries',
 'billing_terms' => 'getBillingTerms',
@@ -209,7 +209,7 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['bookkeeping_variables'] = isset($data['bookkeeping_variables']) ? $data['bookkeeping_variables'] : null;
+        $this->container['book_keeping_variables'] = isset($data['book_keeping_variables']) ? $data['book_keeping_variables'] : null;
         $this->container['payroll_items'] = isset($data['payroll_items']) ? $data['payroll_items'] : null;
         $this->container['countries'] = isset($data['countries']) ? $data['countries'] : null;
         $this->container['billing_terms'] = isset($data['billing_terms']) ? $data['billing_terms'] : null;
@@ -245,25 +245,25 @@ class ReferencesResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets bookkeeping_variables
+     * Gets book_keeping_variables
      *
      * @return \EvoliaV3\Model\ReferenceItem[]
      */
-    public function getBookkeepingVariables()
+    public function getBookKeepingVariables()
     {
-        return $this->container['bookkeeping_variables'];
+        return $this->container['book_keeping_variables'];
     }
 
     /**
-     * Sets bookkeeping_variables
+     * Sets book_keeping_variables
      *
-     * @param \EvoliaV3\Model\ReferenceItem[] $bookkeeping_variables bookkeeping_variables
+     * @param \EvoliaV3\Model\ReferenceItem[] $book_keeping_variables book_keeping_variables
      *
      * @return $this
      */
-    public function setBookkeepingVariables($bookkeeping_variables)
+    public function setBookKeepingVariables($book_keeping_variables)
     {
-        $this->container['bookkeeping_variables'] = $bookkeeping_variables;
+        $this->container['book_keeping_variables'] = $book_keeping_variables;
 
         return $this;
     }

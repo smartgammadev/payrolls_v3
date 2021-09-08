@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ref** | **string** |  | [optional] 
+**reference** | **string** |  | [optional] 
 **title** | **string** |  | [optional] 
 **billing_term** | **string** |  | [optional] 
 **iso** | **string** |  | [optional] 
