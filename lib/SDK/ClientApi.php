@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomerApi
+ * ClientApi
  * PHP version 5
  *
  * @category Class
@@ -39,14 +39,14 @@ use EvoliaV3\HeaderSelector;
 use EvoliaV3\ObjectSerializer;
 
 /**
- * CustomerApi Class Doc Comment
+ * ClientApi Class Doc Comment
  *
  * @category Class
  * @package  EvoliaV3
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CustomerApi
+class ClientApi
 {
     /**
      * @var ClientInterface
@@ -87,39 +87,39 @@ class CustomerApi
     }
 
     /**
-     * Operation apiV3CustomerIdRefPut
+     * Operation apiV3ClientIdRefPut
      *
      * update the Customer
      *
      * @param  int $id_ref id_ref (required)
-     * @param  \EvoliaV3\Model\CustomerRequest $body body (optional)
+     * @param  \EvoliaV3\Model\ClientRequest $body body (optional)
      *
      * @throws \EvoliaV3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \EvoliaV3\Model\SuccessResponse
      */
-    public function apiV3CustomerIdRefPut($id_ref, $body = null)
+    public function apiV3ClientIdRefPut($id_ref, $body = null)
     {
-        list($response) = $this->apiV3CustomerIdRefPutWithHttpInfo($id_ref, $body);
+        list($response) = $this->apiV3ClientIdRefPutWithHttpInfo($id_ref, $body);
         return $response;
     }
 
     /**
-     * Operation apiV3CustomerIdRefPutWithHttpInfo
+     * Operation apiV3ClientIdRefPutWithHttpInfo
      *
      * update the Customer
      *
      * @param  int $id_ref (required)
-     * @param  \EvoliaV3\Model\CustomerRequest $body (optional)
+     * @param  \EvoliaV3\Model\ClientRequest $body (optional)
      *
      * @throws \EvoliaV3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \EvoliaV3\Model\SuccessResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiV3CustomerIdRefPutWithHttpInfo($id_ref, $body = null)
+    public function apiV3ClientIdRefPutWithHttpInfo($id_ref, $body = null)
     {
         $returnType = '\EvoliaV3\Model\SuccessResponse';
-        $request = $this->apiV3CustomerIdRefPutRequest($id_ref, $body);
+        $request = $this->apiV3ClientIdRefPutRequest($id_ref, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -205,19 +205,19 @@ class CustomerApi
     }
 
     /**
-     * Operation apiV3CustomerIdRefPutAsync
+     * Operation apiV3ClientIdRefPutAsync
      *
      * update the Customer
      *
      * @param  int $id_ref (required)
-     * @param  \EvoliaV3\Model\CustomerRequest $body (optional)
+     * @param  \EvoliaV3\Model\ClientRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3CustomerIdRefPutAsync($id_ref, $body = null)
+    public function apiV3ClientIdRefPutAsync($id_ref, $body = null)
     {
-        return $this->apiV3CustomerIdRefPutAsyncWithHttpInfo($id_ref, $body)
+        return $this->apiV3ClientIdRefPutAsyncWithHttpInfo($id_ref, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -226,20 +226,20 @@ class CustomerApi
     }
 
     /**
-     * Operation apiV3CustomerIdRefPutAsyncWithHttpInfo
+     * Operation apiV3ClientIdRefPutAsyncWithHttpInfo
      *
      * update the Customer
      *
      * @param  int $id_ref (required)
-     * @param  \EvoliaV3\Model\CustomerRequest $body (optional)
+     * @param  \EvoliaV3\Model\ClientRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3CustomerIdRefPutAsyncWithHttpInfo($id_ref, $body = null)
+    public function apiV3ClientIdRefPutAsyncWithHttpInfo($id_ref, $body = null)
     {
         $returnType = '\EvoliaV3\Model\SuccessResponse';
-        $request = $this->apiV3CustomerIdRefPutRequest($id_ref, $body);
+        $request = $this->apiV3ClientIdRefPutRequest($id_ref, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -279,24 +279,24 @@ class CustomerApi
     }
 
     /**
-     * Create request for operation 'apiV3CustomerIdRefPut'
+     * Create request for operation 'apiV3ClientIdRefPut'
      *
      * @param  int $id_ref (required)
-     * @param  \EvoliaV3\Model\CustomerRequest $body (optional)
+     * @param  \EvoliaV3\Model\ClientRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function apiV3CustomerIdRefPutRequest($id_ref, $body = null)
+    protected function apiV3ClientIdRefPutRequest($id_ref, $body = null)
     {
         // verify the required parameter 'id_ref' is set
         if ($id_ref === null || (is_array($id_ref) && count($id_ref) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_ref when calling apiV3CustomerIdRefPut'
+                'Missing the required parameter $id_ref when calling apiV3ClientIdRefPut'
             );
         }
 
-        $resourcePath = '/api/v3/customer/{idRef}';
+        $resourcePath = '/api/v3/client/{idRef}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -385,37 +385,37 @@ class CustomerApi
     }
 
     /**
-     * Operation apiV3CustomerPost
+     * Operation apiV3ClientPost
      *
      * Import the Customer
      *
-     * @param  \EvoliaV3\Model\CustomerRequest $body body (optional)
+     * @param  \EvoliaV3\Model\ClientRequest $body body (optional)
      *
      * @throws \EvoliaV3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \EvoliaV3\Model\SuccessResponse
      */
-    public function apiV3CustomerPost($body = null)
+    public function apiV3ClientPost($body = null)
     {
-        list($response) = $this->apiV3CustomerPostWithHttpInfo($body);
+        list($response) = $this->apiV3ClientPostWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation apiV3CustomerPostWithHttpInfo
+     * Operation apiV3ClientPostWithHttpInfo
      *
      * Import the Customer
      *
-     * @param  \EvoliaV3\Model\CustomerRequest $body (optional)
+     * @param  \EvoliaV3\Model\ClientRequest $body (optional)
      *
      * @throws \EvoliaV3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \EvoliaV3\Model\SuccessResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiV3CustomerPostWithHttpInfo($body = null)
+    public function apiV3ClientPostWithHttpInfo($body = null)
     {
         $returnType = '\EvoliaV3\Model\SuccessResponse';
-        $request = $this->apiV3CustomerPostRequest($body);
+        $request = $this->apiV3ClientPostRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -493,18 +493,18 @@ class CustomerApi
     }
 
     /**
-     * Operation apiV3CustomerPostAsync
+     * Operation apiV3ClientPostAsync
      *
      * Import the Customer
      *
-     * @param  \EvoliaV3\Model\CustomerRequest $body (optional)
+     * @param  \EvoliaV3\Model\ClientRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3CustomerPostAsync($body = null)
+    public function apiV3ClientPostAsync($body = null)
     {
-        return $this->apiV3CustomerPostAsyncWithHttpInfo($body)
+        return $this->apiV3ClientPostAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -513,19 +513,19 @@ class CustomerApi
     }
 
     /**
-     * Operation apiV3CustomerPostAsyncWithHttpInfo
+     * Operation apiV3ClientPostAsyncWithHttpInfo
      *
      * Import the Customer
      *
-     * @param  \EvoliaV3\Model\CustomerRequest $body (optional)
+     * @param  \EvoliaV3\Model\ClientRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3CustomerPostAsyncWithHttpInfo($body = null)
+    public function apiV3ClientPostAsyncWithHttpInfo($body = null)
     {
         $returnType = '\EvoliaV3\Model\SuccessResponse';
-        $request = $this->apiV3CustomerPostRequest($body);
+        $request = $this->apiV3ClientPostRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -565,17 +565,17 @@ class CustomerApi
     }
 
     /**
-     * Create request for operation 'apiV3CustomerPost'
+     * Create request for operation 'apiV3ClientPost'
      *
-     * @param  \EvoliaV3\Model\CustomerRequest $body (optional)
+     * @param  \EvoliaV3\Model\ClientRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function apiV3CustomerPostRequest($body = null)
+    protected function apiV3ClientPostRequest($body = null)
     {
 
-        $resourcePath = '/api/v3/customer';
+        $resourcePath = '/api/v3/client';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -649,6 +649,291 @@ class CustomerApi
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
             'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation apiV3ClientRegistrationNumberAgencyIdGet
+     *
+     * This endpoint is used to search the siret in the DB from the NIC and the Siret
+     *
+     * @param  string $registration_number registration_number (required)
+     * @param  string $agency_id agency_id (required)
+     *
+     * @throws \EvoliaV3\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \EvoliaV3\Model\SiretQueryResult[]
+     */
+    public function apiV3ClientRegistrationNumberAgencyIdGet($registration_number, $agency_id)
+    {
+        list($response) = $this->apiV3ClientRegistrationNumberAgencyIdGetWithHttpInfo($registration_number, $agency_id);
+        return $response;
+    }
+
+    /**
+     * Operation apiV3ClientRegistrationNumberAgencyIdGetWithHttpInfo
+     *
+     * This endpoint is used to search the siret in the DB from the NIC and the Siret
+     *
+     * @param  string $registration_number (required)
+     * @param  string $agency_id (required)
+     *
+     * @throws \EvoliaV3\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \EvoliaV3\Model\SiretQueryResult[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function apiV3ClientRegistrationNumberAgencyIdGetWithHttpInfo($registration_number, $agency_id)
+    {
+        $returnType = '\EvoliaV3\Model\SiretQueryResult[]';
+        $request = $this->apiV3ClientRegistrationNumberAgencyIdGetRequest($registration_number, $agency_id);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\EvoliaV3\Model\SiretQueryResult[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation apiV3ClientRegistrationNumberAgencyIdGetAsync
+     *
+     * This endpoint is used to search the siret in the DB from the NIC and the Siret
+     *
+     * @param  string $registration_number (required)
+     * @param  string $agency_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function apiV3ClientRegistrationNumberAgencyIdGetAsync($registration_number, $agency_id)
+    {
+        return $this->apiV3ClientRegistrationNumberAgencyIdGetAsyncWithHttpInfo($registration_number, $agency_id)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation apiV3ClientRegistrationNumberAgencyIdGetAsyncWithHttpInfo
+     *
+     * This endpoint is used to search the siret in the DB from the NIC and the Siret
+     *
+     * @param  string $registration_number (required)
+     * @param  string $agency_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function apiV3ClientRegistrationNumberAgencyIdGetAsyncWithHttpInfo($registration_number, $agency_id)
+    {
+        $returnType = '\EvoliaV3\Model\SiretQueryResult[]';
+        $request = $this->apiV3ClientRegistrationNumberAgencyIdGetRequest($registration_number, $agency_id);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'apiV3ClientRegistrationNumberAgencyIdGet'
+     *
+     * @param  string $registration_number (required)
+     * @param  string $agency_id (required)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function apiV3ClientRegistrationNumberAgencyIdGetRequest($registration_number, $agency_id)
+    {
+        // verify the required parameter 'registration_number' is set
+        if ($registration_number === null || (is_array($registration_number) && count($registration_number) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $registration_number when calling apiV3ClientRegistrationNumberAgencyIdGet'
+            );
+        }
+        // verify the required parameter 'agency_id' is set
+        if ($agency_id === null || (is_array($agency_id) && count($agency_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $agency_id when calling apiV3ClientRegistrationNumberAgencyIdGet'
+            );
+        }
+
+        $resourcePath = '/api/v3/client/{registrationNumber}/{agencyId}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($registration_number !== null) {
+            $resourcePath = str_replace(
+                '{' . 'registrationNumber' . '}',
+                ObjectSerializer::toPathValue($registration_number),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($agency_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'agencyId' . '}',
+                ObjectSerializer::toPathValue($agency_id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                []
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+            // // this endpoint requires Bearer token
+            if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+            }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'GET',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody

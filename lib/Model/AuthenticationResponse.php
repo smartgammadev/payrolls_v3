@@ -99,10 +99,10 @@ class AuthenticationResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'access_token' => 'accessToken',
-'expires_in' => 'expiresIn',
-'refresh_token' => 'refreshToken',
-'token_type' => 'tokenType'    ];
+        'access_token' => 'access_token',
+'expires_in' => 'expires_in',
+'refresh_token' => 'refresh_token',
+'token_type' => 'token_type'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)

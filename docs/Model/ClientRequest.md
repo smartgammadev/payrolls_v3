@@ -1,4 +1,4 @@
-# CustomerRequest
+# ClientRequest
 
 ## Properties
 Name | Type | Description | Notes

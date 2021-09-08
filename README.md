@@ -85,13 +85,13 @@ Class | Method | HTTP request | Description
 *CandidateApi* | [**apiV3CandidatesIdAgencyNumSecuNumSecuClePost**](docs/Api/CandidateApi.md#apiv3candidatesidagencynumsecunumsecuclepost) | **POST** /api/v3/candidates/{idAgency}/{numSecu}/{numSecuCle} | Test if the Candidate exists
 *CandidateApi* | [**apiV3CandidatesPost**](docs/Api/CandidateApi.md#apiv3candidatespost) | **POST** /api/v3/candidates | Import the Candidate
 *CandidateApi* | [**apiV3CandidatesPut**](docs/Api/CandidateApi.md#apiv3candidatesput) | **PUT** /api/v3/candidates | Import the Candidate
+*ClientApi* | [**apiV3ClientIdRefPut**](docs/Api/ClientApi.md#apiv3clientidrefput) | **PUT** /api/v3/client/{idRef} | update the Customer
+*ClientApi* | [**apiV3ClientPost**](docs/Api/ClientApi.md#apiv3clientpost) | **POST** /api/v3/client | Import the Customer
+*ClientApi* | [**apiV3ClientRegistrationNumberAgencyIdGet**](docs/Api/ClientApi.md#apiv3clientregistrationnumberagencyidget) | **GET** /api/v3/client/{registrationNumber}/{agencyId} | This endpoint is used to search the siret in the DB from the NIC and the Siret
 *ContractApi* | [**apiV3ContractContractIdPut**](docs/Api/ContractApi.md#apiv3contractcontractidput) | **PUT** /api/v3/contract/{contractId} | Update the Contract information
-*ContractApi* | [**apiV3ContractPost**](docs/Api/ContractApi.md#apiv3contractpost) | **POST** /api/v3/contract | Import the Contract
-*CustomerApi* | [**apiV3CustomerIdRefPut**](docs/Api/CustomerApi.md#apiv3customeridrefput) | **PUT** /api/v3/customer/{idRef} | update the Customer
-*CustomerApi* | [**apiV3CustomerPost**](docs/Api/CustomerApi.md#apiv3customerpost) | **POST** /api/v3/customer | Import the Customer
+*ContractApi* | [**apiV3ContractPut**](docs/Api/ContractApi.md#apiv3contractput) | **PUT** /api/v3/contract | Import the Contract
 *HomeApi* | [**healthGet**](docs/Api/HomeApi.md#healthget) | **GET** /health | This endpoint is used to test the server&#x27;s health
 *ReferencesApi* | [**apiV3ReferencesGet**](docs/Api/ReferencesApi.md#apiv3referencesget) | **GET** /api/v3/references | Get all the references from the database
-*SiretApi* | [**apiV3SiretSirenNicPost**](docs/Api/SiretApi.md#apiv3siretsirennicpost) | **POST** /api/v3/siret/{siren}/{nic} | This endpoint is used to search the siret in the DB from the NIC and the Siret
 *TokenApi* | [**apiV3TokenRefreshPost**](docs/Api/TokenApi.md#apiv3tokenrefreshpost) | **POST** /api/v3/token/refresh | 
 *TokenApi* | [**apiV3TokenRefreshTokenDelete**](docs/Api/TokenApi.md#apiv3tokenrefreshtokendelete) | **DELETE** /api/v3/token/{refreshToken} | 
 *UserApi* | [**apiV3UserLoginPost**](docs/Api/UserApi.md#apiv3userloginpost) | **POST** /api/v3/user/login | 
@@ -104,13 +104,12 @@ Class | Method | HTTP request | Description
  - [AuthenticationResponse](docs/Model/AuthenticationResponse.md)
  - [Candidate](docs/Model/Candidate.md)
  - [CandidateDpae](docs/Model/CandidateDpae.md)
+ - [ClientRequest](docs/Model/ClientRequest.md)
  - [Contract](docs/Model/Contract.md)
- - [ContractSignUpdate](docs/Model/ContractSignUpdate.md)
+ - [ContractChanges](docs/Model/ContractChanges.md)
  - [ContractualData](docs/Model/ContractualData.md)
- - [CustomerRequest](docs/Model/CustomerRequest.md)
  - [ErrorDetails](docs/Model/ErrorDetails.md)
  - [HealthCheck](docs/Model/HealthCheck.md)
- - [InlineResponse200](docs/Model/InlineResponse200.md)
  - [MissionPlace](docs/Model/MissionPlace.md)
  - [ProblemDetails](docs/Model/ProblemDetails.md)
  - [ReferenceItem](docs/Model/ReferenceItem.md)

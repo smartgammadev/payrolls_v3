@@ -56,13 +56,14 @@ class SiretQueryResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-'name' => 'string',
-'adr1' => 'string',
-'postal_code' => 'string',
+        'company_name' => 'string',
+'registration_number' => 'string',
+'site_name' => 'string',
+'address' => 'string',
+'zip_code' => 'string',
 'city' => 'string',
-'phone' => 'string',
-'email' => 'string'    ];
+'country' => 'string',
+'site_ref' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -70,13 +71,14 @@ class SiretQueryResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => 'int32',
-'name' => null,
-'adr1' => null,
-'postal_code' => null,
+        'company_name' => null,
+'registration_number' => null,
+'site_name' => null,
+'address' => null,
+'zip_code' => null,
 'city' => null,
-'phone' => null,
-'email' => null    ];
+'country' => null,
+'site_ref' => 'int32'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -105,13 +107,14 @@ class SiretQueryResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-'name' => 'name',
-'adr1' => 'adr1',
-'postal_code' => 'postalCode',
+        'company_name' => 'companyName',
+'registration_number' => 'registrationNumber',
+'site_name' => 'siteName',
+'address' => 'address',
+'zip_code' => 'zipCode',
 'city' => 'city',
-'phone' => 'phone',
-'email' => 'email'    ];
+'country' => 'country',
+'site_ref' => 'siteRef'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -119,13 +122,14 @@ class SiretQueryResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-'name' => 'setName',
-'adr1' => 'setAdr1',
-'postal_code' => 'setPostalCode',
+        'company_name' => 'setCompanyName',
+'registration_number' => 'setRegistrationNumber',
+'site_name' => 'setSiteName',
+'address' => 'setAddress',
+'zip_code' => 'setZipCode',
 'city' => 'setCity',
-'phone' => 'setPhone',
-'email' => 'setEmail'    ];
+'country' => 'setCountry',
+'site_ref' => 'setSiteRef'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -133,13 +137,14 @@ class SiretQueryResult implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-'name' => 'getName',
-'adr1' => 'getAdr1',
-'postal_code' => 'getPostalCode',
+        'company_name' => 'getCompanyName',
+'registration_number' => 'getRegistrationNumber',
+'site_name' => 'getSiteName',
+'address' => 'getAddress',
+'zip_code' => 'getZipCode',
 'city' => 'getCity',
-'phone' => 'getPhone',
-'email' => 'getEmail'    ];
+'country' => 'getCountry',
+'site_ref' => 'getSiteRef'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -199,13 +204,14 @@ class SiretQueryResult implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['adr1'] = isset($data['adr1']) ? $data['adr1'] : null;
-        $this->container['postal_code'] = isset($data['postal_code']) ? $data['postal_code'] : null;
+        $this->container['company_name'] = isset($data['company_name']) ? $data['company_name'] : null;
+        $this->container['registration_number'] = isset($data['registration_number']) ? $data['registration_number'] : null;
+        $this->container['site_name'] = isset($data['site_name']) ? $data['site_name'] : null;
+        $this->container['address'] = isset($data['address']) ? $data['address'] : null;
+        $this->container['zip_code'] = isset($data['zip_code']) ? $data['zip_code'] : null;
         $this->container['city'] = isset($data['city']) ? $data['city'] : null;
-        $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
-        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['country'] = isset($data['country']) ? $data['country'] : null;
+        $this->container['site_ref'] = isset($data['site_ref']) ? $data['site_ref'] : null;
     }
 
     /**
@@ -233,97 +239,121 @@ class SiretQueryResult implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets company_name
      *
-     * @return int
+     * @return string
      */
-    public function getId()
+    public function getCompanyName()
     {
-        return $this->container['id'];
+        return $this->container['company_name'];
     }
 
     /**
-     * Sets id
+     * Sets company_name
      *
-     * @param int $id id
+     * @param string $company_name company_name
      *
      * @return $this
      */
-    public function setId($id)
+    public function setCompanyName($company_name)
     {
-        $this->container['id'] = $id;
+        $this->container['company_name'] = $company_name;
 
         return $this;
     }
 
     /**
-     * Gets name
+     * Gets registration_number
      *
      * @return string
      */
-    public function getName()
+    public function getRegistrationNumber()
     {
-        return $this->container['name'];
+        return $this->container['registration_number'];
     }
 
     /**
-     * Sets name
+     * Sets registration_number
      *
-     * @param string $name name
+     * @param string $registration_number registration_number
      *
      * @return $this
      */
-    public function setName($name)
+    public function setRegistrationNumber($registration_number)
     {
-        $this->container['name'] = $name;
+        $this->container['registration_number'] = $registration_number;
 
         return $this;
     }
 
     /**
-     * Gets adr1
+     * Gets site_name
      *
      * @return string
      */
-    public function getAdr1()
+    public function getSiteName()
     {
-        return $this->container['adr1'];
+        return $this->container['site_name'];
     }
 
     /**
-     * Sets adr1
+     * Sets site_name
      *
-     * @param string $adr1 adr1
+     * @param string $site_name site_name
      *
      * @return $this
      */
-    public function setAdr1($adr1)
+    public function setSiteName($site_name)
     {
-        $this->container['adr1'] = $adr1;
+        $this->container['site_name'] = $site_name;
 
         return $this;
     }
 
     /**
-     * Gets postal_code
+     * Gets address
      *
      * @return string
      */
-    public function getPostalCode()
+    public function getAddress()
     {
-        return $this->container['postal_code'];
+        return $this->container['address'];
     }
 
     /**
-     * Sets postal_code
+     * Sets address
      *
-     * @param string $postal_code postal_code
+     * @param string $address address
      *
      * @return $this
      */
-    public function setPostalCode($postal_code)
+    public function setAddress($address)
     {
-        $this->container['postal_code'] = $postal_code;
+        $this->container['address'] = $address;
+
+        return $this;
+    }
+
+    /**
+     * Gets zip_code
+     *
+     * @return string
+     */
+    public function getZipCode()
+    {
+        return $this->container['zip_code'];
+    }
+
+    /**
+     * Sets zip_code
+     *
+     * @param string $zip_code zip_code
+     *
+     * @return $this
+     */
+    public function setZipCode($zip_code)
+    {
+        $this->container['zip_code'] = $zip_code;
 
         return $this;
     }
@@ -353,49 +383,49 @@ class SiretQueryResult implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets phone
+     * Gets country
      *
      * @return string
      */
-    public function getPhone()
+    public function getCountry()
     {
-        return $this->container['phone'];
+        return $this->container['country'];
     }
 
     /**
-     * Sets phone
+     * Sets country
      *
-     * @param string $phone phone
+     * @param string $country country
      *
      * @return $this
      */
-    public function setPhone($phone)
+    public function setCountry($country)
     {
-        $this->container['phone'] = $phone;
+        $this->container['country'] = $country;
 
         return $this;
     }
 
     /**
-     * Gets email
+     * Gets site_ref
      *
-     * @return string
+     * @return int
      */
-    public function getEmail()
+    public function getSiteRef()
     {
-        return $this->container['email'];
+        return $this->container['site_ref'];
     }
 
     /**
-     * Sets email
+     * Sets site_ref
      *
-     * @param string $email email
+     * @param int $site_ref site_ref
      *
      * @return $this
      */
-    public function setEmail($email)
+    public function setSiteRef($site_ref)
     {
-        $this->container['email'] = $email;
+        $this->container['site_ref'] = $site_ref;
 
         return $this;
     }

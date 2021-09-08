@@ -92,7 +92,7 @@ class ContractApi
      * Update the Contract information
      *
      * @param  string $contract_id contract_id (required)
-     * @param  \EvoliaV3\Model\ContractSignUpdate $body body (optional)
+     * @param  \EvoliaV3\Model\ContractChanges $body body (optional)
      *
      * @throws \EvoliaV3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -110,7 +110,7 @@ class ContractApi
      * Update the Contract information
      *
      * @param  string $contract_id (required)
-     * @param  \EvoliaV3\Model\ContractSignUpdate $body (optional)
+     * @param  \EvoliaV3\Model\ContractChanges $body (optional)
      *
      * @throws \EvoliaV3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -210,7 +210,7 @@ class ContractApi
      * Update the Contract information
      *
      * @param  string $contract_id (required)
-     * @param  \EvoliaV3\Model\ContractSignUpdate $body (optional)
+     * @param  \EvoliaV3\Model\ContractChanges $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -231,7 +231,7 @@ class ContractApi
      * Update the Contract information
      *
      * @param  string $contract_id (required)
-     * @param  \EvoliaV3\Model\ContractSignUpdate $body (optional)
+     * @param  \EvoliaV3\Model\ContractChanges $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -282,7 +282,7 @@ class ContractApi
      * Create request for operation 'apiV3ContractContractIdPut'
      *
      * @param  string $contract_id (required)
-     * @param  \EvoliaV3\Model\ContractSignUpdate $body (optional)
+     * @param  \EvoliaV3\Model\ContractChanges $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -385,7 +385,7 @@ class ContractApi
     }
 
     /**
-     * Operation apiV3ContractPost
+     * Operation apiV3ContractPut
      *
      * Import the Contract
      *
@@ -395,14 +395,14 @@ class ContractApi
      * @throws \InvalidArgumentException
      * @return \EvoliaV3\Model\SuccessResponse
      */
-    public function apiV3ContractPost($body = null)
+    public function apiV3ContractPut($body = null)
     {
-        list($response) = $this->apiV3ContractPostWithHttpInfo($body);
+        list($response) = $this->apiV3ContractPutWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation apiV3ContractPostWithHttpInfo
+     * Operation apiV3ContractPutWithHttpInfo
      *
      * Import the Contract
      *
@@ -412,10 +412,10 @@ class ContractApi
      * @throws \InvalidArgumentException
      * @return array of \EvoliaV3\Model\SuccessResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiV3ContractPostWithHttpInfo($body = null)
+    public function apiV3ContractPutWithHttpInfo($body = null)
     {
         $returnType = '\EvoliaV3\Model\SuccessResponse';
-        $request = $this->apiV3ContractPostRequest($body);
+        $request = $this->apiV3ContractPutRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -493,7 +493,7 @@ class ContractApi
     }
 
     /**
-     * Operation apiV3ContractPostAsync
+     * Operation apiV3ContractPutAsync
      *
      * Import the Contract
      *
@@ -502,9 +502,9 @@ class ContractApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3ContractPostAsync($body = null)
+    public function apiV3ContractPutAsync($body = null)
     {
-        return $this->apiV3ContractPostAsyncWithHttpInfo($body)
+        return $this->apiV3ContractPutAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -513,7 +513,7 @@ class ContractApi
     }
 
     /**
-     * Operation apiV3ContractPostAsyncWithHttpInfo
+     * Operation apiV3ContractPutAsyncWithHttpInfo
      *
      * Import the Contract
      *
@@ -522,10 +522,10 @@ class ContractApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3ContractPostAsyncWithHttpInfo($body = null)
+    public function apiV3ContractPutAsyncWithHttpInfo($body = null)
     {
         $returnType = '\EvoliaV3\Model\SuccessResponse';
-        $request = $this->apiV3ContractPostRequest($body);
+        $request = $this->apiV3ContractPutRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -565,14 +565,14 @@ class ContractApi
     }
 
     /**
-     * Create request for operation 'apiV3ContractPost'
+     * Create request for operation 'apiV3ContractPut'
      *
      * @param  \EvoliaV3\Model\Contract $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function apiV3ContractPostRequest($body = null)
+    protected function apiV3ContractPutRequest($body = null)
     {
 
         $resourcePath = '/api/v3/contract';
@@ -648,7 +648,7 @@ class ContractApi
 
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
-            'POST',
+            'PUT',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody

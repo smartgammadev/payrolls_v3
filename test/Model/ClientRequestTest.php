@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomerRequestTest
+ * ClientRequestTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace EvoliaV3;
 
 /**
- * CustomerRequestTest Class Doc Comment
+ * ClientRequestTest Class Doc Comment
  *
  * @category    Class
- * @description CustomerRequest
+ * @description ClientRequest
  * @package     EvoliaV3
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class CustomerRequestTest extends \PHPUnit_Framework_TestCase
+class ClientRequestTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,9 +69,9 @@ class CustomerRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "CustomerRequest"
+     * Test "ClientRequest"
      */
-    public function testCustomerRequest()
+    public function testClientRequest()
     {
     }
 

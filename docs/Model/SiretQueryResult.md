@@ -3,13 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
-**name** | **string** |  | [optional] 
-**adr1** | **string** |  | [optional] 
-**postal_code** | **string** |  | [optional] 
+**company_name** | **string** |  | [optional] 
+**registration_number** | **string** |  | [optional] 
+**site_name** | **string** |  | [optional] 
+**address** | **string** |  | [optional] 
+**zip_code** | **string** |  | [optional] 
 **city** | **string** |  | [optional] 
-**phone** | **string** |  | [optional] 
-**email** | **string** |  | [optional] 
+**country** | **string** |  | [optional] 
+**site_ref** | **int** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

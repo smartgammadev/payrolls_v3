@@ -5,7 +5,7 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Payrol
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**apiV3ContractContractIdPut**](ContractApi.md#apiv3contractcontractidput) | **PUT** /api/v3/contract/{contractId} | Update the Contract information
-[**apiV3ContractPost**](ContractApi.md#apiv3contractpost) | **POST** /api/v3/contract | Import the Contract
+[**apiV3ContractPut**](ContractApi.md#apiv3contractput) | **PUT** /api/v3/contract | Import the Contract
 
 # **apiV3ContractContractIdPut**
 > \EvoliaV3\Model\SuccessResponse apiV3ContractContractIdPut($contract_id, $body)
@@ -30,7 +30,7 @@ $apiInstance = new EvoliaV3\SDK\ContractApi(
     $config
 );
 $contract_id = "contract_id_example"; // string | 
-$body = new \EvoliaV3\Model\ContractSignUpdate(); // \EvoliaV3\Model\ContractSignUpdate | 
+$body = new \EvoliaV3\Model\ContractChanges(); // \EvoliaV3\Model\ContractChanges | 
 
 try {
     $result = $apiInstance->apiV3ContractContractIdPut($contract_id, $body);
@@ -46,7 +46,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contract_id** | **string**|  |
- **body** | [**\EvoliaV3\Model\ContractSignUpdate**](../Model/ContractSignUpdate.md)|  | [optional]
+ **body** | [**\EvoliaV3\Model\ContractChanges**](../Model/ContractChanges.md)|  | [optional]
 
 ### Return type
 
@@ -63,8 +63,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **apiV3ContractPost**
-> \EvoliaV3\Model\SuccessResponse apiV3ContractPost($body)
+# **apiV3ContractPut**
+> \EvoliaV3\Model\SuccessResponse apiV3ContractPut($body)
 
 Import the Contract
 
@@ -86,10 +86,10 @@ $apiInstance = new EvoliaV3\SDK\ContractApi(
 $body = new \EvoliaV3\Model\Contract(); // \EvoliaV3\Model\Contract | 
 
 try {
-    $result = $apiInstance->apiV3ContractPost($body);
+    $result = $apiInstance->apiV3ContractPut($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContractApi->apiV3ContractPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ContractApi->apiV3ContractPut: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

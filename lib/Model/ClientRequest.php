@@ -1,6 +1,6 @@
 <?php
 /**
- * CustomerRequest
+ * ClientRequest
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \EvoliaV3\ObjectSerializer;
 
 /**
- * CustomerRequest Class Doc Comment
+ * ClientRequest Class Doc Comment
  *
  * @category Class
  * @package  EvoliaV3
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CustomerRequest implements ModelInterface, ArrayAccess
+class ClientRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class CustomerRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'CustomerRequest';
+    protected static $swaggerModelName = 'ClientRequest';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

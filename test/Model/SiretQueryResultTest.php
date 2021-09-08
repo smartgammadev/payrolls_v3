@@ -76,30 +76,37 @@ class SiretQueryResultTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "company_name"
      */
-    public function testPropertyId()
+    public function testPropertyCompanyName()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "registration_number"
      */
-    public function testPropertyName()
+    public function testPropertyRegistrationNumber()
     {
     }
 
     /**
-     * Test attribute "adr1"
+     * Test attribute "site_name"
      */
-    public function testPropertyAdr1()
+    public function testPropertySiteName()
     {
     }
 
     /**
-     * Test attribute "postal_code"
+     * Test attribute "address"
      */
-    public function testPropertyPostalCode()
+    public function testPropertyAddress()
+    {
+    }
+
+    /**
+     * Test attribute "zip_code"
+     */
+    public function testPropertyZipCode()
     {
     }
 
@@ -111,16 +118,16 @@ class SiretQueryResultTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "phone"
+     * Test attribute "country"
      */
-    public function testPropertyPhone()
+    public function testPropertyCountry()
     {
     }
 
     /**
-     * Test attribute "email"
+     * Test attribute "site_ref"
      */
-    public function testPropertyEmail()
+    public function testPropertySiteRef()
     {
     }
 }

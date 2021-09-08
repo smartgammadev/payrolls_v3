@@ -1,6 +1,6 @@
 <?php
 /**
- * ContractSignUpdate
+ * ContractChanges
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \EvoliaV3\ObjectSerializer;
 
 /**
- * ContractSignUpdate Class Doc Comment
+ * ContractChanges Class Doc Comment
  *
  * @category Class
  * @package  EvoliaV3
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ContractSignUpdate implements ModelInterface, ArrayAccess
+class ContractChanges implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ContractSignUpdate implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ContractSignUpdate';
+    protected static $swaggerModelName = 'ContractChanges';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

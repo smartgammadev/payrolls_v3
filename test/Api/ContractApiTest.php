@@ -81,12 +81,12 @@ class ContractApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for apiV3ContractPost
+     * Test case for apiV3ContractPut
      *
      * Import the Contract.
      *
      */
-    public function testApiV3ContractPost()
+    public function testApiV3ContractPut()
     {
     }
 }
