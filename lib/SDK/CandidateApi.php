@@ -95,7 +95,7 @@ class CandidateApi
      *
      * @throws \EvoliaV3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \EvoliaV3\Model\CandidateDpae
+     * @return \EvoliaV3\Model\SuccessResponse
      */
     public function apiV3CandidatesDpaesPut($body = null)
     {
@@ -112,11 +112,11 @@ class CandidateApi
      *
      * @throws \EvoliaV3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \EvoliaV3\Model\CandidateDpae, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \EvoliaV3\Model\SuccessResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function apiV3CandidatesDpaesPutWithHttpInfo($body = null)
     {
-        $returnType = '\EvoliaV3\Model\CandidateDpae';
+        $returnType = '\EvoliaV3\Model\SuccessResponse';
         $request = $this->apiV3CandidatesDpaesPutRequest($body);
 
         try {
@@ -168,7 +168,7 @@ class CandidateApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EvoliaV3\Model\CandidateDpae',
+                        '\EvoliaV3\Model\SuccessResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -234,7 +234,7 @@ class CandidateApi
      */
     public function apiV3CandidatesDpaesPutAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\EvoliaV3\Model\CandidateDpae';
+        $returnType = '\EvoliaV3\Model\SuccessResponse';
         $request = $this->apiV3CandidatesDpaesPutRequest($body);
 
         return $this->client

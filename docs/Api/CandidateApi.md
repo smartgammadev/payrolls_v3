@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**apiV3CandidatesPut**](CandidateApi.md#apiv3candidatesput) | **PUT** /api/v3/candidates | Import the Candidate
 
 # **apiV3CandidatesDpaesPut**
-> \EvoliaV3\Model\CandidateDpae apiV3CandidatesDpaesPut($body)
+> \EvoliaV3\Model\SuccessResponse apiV3CandidatesDpaesPut($body)
 
 Update the Candidate with DPAE information
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\EvoliaV3\Model\CandidateDpae**](../Model/CandidateDpae.md)
+[**\EvoliaV3\Model\SuccessResponse**](../Model/SuccessResponse.md)
 
 ### Authorization
 
