@@ -87,7 +87,7 @@ class ReferencesApi
     }
 
     /**
-     * Operation apiV3ReferencesGet
+     * Operation getReferences
      *
      * Get all the references from the database
      *
@@ -96,14 +96,14 @@ class ReferencesApi
      * @throws \InvalidArgumentException
      * @return \EvoliaV3\Model\ReferencesResponse
      */
-    public function apiV3ReferencesGet()
+    public function getReferences()
     {
-        list($response) = $this->apiV3ReferencesGetWithHttpInfo();
+        list($response) = $this->getReferencesWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation apiV3ReferencesGetWithHttpInfo
+     * Operation getReferencesWithHttpInfo
      *
      * Get all the references from the database
      *
@@ -112,10 +112,10 @@ class ReferencesApi
      * @throws \InvalidArgumentException
      * @return array of \EvoliaV3\Model\ReferencesResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiV3ReferencesGetWithHttpInfo()
+    public function getReferencesWithHttpInfo()
     {
         $returnType = '\EvoliaV3\Model\ReferencesResponse';
-        $request = $this->apiV3ReferencesGetRequest();
+        $request = $this->getReferencesRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -177,7 +177,7 @@ class ReferencesApi
     }
 
     /**
-     * Operation apiV3ReferencesGetAsync
+     * Operation getReferencesAsync
      *
      * Get all the references from the database
      *
@@ -185,9 +185,9 @@ class ReferencesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3ReferencesGetAsync()
+    public function getReferencesAsync()
     {
-        return $this->apiV3ReferencesGetAsyncWithHttpInfo()
+        return $this->getReferencesAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -196,7 +196,7 @@ class ReferencesApi
     }
 
     /**
-     * Operation apiV3ReferencesGetAsyncWithHttpInfo
+     * Operation getReferencesAsyncWithHttpInfo
      *
      * Get all the references from the database
      *
@@ -204,10 +204,10 @@ class ReferencesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3ReferencesGetAsyncWithHttpInfo()
+    public function getReferencesAsyncWithHttpInfo()
     {
         $returnType = '\EvoliaV3\Model\ReferencesResponse';
-        $request = $this->apiV3ReferencesGetRequest();
+        $request = $this->getReferencesRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -247,13 +247,13 @@ class ReferencesApi
     }
 
     /**
-     * Create request for operation 'apiV3ReferencesGet'
+     * Create request for operation 'getReferences'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function apiV3ReferencesGetRequest()
+    protected function getReferencesRequest()
     {
 
         $resourcePath = '/api/v3/references';

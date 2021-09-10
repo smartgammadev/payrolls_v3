@@ -4,11 +4,11 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Payrol
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV3TokenRefreshPost**](TokenApi.md#apiv3tokenrefreshpost) | **POST** /api/v3/token/refresh | 
-[**apiV3TokenRefreshTokenDelete**](TokenApi.md#apiv3tokenrefreshtokendelete) | **DELETE** /api/v3/token/{refreshToken} | 
+[**refreshToken**](TokenApi.md#refreshtoken) | **POST** /api/v3/token/refresh | 
+[**revokeToken**](TokenApi.md#revoketoken) | **DELETE** /api/v3/token/{refreshToken} | 
 
-# **apiV3TokenRefreshPost**
-> \EvoliaV3\Model\AuthenticationResponse apiV3TokenRefreshPost($body)
+# **refreshToken**
+> \EvoliaV3\Model\AuthenticationResponse refreshToken($body)
 
 
 
@@ -30,10 +30,10 @@ $apiInstance = new EvoliaV3\SDK\TokenApi(
 $body = new \EvoliaV3\Model\RefreshTokenRequest(); // \EvoliaV3\Model\RefreshTokenRequest | 
 
 try {
-    $result = $apiInstance->apiV3TokenRefreshPost($body);
+    $result = $apiInstance->refreshToken($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling TokenApi->apiV3TokenRefreshPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TokenApi->refreshToken: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -59,8 +59,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **apiV3TokenRefreshTokenDelete**
-> apiV3TokenRefreshTokenDelete($refresh_token)
+# **revokeToken**
+> revokeToken($refresh_token)
 
 
 
@@ -82,9 +82,9 @@ $apiInstance = new EvoliaV3\SDK\TokenApi(
 $refresh_token = "refresh_token_example"; // string | 
 
 try {
-    $apiInstance->apiV3TokenRefreshTokenDelete($refresh_token);
+    $apiInstance->revokeToken($refresh_token);
 } catch (Exception $e) {
-    echo 'Exception when calling TokenApi->apiV3TokenRefreshTokenDelete: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling TokenApi->revokeToken: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

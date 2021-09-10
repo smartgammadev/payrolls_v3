@@ -71,32 +71,32 @@ class ClientApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for apiV3ClientIdRefPut
-     *
-     * update the Customer.
-     *
-     */
-    public function testApiV3ClientIdRefPut()
-    {
-    }
-
-    /**
-     * Test case for apiV3ClientPost
-     *
-     * Import the Customer.
-     *
-     */
-    public function testApiV3ClientPost()
-    {
-    }
-
-    /**
-     * Test case for apiV3ClientRegistrationNumberAgencyIdGet
+     * Test case for findClientsBySiret
      *
      * This endpoint is used to search the siret in the DB from the NIC and the Siret.
      *
      */
-    public function testApiV3ClientRegistrationNumberAgencyIdGet()
+    public function testFindClientsBySiret()
+    {
+    }
+
+    /**
+     * Test case for importClient
+     *
+     * Import the Customer.
+     *
+     */
+    public function testImportClient()
+    {
+    }
+
+    /**
+     * Test case for updateClient
+     *
+     * update the Customer.
+     *
+     */
+    public function testUpdateClient()
     {
     }
 }

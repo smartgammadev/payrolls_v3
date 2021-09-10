@@ -71,12 +71,12 @@ class HomeApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for healthGet
+     * Test case for getHealth
      *
      * This endpoint is used to test the server's health.
      *
      */
-    public function testHealthGet()
+    public function testGetHealth()
     {
     }
 }

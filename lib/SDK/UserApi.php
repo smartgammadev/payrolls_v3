@@ -87,7 +87,7 @@ class UserApi
     }
 
     /**
-     * Operation apiV3UserLoginPost
+     * Operation login
      *
      * @param  \EvoliaV3\Model\UserLoginRequest $body body (optional)
      *
@@ -95,14 +95,14 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \EvoliaV3\Model\AuthenticationResponse
      */
-    public function apiV3UserLoginPost($body = null)
+    public function login($body = null)
     {
-        list($response) = $this->apiV3UserLoginPostWithHttpInfo($body);
+        list($response) = $this->loginWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation apiV3UserLoginPostWithHttpInfo
+     * Operation loginWithHttpInfo
      *
      * @param  \EvoliaV3\Model\UserLoginRequest $body (optional)
      *
@@ -110,10 +110,10 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return array of \EvoliaV3\Model\AuthenticationResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiV3UserLoginPostWithHttpInfo($body = null)
+    public function loginWithHttpInfo($body = null)
     {
         $returnType = '\EvoliaV3\Model\AuthenticationResponse';
-        $request = $this->apiV3UserLoginPostRequest($body);
+        $request = $this->loginRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -191,7 +191,7 @@ class UserApi
     }
 
     /**
-     * Operation apiV3UserLoginPostAsync
+     * Operation loginAsync
      *
      * 
      *
@@ -200,9 +200,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3UserLoginPostAsync($body = null)
+    public function loginAsync($body = null)
     {
-        return $this->apiV3UserLoginPostAsyncWithHttpInfo($body)
+        return $this->loginAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -211,7 +211,7 @@ class UserApi
     }
 
     /**
-     * Operation apiV3UserLoginPostAsyncWithHttpInfo
+     * Operation loginAsyncWithHttpInfo
      *
      * 
      *
@@ -220,10 +220,10 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3UserLoginPostAsyncWithHttpInfo($body = null)
+    public function loginAsyncWithHttpInfo($body = null)
     {
         $returnType = '\EvoliaV3\Model\AuthenticationResponse';
-        $request = $this->apiV3UserLoginPostRequest($body);
+        $request = $this->loginRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -263,14 +263,14 @@ class UserApi
     }
 
     /**
-     * Create request for operation 'apiV3UserLoginPost'
+     * Create request for operation 'login'
      *
      * @param  \EvoliaV3\Model\UserLoginRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function apiV3UserLoginPostRequest($body = null)
+    protected function loginRequest($body = null)
     {
 
         $resourcePath = '/api/v3/user/login';
@@ -354,7 +354,7 @@ class UserApi
     }
 
     /**
-     * Operation apiV3UserRegisterPost
+     * Operation registerUser
      *
      * @param  \EvoliaV3\Model\UserRegistrationRequest $body body (optional)
      *
@@ -362,14 +362,14 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \EvoliaV3\Model\AuthenticationResponse
      */
-    public function apiV3UserRegisterPost($body = null)
+    public function registerUser($body = null)
     {
-        list($response) = $this->apiV3UserRegisterPostWithHttpInfo($body);
+        list($response) = $this->registerUserWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation apiV3UserRegisterPostWithHttpInfo
+     * Operation registerUserWithHttpInfo
      *
      * @param  \EvoliaV3\Model\UserRegistrationRequest $body (optional)
      *
@@ -377,10 +377,10 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return array of \EvoliaV3\Model\AuthenticationResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiV3UserRegisterPostWithHttpInfo($body = null)
+    public function registerUserWithHttpInfo($body = null)
     {
         $returnType = '\EvoliaV3\Model\AuthenticationResponse';
-        $request = $this->apiV3UserRegisterPostRequest($body);
+        $request = $this->registerUserRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -450,7 +450,7 @@ class UserApi
     }
 
     /**
-     * Operation apiV3UserRegisterPostAsync
+     * Operation registerUserAsync
      *
      * 
      *
@@ -459,9 +459,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3UserRegisterPostAsync($body = null)
+    public function registerUserAsync($body = null)
     {
-        return $this->apiV3UserRegisterPostAsyncWithHttpInfo($body)
+        return $this->registerUserAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -470,7 +470,7 @@ class UserApi
     }
 
     /**
-     * Operation apiV3UserRegisterPostAsyncWithHttpInfo
+     * Operation registerUserAsyncWithHttpInfo
      *
      * 
      *
@@ -479,10 +479,10 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3UserRegisterPostAsyncWithHttpInfo($body = null)
+    public function registerUserAsyncWithHttpInfo($body = null)
     {
         $returnType = '\EvoliaV3\Model\AuthenticationResponse';
-        $request = $this->apiV3UserRegisterPostRequest($body);
+        $request = $this->registerUserRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -522,17 +522,17 @@ class UserApi
     }
 
     /**
-     * Create request for operation 'apiV3UserRegisterPost'
+     * Create request for operation 'registerUser'
      *
      * @param  \EvoliaV3\Model\UserRegistrationRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function apiV3UserRegisterPostRequest($body = null)
+    protected function registerUserRequest($body = null)
     {
 
-        $resourcePath = '/api/v3/user/register';
+        $resourcePath = '/api/v3/user/registeruser';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -613,7 +613,7 @@ class UserApi
     }
 
     /**
-     * Operation apiV3UserUserNameDelete
+     * Operation revokeUser
      *
      * @param  string $user_name user_name (required)
      *
@@ -621,13 +621,13 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function apiV3UserUserNameDelete($user_name)
+    public function revokeUser($user_name)
     {
-        $this->apiV3UserUserNameDeleteWithHttpInfo($user_name);
+        $this->revokeUserWithHttpInfo($user_name);
     }
 
     /**
-     * Operation apiV3UserUserNameDeleteWithHttpInfo
+     * Operation revokeUserWithHttpInfo
      *
      * @param  string $user_name (required)
      *
@@ -635,10 +635,10 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiV3UserUserNameDeleteWithHttpInfo($user_name)
+    public function revokeUserWithHttpInfo($user_name)
     {
         $returnType = '';
-        $request = $this->apiV3UserUserNameDeleteRequest($user_name);
+        $request = $this->revokeUserRequest($user_name);
 
         try {
             $options = $this->createHttpClientOption();
@@ -686,7 +686,7 @@ class UserApi
     }
 
     /**
-     * Operation apiV3UserUserNameDeleteAsync
+     * Operation revokeUserAsync
      *
      * 
      *
@@ -695,9 +695,9 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3UserUserNameDeleteAsync($user_name)
+    public function revokeUserAsync($user_name)
     {
-        return $this->apiV3UserUserNameDeleteAsyncWithHttpInfo($user_name)
+        return $this->revokeUserAsyncWithHttpInfo($user_name)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -706,7 +706,7 @@ class UserApi
     }
 
     /**
-     * Operation apiV3UserUserNameDeleteAsyncWithHttpInfo
+     * Operation revokeUserAsyncWithHttpInfo
      *
      * 
      *
@@ -715,10 +715,10 @@ class UserApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3UserUserNameDeleteAsyncWithHttpInfo($user_name)
+    public function revokeUserAsyncWithHttpInfo($user_name)
     {
         $returnType = '';
-        $request = $this->apiV3UserUserNameDeleteRequest($user_name);
+        $request = $this->revokeUserRequest($user_name);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -744,19 +744,19 @@ class UserApi
     }
 
     /**
-     * Create request for operation 'apiV3UserUserNameDelete'
+     * Create request for operation 'revokeUser'
      *
      * @param  string $user_name (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function apiV3UserUserNameDeleteRequest($user_name)
+    protected function revokeUserRequest($user_name)
     {
         // verify the required parameter 'user_name' is set
         if ($user_name === null || (is_array($user_name) && count($user_name) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $user_name when calling apiV3UserUserNameDelete'
+                'Missing the required parameter $user_name when calling revokeUser'
             );
         }
 

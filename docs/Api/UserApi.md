@@ -4,12 +4,12 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Payrol
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**apiV3UserLoginPost**](UserApi.md#apiv3userloginpost) | **POST** /api/v3/user/login | 
-[**apiV3UserRegisterPost**](UserApi.md#apiv3userregisterpost) | **POST** /api/v3/user/register | 
-[**apiV3UserUserNameDelete**](UserApi.md#apiv3userusernamedelete) | **DELETE** /api/v3/user/{userName} | 
+[**login**](UserApi.md#login) | **POST** /api/v3/user/login | 
+[**registerUser**](UserApi.md#registeruser) | **POST** /api/v3/user/registeruser | 
+[**revokeUser**](UserApi.md#revokeuser) | **DELETE** /api/v3/user/{userName} | 
 
-# **apiV3UserLoginPost**
-> \EvoliaV3\Model\AuthenticationResponse apiV3UserLoginPost($body)
+# **login**
+> \EvoliaV3\Model\AuthenticationResponse login($body)
 
 
 
@@ -31,10 +31,10 @@ $apiInstance = new EvoliaV3\SDK\UserApi(
 $body = new \EvoliaV3\Model\UserLoginRequest(); // \EvoliaV3\Model\UserLoginRequest | 
 
 try {
-    $result = $apiInstance->apiV3UserLoginPost($body);
+    $result = $apiInstance->login($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UserApi->apiV3UserLoginPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UserApi->login: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -60,8 +60,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **apiV3UserRegisterPost**
-> \EvoliaV3\Model\AuthenticationResponse apiV3UserRegisterPost($body)
+# **registerUser**
+> \EvoliaV3\Model\AuthenticationResponse registerUser($body)
 
 
 
@@ -83,10 +83,10 @@ $apiInstance = new EvoliaV3\SDK\UserApi(
 $body = new \EvoliaV3\Model\UserRegistrationRequest(); // \EvoliaV3\Model\UserRegistrationRequest | 
 
 try {
-    $result = $apiInstance->apiV3UserRegisterPost($body);
+    $result = $apiInstance->registerUser($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UserApi->apiV3UserRegisterPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UserApi->registerUser: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -112,8 +112,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **apiV3UserUserNameDelete**
-> apiV3UserUserNameDelete($user_name)
+# **revokeUser**
+> revokeUser($user_name)
 
 
 
@@ -135,9 +135,9 @@ $apiInstance = new EvoliaV3\SDK\UserApi(
 $user_name = "user_name_example"; // string | 
 
 try {
-    $apiInstance->apiV3UserUserNameDelete($user_name);
+    $apiInstance->revokeUser($user_name);
 } catch (Exception $e) {
-    echo 'Exception when calling UserApi->apiV3UserUserNameDelete: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UserApi->revokeUser: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

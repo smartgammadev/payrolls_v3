@@ -87,7 +87,7 @@ class HomeApi
     }
 
     /**
-     * Operation healthGet
+     * Operation getHealth
      *
      * This endpoint is used to test the server's health
      *
@@ -96,14 +96,14 @@ class HomeApi
      * @throws \InvalidArgumentException
      * @return \EvoliaV3\Model\HealthCheck
      */
-    public function healthGet()
+    public function getHealth()
     {
-        list($response) = $this->healthGetWithHttpInfo();
+        list($response) = $this->getHealthWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation healthGetWithHttpInfo
+     * Operation getHealthWithHttpInfo
      *
      * This endpoint is used to test the server's health
      *
@@ -112,10 +112,10 @@ class HomeApi
      * @throws \InvalidArgumentException
      * @return array of \EvoliaV3\Model\HealthCheck, HTTP status code, HTTP response headers (array of strings)
      */
-    public function healthGetWithHttpInfo()
+    public function getHealthWithHttpInfo()
     {
         $returnType = '\EvoliaV3\Model\HealthCheck';
-        $request = $this->healthGetRequest();
+        $request = $this->getHealthRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -177,7 +177,7 @@ class HomeApi
     }
 
     /**
-     * Operation healthGetAsync
+     * Operation getHealthAsync
      *
      * This endpoint is used to test the server's health
      *
@@ -185,9 +185,9 @@ class HomeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function healthGetAsync()
+    public function getHealthAsync()
     {
-        return $this->healthGetAsyncWithHttpInfo()
+        return $this->getHealthAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -196,7 +196,7 @@ class HomeApi
     }
 
     /**
-     * Operation healthGetAsyncWithHttpInfo
+     * Operation getHealthAsyncWithHttpInfo
      *
      * This endpoint is used to test the server's health
      *
@@ -204,10 +204,10 @@ class HomeApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function healthGetAsyncWithHttpInfo()
+    public function getHealthAsyncWithHttpInfo()
     {
         $returnType = '\EvoliaV3\Model\HealthCheck';
-        $request = $this->healthGetRequest();
+        $request = $this->getHealthRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -247,13 +247,13 @@ class HomeApi
     }
 
     /**
-     * Create request for operation 'healthGet'
+     * Create request for operation 'getHealth'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function healthGetRequest()
+    protected function getHealthRequest()
     {
 
         $resourcePath = '/health';

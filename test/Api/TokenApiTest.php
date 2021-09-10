@@ -71,22 +71,22 @@ class TokenApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for apiV3TokenRefreshPost
+     * Test case for refreshToken
      *
      * .
      *
      */
-    public function testApiV3TokenRefreshPost()
+    public function testRefreshToken()
     {
     }
 
     /**
-     * Test case for apiV3TokenRefreshTokenDelete
+     * Test case for revokeToken
      *
      * .
      *
      */
-    public function testApiV3TokenRefreshTokenDelete()
+    public function testRevokeToken()
     {
     }
 }

@@ -66,10 +66,10 @@ $apiInstance = new EvoliaV3\SDK\AdminApi(
 );
 
 try {
-    $result = $apiInstance->apiV3AdminInitializationPost();
+    $result = $apiInstance->initProject();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AdminApi->apiV3AdminInitializationPost: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AdminApi->initProject: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -80,23 +80,23 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Payrol
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AdminApi* | [**apiV3AdminInitializationPost**](docs/Api/AdminApi.md#apiv3admininitializationpost) | **POST** /api/v3/admin/initialization | Used to create (if needed) the local SQLite Database  And create the default appID/appSecret
-*CandidateApi* | [**apiV3CandidatesDpaesPut**](docs/Api/CandidateApi.md#apiv3candidatesdpaesput) | **PUT** /api/v3/candidates/dpaes | Update the Candidate with DPAE information
-*CandidateApi* | [**apiV3CandidatesIdAgencyNumSecuNumSecuClePost**](docs/Api/CandidateApi.md#apiv3candidatesidagencynumsecunumsecuclepost) | **POST** /api/v3/candidates/{idAgency}/{numSecu}/{numSecuCle} | Test if the Candidate exists
-*CandidateApi* | [**apiV3CandidatesPost**](docs/Api/CandidateApi.md#apiv3candidatespost) | **POST** /api/v3/candidates | Import the Candidate
-*CandidateApi* | [**apiV3CandidatesPut**](docs/Api/CandidateApi.md#apiv3candidatesput) | **PUT** /api/v3/candidates | Import the Candidate
-*ClientApi* | [**apiV3ClientIdRefPut**](docs/Api/ClientApi.md#apiv3clientidrefput) | **PUT** /api/v3/client/{idRef} | update the Customer
-*ClientApi* | [**apiV3ClientPost**](docs/Api/ClientApi.md#apiv3clientpost) | **POST** /api/v3/client | Import the Customer
-*ClientApi* | [**apiV3ClientRegistrationNumberAgencyIdGet**](docs/Api/ClientApi.md#apiv3clientregistrationnumberagencyidget) | **GET** /api/v3/client/{registrationNumber}/{agencyId} | This endpoint is used to search the siret in the DB from the NIC and the Siret
-*ContractApi* | [**apiV3ContractContractIdPut**](docs/Api/ContractApi.md#apiv3contractcontractidput) | **PUT** /api/v3/contract/{contractId} | Update the Contract information
-*ContractApi* | [**apiV3ContractPut**](docs/Api/ContractApi.md#apiv3contractput) | **PUT** /api/v3/contract | Import the Contract
-*HomeApi* | [**healthGet**](docs/Api/HomeApi.md#healthget) | **GET** /health | This endpoint is used to test the server&#x27;s health
-*ReferencesApi* | [**apiV3ReferencesGet**](docs/Api/ReferencesApi.md#apiv3referencesget) | **GET** /api/v3/references | Get all the references from the database
-*TokenApi* | [**apiV3TokenRefreshPost**](docs/Api/TokenApi.md#apiv3tokenrefreshpost) | **POST** /api/v3/token/refresh | 
-*TokenApi* | [**apiV3TokenRefreshTokenDelete**](docs/Api/TokenApi.md#apiv3tokenrefreshtokendelete) | **DELETE** /api/v3/token/{refreshToken} | 
-*UserApi* | [**apiV3UserLoginPost**](docs/Api/UserApi.md#apiv3userloginpost) | **POST** /api/v3/user/login | 
-*UserApi* | [**apiV3UserRegisterPost**](docs/Api/UserApi.md#apiv3userregisterpost) | **POST** /api/v3/user/register | 
-*UserApi* | [**apiV3UserUserNameDelete**](docs/Api/UserApi.md#apiv3userusernamedelete) | **DELETE** /api/v3/user/{userName} | 
+*AdminApi* | [**initProject**](docs/Api/AdminApi.md#initproject) | **POST** /api/v3/admin/initialization | Used to create (if needed) the local SQLite Database  And create the default appID/appSecret
+*CandidatesApi* | [**importCandidate**](docs/Api/CandidatesApi.md#importcandidate) | **POST** /api/v3/candidates | Import the Candidate
+*CandidatesApi* | [**searchCandidate**](docs/Api/CandidatesApi.md#searchcandidate) | **POST** /api/v3/candidates/{idAgency}/{numSecu}/{numSecuCle} | Test if the Candidate exists
+*CandidatesApi* | [**updateCandidate**](docs/Api/CandidatesApi.md#updatecandidate) | **PUT** /api/v3/candidates | Update the Candidate
+*CandidatesApi* | [**updateDpaes**](docs/Api/CandidatesApi.md#updatedpaes) | **PUT** /api/v3/candidates/dpaes | Update the Candidate with DPAE information
+*ClientApi* | [**findClientsBySiret**](docs/Api/ClientApi.md#findclientsbysiret) | **GET** /api/v3/client/{registrationNumber}/{agencyId} | This endpoint is used to search the siret in the DB from the NIC and the Siret
+*ClientApi* | [**importClient**](docs/Api/ClientApi.md#importclient) | **POST** /api/v3/client | Import the Customer
+*ClientApi* | [**updateClient**](docs/Api/ClientApi.md#updateclient) | **PUT** /api/v3/client/{idRef} | update the Customer
+*ContractApi* | [**importContract**](docs/Api/ContractApi.md#importcontract) | **PUT** /api/v3/contract | Import the Contract
+*ContractApi* | [**updateContract**](docs/Api/ContractApi.md#updatecontract) | **PUT** /api/v3/contract/{contractId} | Update the Contract information
+*HomeApi* | [**getHealth**](docs/Api/HomeApi.md#gethealth) | **GET** /health | This endpoint is used to test the server&#x27;s health
+*ReferencesApi* | [**getReferences**](docs/Api/ReferencesApi.md#getreferences) | **GET** /api/v3/references | Get all the references from the database
+*TokenApi* | [**refreshToken**](docs/Api/TokenApi.md#refreshtoken) | **POST** /api/v3/token/refresh | 
+*TokenApi* | [**revokeToken**](docs/Api/TokenApi.md#revoketoken) | **DELETE** /api/v3/token/{refreshToken} | 
+*UserApi* | [**login**](docs/Api/UserApi.md#login) | **POST** /api/v3/user/login | 
+*UserApi* | [**registerUser**](docs/Api/UserApi.md#registeruser) | **POST** /api/v3/user/registeruser | 
+*UserApi* | [**revokeUser**](docs/Api/UserApi.md#revokeuser) | **DELETE** /api/v3/user/{userName} | 
 
 ## Documentation For Models
 

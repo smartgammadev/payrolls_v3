@@ -4,10 +4,10 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Payrol
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**healthGet**](HomeApi.md#healthget) | **GET** /health | This endpoint is used to test the server&#x27;s health
+[**getHealth**](HomeApi.md#gethealth) | **GET** /health | This endpoint is used to test the server&#x27;s health
 
-# **healthGet**
-> \EvoliaV3\Model\HealthCheck healthGet()
+# **getHealth**
+> \EvoliaV3\Model\HealthCheck getHealth()
 
 This endpoint is used to test the server's health
 
@@ -28,10 +28,10 @@ $apiInstance = new EvoliaV3\SDK\HomeApi(
 );
 
 try {
-    $result = $apiInstance->healthGet();
+    $result = $apiInstance->getHealth();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling HomeApi->healthGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling HomeApi->getHealth: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

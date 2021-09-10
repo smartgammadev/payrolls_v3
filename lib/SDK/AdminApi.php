@@ -87,7 +87,7 @@ class AdminApi
     }
 
     /**
-     * Operation apiV3AdminInitializationPost
+     * Operation initProject
      *
      * Used to create (if needed) the local SQLite Database  And create the default appID/appSecret
      *
@@ -96,14 +96,14 @@ class AdminApi
      * @throws \InvalidArgumentException
      * @return \EvoliaV3\Model\User
      */
-    public function apiV3AdminInitializationPost()
+    public function initProject()
     {
-        list($response) = $this->apiV3AdminInitializationPostWithHttpInfo();
+        list($response) = $this->initProjectWithHttpInfo();
         return $response;
     }
 
     /**
-     * Operation apiV3AdminInitializationPostWithHttpInfo
+     * Operation initProjectWithHttpInfo
      *
      * Used to create (if needed) the local SQLite Database  And create the default appID/appSecret
      *
@@ -112,10 +112,10 @@ class AdminApi
      * @throws \InvalidArgumentException
      * @return array of \EvoliaV3\Model\User, HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiV3AdminInitializationPostWithHttpInfo()
+    public function initProjectWithHttpInfo()
     {
         $returnType = '\EvoliaV3\Model\User';
-        $request = $this->apiV3AdminInitializationPostRequest();
+        $request = $this->initProjectRequest();
 
         try {
             $options = $this->createHttpClientOption();
@@ -185,7 +185,7 @@ class AdminApi
     }
 
     /**
-     * Operation apiV3AdminInitializationPostAsync
+     * Operation initProjectAsync
      *
      * Used to create (if needed) the local SQLite Database  And create the default appID/appSecret
      *
@@ -193,9 +193,9 @@ class AdminApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3AdminInitializationPostAsync()
+    public function initProjectAsync()
     {
-        return $this->apiV3AdminInitializationPostAsyncWithHttpInfo()
+        return $this->initProjectAsyncWithHttpInfo()
             ->then(
                 function ($response) {
                     return $response[0];
@@ -204,7 +204,7 @@ class AdminApi
     }
 
     /**
-     * Operation apiV3AdminInitializationPostAsyncWithHttpInfo
+     * Operation initProjectAsyncWithHttpInfo
      *
      * Used to create (if needed) the local SQLite Database  And create the default appID/appSecret
      *
@@ -212,10 +212,10 @@ class AdminApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3AdminInitializationPostAsyncWithHttpInfo()
+    public function initProjectAsyncWithHttpInfo()
     {
         $returnType = '\EvoliaV3\Model\User';
-        $request = $this->apiV3AdminInitializationPostRequest();
+        $request = $this->initProjectRequest();
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -255,13 +255,13 @@ class AdminApi
     }
 
     /**
-     * Create request for operation 'apiV3AdminInitializationPost'
+     * Create request for operation 'initProject'
      *
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function apiV3AdminInitializationPostRequest()
+    protected function initProjectRequest()
     {
 
         $resourcePath = '/api/v3/admin/initialization';

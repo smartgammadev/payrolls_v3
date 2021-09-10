@@ -71,12 +71,12 @@ class AdminApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for apiV3AdminInitializationPost
+     * Test case for initProject
      *
      * Used to create (if needed) the local SQLite Database  And create the default appID/appSecret.
      *
      */
-    public function testApiV3AdminInitializationPost()
+    public function testInitProject()
     {
     }
 }

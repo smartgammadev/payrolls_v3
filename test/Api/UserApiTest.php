@@ -71,32 +71,32 @@ class UserApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for apiV3UserLoginPost
+     * Test case for login
      *
      * .
      *
      */
-    public function testApiV3UserLoginPost()
+    public function testLogin()
     {
     }
 
     /**
-     * Test case for apiV3UserRegisterPost
+     * Test case for registerUser
      *
      * .
      *
      */
-    public function testApiV3UserRegisterPost()
+    public function testRegisterUser()
     {
     }
 
     /**
-     * Test case for apiV3UserUserNameDelete
+     * Test case for revokeUser
      *
      * .
      *
      */
-    public function testApiV3UserUserNameDelete()
+    public function testRevokeUser()
     {
     }
 }

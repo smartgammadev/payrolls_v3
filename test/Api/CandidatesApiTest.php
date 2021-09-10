@@ -1,6 +1,6 @@
 <?php
 /**
- * CandidateApiTest
+ * CandidatesApiTest
  * PHP version 5
  *
  * @category Class
@@ -32,14 +32,14 @@ use EvoliaV3\ApiException;
 use EvoliaV3\ObjectSerializer;
 
 /**
- * CandidateApiTest Class Doc Comment
+ * CandidatesApiTest Class Doc Comment
  *
  * @category Class
  * @package  EvoliaV3
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CandidateApiTest extends \PHPUnit_Framework_TestCase
+class CandidatesApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,42 +71,42 @@ class CandidateApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for apiV3CandidatesDpaesPut
+     * Test case for importCandidate
      *
-     * Update the Candidate with DPAE information.
+     * Import the Candidate.
      *
      */
-    public function testApiV3CandidatesDpaesPut()
+    public function testImportCandidate()
     {
     }
 
     /**
-     * Test case for apiV3CandidatesIdAgencyNumSecuNumSecuClePost
+     * Test case for searchCandidate
      *
      * Test if the Candidate exists.
      *
      */
-    public function testApiV3CandidatesIdAgencyNumSecuNumSecuClePost()
+    public function testSearchCandidate()
     {
     }
 
     /**
-     * Test case for apiV3CandidatesPost
+     * Test case for updateCandidate
      *
-     * Import the Candidate.
+     * Update the Candidate.
      *
      */
-    public function testApiV3CandidatesPost()
+    public function testUpdateCandidate()
     {
     }
 
     /**
-     * Test case for apiV3CandidatesPut
+     * Test case for updateDpaes
      *
-     * Import the Candidate.
+     * Update the Candidate with DPAE information.
      *
      */
-    public function testApiV3CandidatesPut()
+    public function testUpdateDpaes()
     {
     }
 }

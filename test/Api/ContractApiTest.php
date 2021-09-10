@@ -71,22 +71,22 @@ class ContractApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for apiV3ContractContractIdPut
-     *
-     * Update the Contract information.
-     *
-     */
-    public function testApiV3ContractContractIdPut()
-    {
-    }
-
-    /**
-     * Test case for apiV3ContractPut
+     * Test case for importContract
      *
      * Import the Contract.
      *
      */
-    public function testApiV3ContractPut()
+    public function testImportContract()
+    {
+    }
+
+    /**
+     * Test case for updateContract
+     *
+     * Update the Contract information.
+     *
+     */
+    public function testUpdateContract()
     {
     }
 }

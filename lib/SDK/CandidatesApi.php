@@ -1,6 +1,6 @@
 <?php
 /**
- * CandidateApi
+ * CandidatesApi
  * PHP version 5
  *
  * @category Class
@@ -39,14 +39,14 @@ use EvoliaV3\HeaderSelector;
 use EvoliaV3\ObjectSerializer;
 
 /**
- * CandidateApi Class Doc Comment
+ * CandidatesApi Class Doc Comment
  *
  * @category Class
  * @package  EvoliaV3
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class CandidateApi
+class CandidatesApi
 {
     /**
      * @var ClientInterface
@@ -87,37 +87,37 @@ class CandidateApi
     }
 
     /**
-     * Operation apiV3CandidatesDpaesPut
+     * Operation importCandidate
      *
-     * Update the Candidate with DPAE information
+     * Import the Candidate
      *
-     * @param  \EvoliaV3\Model\CandidateDpae $body body (optional)
+     * @param  \EvoliaV3\Model\Candidate $body body (optional)
      *
      * @throws \EvoliaV3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \EvoliaV3\Model\SuccessResponse
      */
-    public function apiV3CandidatesDpaesPut($body = null)
+    public function importCandidate($body = null)
     {
-        list($response) = $this->apiV3CandidatesDpaesPutWithHttpInfo($body);
+        list($response) = $this->importCandidateWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation apiV3CandidatesDpaesPutWithHttpInfo
+     * Operation importCandidateWithHttpInfo
      *
-     * Update the Candidate with DPAE information
+     * Import the Candidate
      *
-     * @param  \EvoliaV3\Model\CandidateDpae $body (optional)
+     * @param  \EvoliaV3\Model\Candidate $body (optional)
      *
      * @throws \EvoliaV3\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \EvoliaV3\Model\SuccessResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiV3CandidatesDpaesPutWithHttpInfo($body = null)
+    public function importCandidateWithHttpInfo($body = null)
     {
         $returnType = '\EvoliaV3\Model\SuccessResponse';
-        $request = $this->apiV3CandidatesDpaesPutRequest($body);
+        $request = $this->importCandidateRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -173,14 +173,6 @@ class CandidateApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 204:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\EvoliaV3\Model\AppErrorResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -203,18 +195,18 @@ class CandidateApi
     }
 
     /**
-     * Operation apiV3CandidatesDpaesPutAsync
+     * Operation importCandidateAsync
      *
-     * Update the Candidate with DPAE information
+     * Import the Candidate
      *
-     * @param  \EvoliaV3\Model\CandidateDpae $body (optional)
+     * @param  \EvoliaV3\Model\Candidate $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3CandidatesDpaesPutAsync($body = null)
+    public function importCandidateAsync($body = null)
     {
-        return $this->apiV3CandidatesDpaesPutAsyncWithHttpInfo($body)
+        return $this->importCandidateAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -223,19 +215,19 @@ class CandidateApi
     }
 
     /**
-     * Operation apiV3CandidatesDpaesPutAsyncWithHttpInfo
+     * Operation importCandidateAsyncWithHttpInfo
      *
-     * Update the Candidate with DPAE information
+     * Import the Candidate
      *
-     * @param  \EvoliaV3\Model\CandidateDpae $body (optional)
+     * @param  \EvoliaV3\Model\Candidate $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3CandidatesDpaesPutAsyncWithHttpInfo($body = null)
+    public function importCandidateAsyncWithHttpInfo($body = null)
     {
         $returnType = '\EvoliaV3\Model\SuccessResponse';
-        $request = $this->apiV3CandidatesDpaesPutRequest($body);
+        $request = $this->importCandidateRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -275,17 +267,17 @@ class CandidateApi
     }
 
     /**
-     * Create request for operation 'apiV3CandidatesDpaesPut'
+     * Create request for operation 'importCandidate'
      *
-     * @param  \EvoliaV3\Model\CandidateDpae $body (optional)
+     * @param  \EvoliaV3\Model\Candidate $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function apiV3CandidatesDpaesPutRequest($body = null)
+    protected function importCandidateRequest($body = null)
     {
 
-        $resourcePath = '/api/v3/candidates/dpaes';
+        $resourcePath = '/api/v3/candidates';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -358,7 +350,7 @@ class CandidateApi
 
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
-            'PUT',
+            'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
@@ -366,7 +358,7 @@ class CandidateApi
     }
 
     /**
-     * Operation apiV3CandidatesIdAgencyNumSecuNumSecuClePost
+     * Operation searchCandidate
      *
      * Test if the Candidate exists
      *
@@ -378,14 +370,14 @@ class CandidateApi
      * @throws \InvalidArgumentException
      * @return \EvoliaV3\Model\CandidateResult
      */
-    public function apiV3CandidatesIdAgencyNumSecuNumSecuClePost($id_agency, $num_secu, $num_secu_cle)
+    public function searchCandidate($id_agency, $num_secu, $num_secu_cle)
     {
-        list($response) = $this->apiV3CandidatesIdAgencyNumSecuNumSecuClePostWithHttpInfo($id_agency, $num_secu, $num_secu_cle);
+        list($response) = $this->searchCandidateWithHttpInfo($id_agency, $num_secu, $num_secu_cle);
         return $response;
     }
 
     /**
-     * Operation apiV3CandidatesIdAgencyNumSecuNumSecuClePostWithHttpInfo
+     * Operation searchCandidateWithHttpInfo
      *
      * Test if the Candidate exists
      *
@@ -397,10 +389,10 @@ class CandidateApi
      * @throws \InvalidArgumentException
      * @return array of \EvoliaV3\Model\CandidateResult, HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiV3CandidatesIdAgencyNumSecuNumSecuClePostWithHttpInfo($id_agency, $num_secu, $num_secu_cle)
+    public function searchCandidateWithHttpInfo($id_agency, $num_secu, $num_secu_cle)
     {
         $returnType = '\EvoliaV3\Model\CandidateResult';
-        $request = $this->apiV3CandidatesIdAgencyNumSecuNumSecuClePostRequest($id_agency, $num_secu, $num_secu_cle);
+        $request = $this->searchCandidateRequest($id_agency, $num_secu, $num_secu_cle);
 
         try {
             $options = $this->createHttpClientOption();
@@ -486,7 +478,7 @@ class CandidateApi
     }
 
     /**
-     * Operation apiV3CandidatesIdAgencyNumSecuNumSecuClePostAsync
+     * Operation searchCandidateAsync
      *
      * Test if the Candidate exists
      *
@@ -497,9 +489,9 @@ class CandidateApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3CandidatesIdAgencyNumSecuNumSecuClePostAsync($id_agency, $num_secu, $num_secu_cle)
+    public function searchCandidateAsync($id_agency, $num_secu, $num_secu_cle)
     {
-        return $this->apiV3CandidatesIdAgencyNumSecuNumSecuClePostAsyncWithHttpInfo($id_agency, $num_secu, $num_secu_cle)
+        return $this->searchCandidateAsyncWithHttpInfo($id_agency, $num_secu, $num_secu_cle)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -508,7 +500,7 @@ class CandidateApi
     }
 
     /**
-     * Operation apiV3CandidatesIdAgencyNumSecuNumSecuClePostAsyncWithHttpInfo
+     * Operation searchCandidateAsyncWithHttpInfo
      *
      * Test if the Candidate exists
      *
@@ -519,10 +511,10 @@ class CandidateApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3CandidatesIdAgencyNumSecuNumSecuClePostAsyncWithHttpInfo($id_agency, $num_secu, $num_secu_cle)
+    public function searchCandidateAsyncWithHttpInfo($id_agency, $num_secu, $num_secu_cle)
     {
         $returnType = '\EvoliaV3\Model\CandidateResult';
-        $request = $this->apiV3CandidatesIdAgencyNumSecuNumSecuClePostRequest($id_agency, $num_secu, $num_secu_cle);
+        $request = $this->searchCandidateRequest($id_agency, $num_secu, $num_secu_cle);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -562,7 +554,7 @@ class CandidateApi
     }
 
     /**
-     * Create request for operation 'apiV3CandidatesIdAgencyNumSecuNumSecuClePost'
+     * Create request for operation 'searchCandidate'
      *
      * @param  string $id_agency (required)
      * @param  string $num_secu (required)
@@ -571,24 +563,24 @@ class CandidateApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function apiV3CandidatesIdAgencyNumSecuNumSecuClePostRequest($id_agency, $num_secu, $num_secu_cle)
+    protected function searchCandidateRequest($id_agency, $num_secu, $num_secu_cle)
     {
         // verify the required parameter 'id_agency' is set
         if ($id_agency === null || (is_array($id_agency) && count($id_agency) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id_agency when calling apiV3CandidatesIdAgencyNumSecuNumSecuClePost'
+                'Missing the required parameter $id_agency when calling searchCandidate'
             );
         }
         // verify the required parameter 'num_secu' is set
         if ($num_secu === null || (is_array($num_secu) && count($num_secu) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $num_secu when calling apiV3CandidatesIdAgencyNumSecuNumSecuClePost'
+                'Missing the required parameter $num_secu when calling searchCandidate'
             );
         }
         // verify the required parameter 'num_secu_cle' is set
         if ($num_secu_cle === null || (is_array($num_secu_cle) && count($num_secu_cle) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $num_secu_cle when calling apiV3CandidatesIdAgencyNumSecuNumSecuClePost'
+                'Missing the required parameter $num_secu_cle when calling searchCandidate'
             );
         }
 
@@ -694,280 +686,9 @@ class CandidateApi
     }
 
     /**
-     * Operation apiV3CandidatesPost
+     * Operation updateCandidate
      *
-     * Import the Candidate
-     *
-     * @param  \EvoliaV3\Model\Candidate $body body (optional)
-     *
-     * @throws \EvoliaV3\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \EvoliaV3\Model\SuccessResponse
-     */
-    public function apiV3CandidatesPost($body = null)
-    {
-        list($response) = $this->apiV3CandidatesPostWithHttpInfo($body);
-        return $response;
-    }
-
-    /**
-     * Operation apiV3CandidatesPostWithHttpInfo
-     *
-     * Import the Candidate
-     *
-     * @param  \EvoliaV3\Model\Candidate $body (optional)
-     *
-     * @throws \EvoliaV3\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \EvoliaV3\Model\SuccessResponse, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function apiV3CandidatesPostWithHttpInfo($body = null)
-    {
-        $returnType = '\EvoliaV3\Model\SuccessResponse';
-        $request = $this->apiV3CandidatesPostRequest($body);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if (!in_array($returnType, ['string','integer','bool'])) {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\EvoliaV3\Model\SuccessResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 400:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\EvoliaV3\Model\AppErrorResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                case 401:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\EvoliaV3\Model\AppErrorResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation apiV3CandidatesPostAsync
-     *
-     * Import the Candidate
-     *
-     * @param  \EvoliaV3\Model\Candidate $body (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function apiV3CandidatesPostAsync($body = null)
-    {
-        return $this->apiV3CandidatesPostAsyncWithHttpInfo($body)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation apiV3CandidatesPostAsyncWithHttpInfo
-     *
-     * Import the Candidate
-     *
-     * @param  \EvoliaV3\Model\Candidate $body (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function apiV3CandidatesPostAsyncWithHttpInfo($body = null)
-    {
-        $returnType = '\EvoliaV3\Model\SuccessResponse';
-        $request = $this->apiV3CandidatesPostRequest($body);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'apiV3CandidatesPost'
-     *
-     * @param  \EvoliaV3\Model\Candidate $body (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function apiV3CandidatesPostRequest($body = null)
-    {
-
-        $resourcePath = '/api/v3/candidates';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/json'],
-                ['application/json']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
-            }
-        }
-
-            // // this endpoint requires Bearer token
-            if ($this->config->getAccessToken() !== null) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-            }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
-        return new Request(
-            'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation apiV3CandidatesPut
-     *
-     * Import the Candidate
+     * Update the Candidate
      *
      * @param  \EvoliaV3\Model\Candidate $body body (optional)
      *
@@ -975,16 +696,16 @@ class CandidateApi
      * @throws \InvalidArgumentException
      * @return \EvoliaV3\Model\SuccessResponse
      */
-    public function apiV3CandidatesPut($body = null)
+    public function updateCandidate($body = null)
     {
-        list($response) = $this->apiV3CandidatesPutWithHttpInfo($body);
+        list($response) = $this->updateCandidateWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation apiV3CandidatesPutWithHttpInfo
+     * Operation updateCandidateWithHttpInfo
      *
-     * Import the Candidate
+     * Update the Candidate
      *
      * @param  \EvoliaV3\Model\Candidate $body (optional)
      *
@@ -992,10 +713,10 @@ class CandidateApi
      * @throws \InvalidArgumentException
      * @return array of \EvoliaV3\Model\SuccessResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiV3CandidatesPutWithHttpInfo($body = null)
+    public function updateCandidateWithHttpInfo($body = null)
     {
         $returnType = '\EvoliaV3\Model\SuccessResponse';
-        $request = $this->apiV3CandidatesPutRequest($body);
+        $request = $this->updateCandidateRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1081,18 +802,18 @@ class CandidateApi
     }
 
     /**
-     * Operation apiV3CandidatesPutAsync
+     * Operation updateCandidateAsync
      *
-     * Import the Candidate
+     * Update the Candidate
      *
      * @param  \EvoliaV3\Model\Candidate $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3CandidatesPutAsync($body = null)
+    public function updateCandidateAsync($body = null)
     {
-        return $this->apiV3CandidatesPutAsyncWithHttpInfo($body)
+        return $this->updateCandidateAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1101,19 +822,19 @@ class CandidateApi
     }
 
     /**
-     * Operation apiV3CandidatesPutAsyncWithHttpInfo
+     * Operation updateCandidateAsyncWithHttpInfo
      *
-     * Import the Candidate
+     * Update the Candidate
      *
      * @param  \EvoliaV3\Model\Candidate $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3CandidatesPutAsyncWithHttpInfo($body = null)
+    public function updateCandidateAsyncWithHttpInfo($body = null)
     {
         $returnType = '\EvoliaV3\Model\SuccessResponse';
-        $request = $this->apiV3CandidatesPutRequest($body);
+        $request = $this->updateCandidateRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1153,17 +874,296 @@ class CandidateApi
     }
 
     /**
-     * Create request for operation 'apiV3CandidatesPut'
+     * Create request for operation 'updateCandidate'
      *
      * @param  \EvoliaV3\Model\Candidate $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function apiV3CandidatesPutRequest($body = null)
+    protected function updateCandidateRequest($body = null)
     {
 
         $resourcePath = '/api/v3/candidates';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/json']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/json'],
+                ['application/json']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+            // // this endpoint requires Bearer token
+            if ($this->config->getAccessToken() !== null) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+            }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'PUT',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation updateDpaes
+     *
+     * Update the Candidate with DPAE information
+     *
+     * @param  \EvoliaV3\Model\CandidateDpae $body body (optional)
+     *
+     * @throws \EvoliaV3\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \EvoliaV3\Model\SuccessResponse
+     */
+    public function updateDpaes($body = null)
+    {
+        list($response) = $this->updateDpaesWithHttpInfo($body);
+        return $response;
+    }
+
+    /**
+     * Operation updateDpaesWithHttpInfo
+     *
+     * Update the Candidate with DPAE information
+     *
+     * @param  \EvoliaV3\Model\CandidateDpae $body (optional)
+     *
+     * @throws \EvoliaV3\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \EvoliaV3\Model\SuccessResponse, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateDpaesWithHttpInfo($body = null)
+    {
+        $returnType = '\EvoliaV3\Model\SuccessResponse';
+        $request = $this->updateDpaesRequest($body);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\EvoliaV3\Model\SuccessResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 204:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\EvoliaV3\Model\AppErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 400:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\EvoliaV3\Model\AppErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\EvoliaV3\Model\AppErrorResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateDpaesAsync
+     *
+     * Update the Candidate with DPAE information
+     *
+     * @param  \EvoliaV3\Model\CandidateDpae $body (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updateDpaesAsync($body = null)
+    {
+        return $this->updateDpaesAsyncWithHttpInfo($body)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation updateDpaesAsyncWithHttpInfo
+     *
+     * Update the Candidate with DPAE information
+     *
+     * @param  \EvoliaV3\Model\CandidateDpae $body (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updateDpaesAsyncWithHttpInfo($body = null)
+    {
+        $returnType = '\EvoliaV3\Model\SuccessResponse';
+        $request = $this->updateDpaesRequest($body);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'updateDpaes'
+     *
+     * @param  \EvoliaV3\Model\CandidateDpae $body (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function updateDpaesRequest($body = null)
+    {
+
+        $resourcePath = '/api/v3/candidates/dpaes';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

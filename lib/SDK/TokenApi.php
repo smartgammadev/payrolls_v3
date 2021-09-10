@@ -87,7 +87,7 @@ class TokenApi
     }
 
     /**
-     * Operation apiV3TokenRefreshPost
+     * Operation refreshToken
      *
      * @param  \EvoliaV3\Model\RefreshTokenRequest $body body (optional)
      *
@@ -95,14 +95,14 @@ class TokenApi
      * @throws \InvalidArgumentException
      * @return \EvoliaV3\Model\AuthenticationResponse
      */
-    public function apiV3TokenRefreshPost($body = null)
+    public function refreshToken($body = null)
     {
-        list($response) = $this->apiV3TokenRefreshPostWithHttpInfo($body);
+        list($response) = $this->refreshTokenWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation apiV3TokenRefreshPostWithHttpInfo
+     * Operation refreshTokenWithHttpInfo
      *
      * @param  \EvoliaV3\Model\RefreshTokenRequest $body (optional)
      *
@@ -110,10 +110,10 @@ class TokenApi
      * @throws \InvalidArgumentException
      * @return array of \EvoliaV3\Model\AuthenticationResponse, HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiV3TokenRefreshPostWithHttpInfo($body = null)
+    public function refreshTokenWithHttpInfo($body = null)
     {
         $returnType = '\EvoliaV3\Model\AuthenticationResponse';
-        $request = $this->apiV3TokenRefreshPostRequest($body);
+        $request = $this->refreshTokenRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -191,7 +191,7 @@ class TokenApi
     }
 
     /**
-     * Operation apiV3TokenRefreshPostAsync
+     * Operation refreshTokenAsync
      *
      * 
      *
@@ -200,9 +200,9 @@ class TokenApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3TokenRefreshPostAsync($body = null)
+    public function refreshTokenAsync($body = null)
     {
-        return $this->apiV3TokenRefreshPostAsyncWithHttpInfo($body)
+        return $this->refreshTokenAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -211,7 +211,7 @@ class TokenApi
     }
 
     /**
-     * Operation apiV3TokenRefreshPostAsyncWithHttpInfo
+     * Operation refreshTokenAsyncWithHttpInfo
      *
      * 
      *
@@ -220,10 +220,10 @@ class TokenApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3TokenRefreshPostAsyncWithHttpInfo($body = null)
+    public function refreshTokenAsyncWithHttpInfo($body = null)
     {
         $returnType = '\EvoliaV3\Model\AuthenticationResponse';
-        $request = $this->apiV3TokenRefreshPostRequest($body);
+        $request = $this->refreshTokenRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -263,14 +263,14 @@ class TokenApi
     }
 
     /**
-     * Create request for operation 'apiV3TokenRefreshPost'
+     * Create request for operation 'refreshToken'
      *
      * @param  \EvoliaV3\Model\RefreshTokenRequest $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function apiV3TokenRefreshPostRequest($body = null)
+    protected function refreshTokenRequest($body = null)
     {
 
         $resourcePath = '/api/v3/token/refresh';
@@ -354,7 +354,7 @@ class TokenApi
     }
 
     /**
-     * Operation apiV3TokenRefreshTokenDelete
+     * Operation revokeToken
      *
      * @param  string $refresh_token refresh_token (required)
      *
@@ -362,13 +362,13 @@ class TokenApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function apiV3TokenRefreshTokenDelete($refresh_token)
+    public function revokeToken($refresh_token)
     {
-        $this->apiV3TokenRefreshTokenDeleteWithHttpInfo($refresh_token);
+        $this->revokeTokenWithHttpInfo($refresh_token);
     }
 
     /**
-     * Operation apiV3TokenRefreshTokenDeleteWithHttpInfo
+     * Operation revokeTokenWithHttpInfo
      *
      * @param  string $refresh_token (required)
      *
@@ -376,10 +376,10 @@ class TokenApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiV3TokenRefreshTokenDeleteWithHttpInfo($refresh_token)
+    public function revokeTokenWithHttpInfo($refresh_token)
     {
         $returnType = '';
-        $request = $this->apiV3TokenRefreshTokenDeleteRequest($refresh_token);
+        $request = $this->revokeTokenRequest($refresh_token);
 
         try {
             $options = $this->createHttpClientOption();
@@ -427,7 +427,7 @@ class TokenApi
     }
 
     /**
-     * Operation apiV3TokenRefreshTokenDeleteAsync
+     * Operation revokeTokenAsync
      *
      * 
      *
@@ -436,9 +436,9 @@ class TokenApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3TokenRefreshTokenDeleteAsync($refresh_token)
+    public function revokeTokenAsync($refresh_token)
     {
-        return $this->apiV3TokenRefreshTokenDeleteAsyncWithHttpInfo($refresh_token)
+        return $this->revokeTokenAsyncWithHttpInfo($refresh_token)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -447,7 +447,7 @@ class TokenApi
     }
 
     /**
-     * Operation apiV3TokenRefreshTokenDeleteAsyncWithHttpInfo
+     * Operation revokeTokenAsyncWithHttpInfo
      *
      * 
      *
@@ -456,10 +456,10 @@ class TokenApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiV3TokenRefreshTokenDeleteAsyncWithHttpInfo($refresh_token)
+    public function revokeTokenAsyncWithHttpInfo($refresh_token)
     {
         $returnType = '';
-        $request = $this->apiV3TokenRefreshTokenDeleteRequest($refresh_token);
+        $request = $this->revokeTokenRequest($refresh_token);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -485,19 +485,19 @@ class TokenApi
     }
 
     /**
-     * Create request for operation 'apiV3TokenRefreshTokenDelete'
+     * Create request for operation 'revokeToken'
      *
      * @param  string $refresh_token (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function apiV3TokenRefreshTokenDeleteRequest($refresh_token)
+    protected function revokeTokenRequest($refresh_token)
     {
         // verify the required parameter 'refresh_token' is set
         if ($refresh_token === null || (is_array($refresh_token) && count($refresh_token) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $refresh_token when calling apiV3TokenRefreshTokenDelete'
+                'Missing the required parameter $refresh_token when calling revokeToken'
             );
         }
 
