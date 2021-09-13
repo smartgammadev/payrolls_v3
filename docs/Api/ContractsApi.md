@@ -1,11 +1,11 @@
-# EvoliaV3\ContractApi
+# EvoliaV3\ContractsApi
 
 All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/PayrollV3/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**importContract**](ContractApi.md#importcontract) | **PUT** /api/v3/contract | Import the Contract
-[**updateContract**](ContractApi.md#updatecontract) | **PUT** /api/v3/contract/{contractId} | Update the Contract information
+[**importContract**](ContractsApi.md#importcontract) | **POST** /api/v3/contracts | Import the Contract
+[**updateContract**](ContractsApi.md#updatecontract) | **PUT** /api/v3/contracts/{contractId} | Update the Contract information
 
 # **importContract**
 > \EvoliaV3\Model\SuccessResponse importContract($body)
@@ -21,7 +21,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new EvoliaV3\SDK\ContractApi(
+$apiInstance = new EvoliaV3\SDK\ContractsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -33,7 +33,7 @@ try {
     $result = $apiInstance->importContract($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContractApi->importContract: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ContractsApi->importContract: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -75,7 +75,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new EvoliaV3\SDK\ContractApi(
+$apiInstance = new EvoliaV3\SDK\ContractsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -88,7 +88,7 @@ try {
     $result = $apiInstance->updateContract($contract_id, $body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ContractApi->updateContract: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ContractsApi->updateContract: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

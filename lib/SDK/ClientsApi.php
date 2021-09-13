@@ -1,6 +1,6 @@
 <?php
 /**
- * ClientApi
+ * ClientsApi
  * PHP version 5
  *
  * @category Class
@@ -39,14 +39,14 @@ use EvoliaV3\HeaderSelector;
 use EvoliaV3\ObjectSerializer;
 
 /**
- * ClientApi Class Doc Comment
+ * ClientsApi Class Doc Comment
  *
  * @category Class
  * @package  EvoliaV3
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ClientApi
+class ClientsApi
 {
     /**
      * @var ClientInterface
@@ -278,7 +278,7 @@ class ClientApi
             );
         }
 
-        $resourcePath = '/api/v3/client/{registrationNumber}/{agencyId}';
+        $resourcePath = '/api/v3/clients/{registrationNumber}/{agencyId}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -562,7 +562,7 @@ class ClientApi
     protected function importClientRequest($body = null)
     {
 
-        $resourcePath = '/api/v3/client';
+        $resourcePath = '/api/v3/clients';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -852,7 +852,7 @@ class ClientApi
             );
         }
 
-        $resourcePath = '/api/v3/client/{idRef}';
+        $resourcePath = '/api/v3/clients/{idRef}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

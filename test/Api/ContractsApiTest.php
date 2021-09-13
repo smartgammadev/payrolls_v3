@@ -1,6 +1,6 @@
 <?php
 /**
- * ContractApiTest
+ * ContractsApiTest
  * PHP version 5
  *
  * @category Class
@@ -32,14 +32,14 @@ use EvoliaV3\ApiException;
 use EvoliaV3\ObjectSerializer;
 
 /**
- * ContractApiTest Class Doc Comment
+ * ContractsApiTest Class Doc Comment
  *
  * @category Class
  * @package  EvoliaV3
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ContractApiTest extends \PHPUnit_Framework_TestCase
+class ContractsApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**

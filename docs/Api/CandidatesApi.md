@@ -5,7 +5,7 @@ All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/Payrol
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**importCandidate**](CandidatesApi.md#importcandidate) | **POST** /api/v3/candidates | Import the Candidate
-[**searchCandidate**](CandidatesApi.md#searchcandidate) | **POST** /api/v3/candidates/{idAgency}/{numSecu}/{numSecuCle} | Test if the Candidate exists
+[**searchCandidate**](CandidatesApi.md#searchcandidate) | **GET** /api/v3/candidates/{idAgency}/{numSecu}/{numSecuCle} | Test if the Candidate exists
 [**updateCandidate**](CandidatesApi.md#updatecandidate) | **PUT** /api/v3/candidates | Update the Candidate
 [**updateDpaes**](CandidatesApi.md#updatedpaes) | **PUT** /api/v3/candidates/dpaes | Update the Candidate with DPAE information
 
