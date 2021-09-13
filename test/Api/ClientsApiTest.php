@@ -1,6 +1,6 @@
 <?php
 /**
- * ClientApiTest
+ * ClientsApiTest
  * PHP version 5
  *
  * @category Class
@@ -32,14 +32,14 @@ use EvoliaV3\ApiException;
 use EvoliaV3\ObjectSerializer;
 
 /**
- * ClientApiTest Class Doc Comment
+ * ClientsApiTest Class Doc Comment
  *
  * @category Class
  * @package  EvoliaV3
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ClientApiTest extends \PHPUnit_Framework_TestCase
+class ClientsApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
