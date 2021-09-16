@@ -1,6 +1,6 @@
 <?php
 /**
- * UserLoginRequest
+ * ContractIds
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \EvoliaV3\ObjectSerializer;
 
 /**
- * UserLoginRequest Class Doc Comment
+ * ContractIds Class Doc Comment
  *
  * @category Class
  * @package  EvoliaV3
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class UserLoginRequest implements ModelInterface, ArrayAccess
+class ContractIds implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class UserLoginRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'UserLoginRequest';
+    protected static $swaggerModelName = 'ContractIds';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,8 +56,8 @@ class UserLoginRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'user' => 'string',
-'password' => 'string'    ];
+        'id_contrat' => 'int',
+'id_personne' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +65,8 @@ class UserLoginRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'user' => null,
-'password' => null    ];
+        'id_contrat' => 'int32',
+'id_personne' => 'int32'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +95,8 @@ class UserLoginRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'user' => 'user',
-'password' => 'password'    ];
+        'id_contrat' => 'idContrat',
+'id_personne' => 'idPersonne'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +104,8 @@ class UserLoginRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'user' => 'setUser',
-'password' => 'setPassword'    ];
+        'id_contrat' => 'setIdContrat',
+'id_personne' => 'setIdPersonne'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +113,8 @@ class UserLoginRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'user' => 'getUser',
-'password' => 'getPassword'    ];
+        'id_contrat' => 'getIdContrat',
+'id_personne' => 'getIdPersonne'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +174,8 @@ class UserLoginRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
-        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
+        $this->container['id_contrat'] = isset($data['id_contrat']) ? $data['id_contrat'] : null;
+        $this->container['id_personne'] = isset($data['id_personne']) ? $data['id_personne'] : null;
     }
 
     /**
@@ -187,11 +187,11 @@ class UserLoginRequest implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['user'] === null) {
-            $invalidProperties[] = "'user' can't be null";
+        if ($this->container['id_contrat'] === null) {
+            $invalidProperties[] = "'id_contrat' can't be null";
         }
-        if ($this->container['password'] === null) {
-            $invalidProperties[] = "'password' can't be null";
+        if ($this->container['id_personne'] === null) {
+            $invalidProperties[] = "'id_personne' can't be null";
         }
         return $invalidProperties;
     }
@@ -209,49 +209,49 @@ class UserLoginRequest implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets user
+     * Gets id_contrat
      *
-     * @return string
+     * @return int
      */
-    public function getUser()
+    public function getIdContrat()
     {
-        return $this->container['user'];
+        return $this->container['id_contrat'];
     }
 
     /**
-     * Sets user
+     * Sets id_contrat
      *
-     * @param string $user user
+     * @param int $id_contrat id_contrat
      *
      * @return $this
      */
-    public function setUser($user)
+    public function setIdContrat($id_contrat)
     {
-        $this->container['user'] = $user;
+        $this->container['id_contrat'] = $id_contrat;
 
         return $this;
     }
 
     /**
-     * Gets password
+     * Gets id_personne
      *
-     * @return string
+     * @return int
      */
-    public function getPassword()
+    public function getIdPersonne()
     {
-        return $this->container['password'];
+        return $this->container['id_personne'];
     }
 
     /**
-     * Sets password
+     * Sets id_personne
      *
-     * @param string $password password
+     * @param int $id_personne id_personne
      *
      * @return $this
      */
-    public function setPassword($password)
+    public function setIdPersonne($id_personne)
     {
-        $this->container['password'] = $password;
+        $this->container['id_personne'] = $id_personne;
 
         return $this;
     }

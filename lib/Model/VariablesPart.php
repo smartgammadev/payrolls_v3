@@ -1,6 +1,6 @@
 <?php
 /**
- * UserLoginRequest
+ * VariablesPart
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \EvoliaV3\ObjectSerializer;
 
 /**
- * UserLoginRequest Class Doc Comment
+ * VariablesPart Class Doc Comment
  *
  * @category Class
  * @package  EvoliaV3
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class UserLoginRequest implements ModelInterface, ArrayAccess
+class VariablesPart implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class UserLoginRequest implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'UserLoginRequest';
+    protected static $swaggerModelName = 'VariablesPart';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,8 +56,10 @@ class UserLoginRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'user' => 'string',
-'password' => 'string'    ];
+        'code' => 'string',
+'libelle' => 'string',
+'taux_payee' => 'string',
+'taux_facturee' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +67,10 @@ class UserLoginRequest implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'user' => null,
-'password' => null    ];
+        'code' => null,
+'libelle' => null,
+'taux_payee' => null,
+'taux_facturee' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +99,10 @@ class UserLoginRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'user' => 'user',
-'password' => 'password'    ];
+        'code' => 'code',
+'libelle' => 'libelle',
+'taux_payee' => 'tauxPayee',
+'taux_facturee' => 'tauxFacturee'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +110,10 @@ class UserLoginRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'user' => 'setUser',
-'password' => 'setPassword'    ];
+        'code' => 'setCode',
+'libelle' => 'setLibelle',
+'taux_payee' => 'setTauxPayee',
+'taux_facturee' => 'setTauxFacturee'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +121,10 @@ class UserLoginRequest implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'user' => 'getUser',
-'password' => 'getPassword'    ];
+        'code' => 'getCode',
+'libelle' => 'getLibelle',
+'taux_payee' => 'getTauxPayee',
+'taux_facturee' => 'getTauxFacturee'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +184,10 @@ class UserLoginRequest implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['user'] = isset($data['user']) ? $data['user'] : null;
-        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['libelle'] = isset($data['libelle']) ? $data['libelle'] : null;
+        $this->container['taux_payee'] = isset($data['taux_payee']) ? $data['taux_payee'] : null;
+        $this->container['taux_facturee'] = isset($data['taux_facturee']) ? $data['taux_facturee'] : null;
     }
 
     /**
@@ -187,12 +199,6 @@ class UserLoginRequest implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['user'] === null) {
-            $invalidProperties[] = "'user' can't be null";
-        }
-        if ($this->container['password'] === null) {
-            $invalidProperties[] = "'password' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -209,49 +215,97 @@ class UserLoginRequest implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets user
+     * Gets code
      *
      * @return string
      */
-    public function getUser()
+    public function getCode()
     {
-        return $this->container['user'];
+        return $this->container['code'];
     }
 
     /**
-     * Sets user
+     * Sets code
      *
-     * @param string $user user
+     * @param string $code code
      *
      * @return $this
      */
-    public function setUser($user)
+    public function setCode($code)
     {
-        $this->container['user'] = $user;
+        $this->container['code'] = $code;
 
         return $this;
     }
 
     /**
-     * Gets password
+     * Gets libelle
      *
      * @return string
      */
-    public function getPassword()
+    public function getLibelle()
     {
-        return $this->container['password'];
+        return $this->container['libelle'];
     }
 
     /**
-     * Sets password
+     * Sets libelle
      *
-     * @param string $password password
+     * @param string $libelle libelle
      *
      * @return $this
      */
-    public function setPassword($password)
+    public function setLibelle($libelle)
     {
-        $this->container['password'] = $password;
+        $this->container['libelle'] = $libelle;
+
+        return $this;
+    }
+
+    /**
+     * Gets taux_payee
+     *
+     * @return string
+     */
+    public function getTauxPayee()
+    {
+        return $this->container['taux_payee'];
+    }
+
+    /**
+     * Sets taux_payee
+     *
+     * @param string $taux_payee taux_payee
+     *
+     * @return $this
+     */
+    public function setTauxPayee($taux_payee)
+    {
+        $this->container['taux_payee'] = $taux_payee;
+
+        return $this;
+    }
+
+    /**
+     * Gets taux_facturee
+     *
+     * @return string
+     */
+    public function getTauxFacturee()
+    {
+        return $this->container['taux_facturee'];
+    }
+
+    /**
+     * Sets taux_facturee
+     *
+     * @param string $taux_facturee taux_facturee
+     *
+     * @return $this
+     */
+    public function setTauxFacturee($taux_facturee)
+    {
+        $this->container['taux_facturee'] = $taux_facturee;
 
         return $this;
     }

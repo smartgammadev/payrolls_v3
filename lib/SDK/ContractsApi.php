@@ -1,6 +1,6 @@
 <?php
 /**
- * ContractApi
+ * ContractsApi
  * PHP version 5
  *
  * @category Class
@@ -39,14 +39,14 @@ use EvoliaV3\HeaderSelector;
 use EvoliaV3\ObjectSerializer;
 
 /**
- * ContractApi Class Doc Comment
+ * ContractsApi Class Doc Comment
  *
  * @category Class
  * @package  EvoliaV3
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ContractApi
+class ContractsApi
 {
     /**
      * @var ClientInterface
@@ -277,7 +277,7 @@ class ContractApi
     protected function importContractRequest($body = null)
     {
 
-        $resourcePath = '/api/v3/contract';
+        $resourcePath = '/api/v3/contracts';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -350,7 +350,7 @@ class ContractApi
 
         $query = \GuzzleHttp\Psr7\build_query($queryParams);
         return new Request(
-            'PUT',
+            'POST',
             $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
@@ -567,7 +567,7 @@ class ContractApi
             );
         }
 
-        $resourcePath = '/api/v3/contract/{contractId}';
+        $resourcePath = '/api/v3/contracts/{contractId}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

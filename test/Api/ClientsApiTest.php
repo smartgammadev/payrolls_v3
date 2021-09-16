@@ -1,6 +1,6 @@
 <?php
 /**
- * ContractApiTest
+ * ClientsApiTest
  * PHP version 5
  *
  * @category Class
@@ -32,14 +32,14 @@ use EvoliaV3\ApiException;
 use EvoliaV3\ObjectSerializer;
 
 /**
- * ContractApiTest Class Doc Comment
+ * ClientsApiTest Class Doc Comment
  *
  * @category Class
  * @package  EvoliaV3
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ContractApiTest extends \PHPUnit_Framework_TestCase
+class ClientsApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -71,22 +71,32 @@ class ContractApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for importContract
+     * Test case for findClientsBySiret
      *
-     * Import the Contract.
+     * This endpoint is used to search the siret in the DB from the NIC and the Siret.
      *
      */
-    public function testImportContract()
+    public function testFindClientsBySiret()
     {
     }
 
     /**
-     * Test case for updateContract
+     * Test case for importClient
      *
-     * Update the Contract information.
+     * Import the Customer.
      *
      */
-    public function testUpdateContract()
+    public function testImportClient()
+    {
+    }
+
+    /**
+     * Test case for updateClient
+     *
+     * update the Customer.
+     *
+     */
+    public function testUpdateClient()
     {
     }
 }

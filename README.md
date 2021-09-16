@@ -82,18 +82,20 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AdminApi* | [**initProject**](docs/Api/AdminApi.md#initproject) | **POST** /api/v3/admin/initialization | Used to create (if needed) the local SQLite Database  And create the default appID/appSecret
 *CandidatesApi* | [**importCandidate**](docs/Api/CandidatesApi.md#importcandidate) | **POST** /api/v3/candidates | Import the Candidate
-*CandidatesApi* | [**searchCandidate**](docs/Api/CandidatesApi.md#searchcandidate) | **POST** /api/v3/candidates/{idAgency}/{numSecu}/{numSecuCle} | Test if the Candidate exists
+*CandidatesApi* | [**searchCandidate**](docs/Api/CandidatesApi.md#searchcandidate) | **GET** /api/v3/candidates/{idAgency}/{numSecu}/{numSecuCle} | Test if the Candidate exists
 *CandidatesApi* | [**updateCandidate**](docs/Api/CandidatesApi.md#updatecandidate) | **PUT** /api/v3/candidates | Update the Candidate
 *CandidatesApi* | [**updateDpaes**](docs/Api/CandidatesApi.md#updatedpaes) | **PUT** /api/v3/candidates/dpaes | Update the Candidate with DPAE information
-*ClientApi* | [**findClientsBySiret**](docs/Api/ClientApi.md#findclientsbysiret) | **GET** /api/v3/client/{registrationNumber}/{agencyId} | This endpoint is used to search the siret in the DB from the NIC and the Siret
-*ClientApi* | [**importClient**](docs/Api/ClientApi.md#importclient) | **POST** /api/v3/client | Import the Customer
-*ClientApi* | [**updateClient**](docs/Api/ClientApi.md#updateclient) | **PUT** /api/v3/client/{idRef} | update the Customer
-*ContractApi* | [**importContract**](docs/Api/ContractApi.md#importcontract) | **PUT** /api/v3/contract | Import the Contract
-*ContractApi* | [**updateContract**](docs/Api/ContractApi.md#updatecontract) | **PUT** /api/v3/contract/{contractId} | Update the Contract information
+*ClientsApi* | [**findClientsBySiret**](docs/Api/ClientsApi.md#findclientsbysiret) | **GET** /api/v3/clients/{registrationNumber}/{agencyId} | This endpoint is used to search the siret in the DB from the NIC and the Siret
+*ClientsApi* | [**importClient**](docs/Api/ClientsApi.md#importclient) | **POST** /api/v3/clients | Import the Customer
+*ClientsApi* | [**updateClient**](docs/Api/ClientsApi.md#updateclient) | **PUT** /api/v3/clients/{idRef} | update the Customer
+*ContractsApi* | [**importContract**](docs/Api/ContractsApi.md#importcontract) | **POST** /api/v3/contracts | Import the Contract
+*ContractsApi* | [**updateContract**](docs/Api/ContractsApi.md#updatecontract) | **PUT** /api/v3/contracts/{contractId} | Update the Contract information
 *HomeApi* | [**getHealth**](docs/Api/HomeApi.md#gethealth) | **GET** /health | This endpoint is used to test the server&#x27;s health
 *ReferencesApi* | [**getReferences**](docs/Api/ReferencesApi.md#getreferences) | **GET** /api/v3/references | Get all the references from the database
+*TimesheetApi* | [**importTimesheet**](docs/Api/TimesheetApi.md#importtimesheet) | **POST** /api/v3/timesheet | Import Timesheet
 *TokenApi* | [**refreshToken**](docs/Api/TokenApi.md#refreshtoken) | **POST** /api/v3/token/refresh | 
 *TokenApi* | [**revokeToken**](docs/Api/TokenApi.md#revoketoken) | **DELETE** /api/v3/token/{refreshToken} | 
+*TokenApi* | [**userLogin**](docs/Api/TokenApi.md#userlogin) | **POST** /api/v3/token | user authentication and token generation
 *UserApi* | [**login**](docs/Api/UserApi.md#login) | **POST** /api/v3/user/login | 
 *UserApi* | [**registerUser**](docs/Api/UserApi.md#registeruser) | **POST** /api/v3/user/registeruser | 
 *UserApi* | [**revokeUser**](docs/Api/UserApi.md#revokeuser) | **DELETE** /api/v3/user/{userName} | 
@@ -108,6 +110,7 @@ Class | Method | HTTP request | Description
  - [ClientRequest](docs/Model/ClientRequest.md)
  - [Contract](docs/Model/Contract.md)
  - [ContractChanges](docs/Model/ContractChanges.md)
+ - [ContractIds](docs/Model/ContractIds.md)
  - [ContractualData](docs/Model/ContractualData.md)
  - [ErrorDetails](docs/Model/ErrorDetails.md)
  - [HealthCheck](docs/Model/HealthCheck.md)
@@ -118,9 +121,11 @@ Class | Method | HTTP request | Description
  - [RefreshTokenRequest](docs/Model/RefreshTokenRequest.md)
  - [SiretQueryResult](docs/Model/SiretQueryResult.md)
  - [SuccessResponse](docs/Model/SuccessResponse.md)
+ - [Timesheet](docs/Model/Timesheet.md)
  - [User](docs/Model/User.md)
  - [UserLoginRequest](docs/Model/UserLoginRequest.md)
  - [UserRegistrationRequest](docs/Model/UserRegistrationRequest.md)
+ - [VariablesPart](docs/Model/VariablesPart.md)
 
 ## Documentation For Authorization
 

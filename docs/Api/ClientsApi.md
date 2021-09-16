@@ -1,12 +1,12 @@
-# EvoliaV3\ClientApi
+# EvoliaV3\ClientsApi
 
 All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/PayrollV3/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**findClientsBySiret**](ClientApi.md#findclientsbysiret) | **GET** /api/v3/client/{registrationNumber}/{agencyId} | This endpoint is used to search the siret in the DB from the NIC and the Siret
-[**importClient**](ClientApi.md#importclient) | **POST** /api/v3/client | Import the Customer
-[**updateClient**](ClientApi.md#updateclient) | **PUT** /api/v3/client/{idRef} | update the Customer
+[**findClientsBySiret**](ClientsApi.md#findclientsbysiret) | **GET** /api/v3/clients/{registrationNumber}/{agencyId} | This endpoint is used to search the siret in the DB from the NIC and the Siret
+[**importClient**](ClientsApi.md#importclient) | **POST** /api/v3/clients | Import the Customer
+[**updateClient**](ClientsApi.md#updateclient) | **PUT** /api/v3/clients/{idRef} | update the Customer
 
 # **findClientsBySiret**
 > \EvoliaV3\Model\SiretQueryResult[] findClientsBySiret($registration_number, $agency_id)
@@ -24,7 +24,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new EvoliaV3\SDK\ClientApi(
+$apiInstance = new EvoliaV3\SDK\ClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -37,7 +37,7 @@ try {
     $result = $apiInstance->findClientsBySiret($registration_number, $agency_id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ClientApi->findClientsBySiret: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ClientsApi->findClientsBySiret: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -78,7 +78,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new EvoliaV3\SDK\ClientApi(
+$apiInstance = new EvoliaV3\SDK\ClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -90,7 +90,7 @@ try {
     $result = $apiInstance->importClient($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ClientApi->importClient: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ClientsApi->importClient: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -130,7 +130,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
     ->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new EvoliaV3\SDK\ClientApi(
+$apiInstance = new EvoliaV3\SDK\ClientsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -143,7 +143,7 @@ try {
     $result = $apiInstance->updateClient($id_ref, $body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ClientApi->updateClient: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ClientsApi->updateClient: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

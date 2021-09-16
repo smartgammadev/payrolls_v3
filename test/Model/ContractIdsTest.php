@@ -1,6 +1,6 @@
 <?php
 /**
- * UserLoginRequestTest
+ * ContractIdsTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace EvoliaV3;
 
 /**
- * UserLoginRequestTest Class Doc Comment
+ * ContractIdsTest Class Doc Comment
  *
  * @category    Class
- * @description UserLoginRequest
+ * @description ContractIds
  * @package     EvoliaV3
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class UserLoginRequestTest extends \PHPUnit_Framework_TestCase
+class ContractIdsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,23 +69,23 @@ class UserLoginRequestTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "UserLoginRequest"
+     * Test "ContractIds"
      */
-    public function testUserLoginRequest()
+    public function testContractIds()
     {
     }
 
     /**
-     * Test attribute "user"
+     * Test attribute "id_contrat"
      */
-    public function testPropertyUser()
+    public function testPropertyIdContrat()
     {
     }
 
     /**
-     * Test attribute "password"
+     * Test attribute "id_personne"
      */
-    public function testPropertyPassword()
+    public function testPropertyIdPersonne()
     {
     }
 }
