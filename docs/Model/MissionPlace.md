@@ -16,7 +16,6 @@ Name | Type | Description | Notes
 **siren** | **string** |  | [optional] 
 **nic** | **string** |  | [optional] 
 **tva_pays** | **string** |  | [optional] 
-**tva_clef** | **string** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -165,11 +165,4 @@ class MissionPlaceTest extends \PHPUnit_Framework_TestCase
     public function testPropertyTvaPays()
     {
     }
-
-    /**
-     * Test attribute "tva_clef"
-     */
-    public function testPropertyTvaClef()
-    {
-    }
 }

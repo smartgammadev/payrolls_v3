@@ -68,8 +68,7 @@ class MissionPlace implements ModelInterface, ArrayAccess
 'ape' => 'string',
 'siren' => 'string',
 'nic' => 'string',
-'tva_pays' => 'string',
-'tva_clef' => 'string'    ];
+'tva_pays' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -89,8 +88,7 @@ class MissionPlace implements ModelInterface, ArrayAccess
 'ape' => null,
 'siren' => null,
 'nic' => null,
-'tva_pays' => null,
-'tva_clef' => null    ];
+'tva_pays' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -131,8 +129,7 @@ class MissionPlace implements ModelInterface, ArrayAccess
 'ape' => 'ape',
 'siren' => 'siren',
 'nic' => 'nic',
-'tva_pays' => 'tvaPays',
-'tva_clef' => 'tvaClef'    ];
+'tva_pays' => 'tvaPays'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -152,8 +149,7 @@ class MissionPlace implements ModelInterface, ArrayAccess
 'ape' => 'setApe',
 'siren' => 'setSiren',
 'nic' => 'setNic',
-'tva_pays' => 'setTvaPays',
-'tva_clef' => 'setTvaClef'    ];
+'tva_pays' => 'setTvaPays'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -173,8 +169,7 @@ class MissionPlace implements ModelInterface, ArrayAccess
 'ape' => 'getApe',
 'siren' => 'getSiren',
 'nic' => 'getNic',
-'tva_pays' => 'getTvaPays',
-'tva_clef' => 'getTvaClef'    ];
+'tva_pays' => 'getTvaPays'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -247,7 +242,6 @@ class MissionPlace implements ModelInterface, ArrayAccess
         $this->container['siren'] = isset($data['siren']) ? $data['siren'] : null;
         $this->container['nic'] = isset($data['nic']) ? $data['nic'] : null;
         $this->container['tva_pays'] = isset($data['tva_pays']) ? $data['tva_pays'] : null;
-        $this->container['tva_clef'] = isset($data['tva_clef']) ? $data['tva_clef'] : null;
     }
 
     /**
@@ -582,30 +576,6 @@ class MissionPlace implements ModelInterface, ArrayAccess
     public function setTvaPays($tva_pays)
     {
         $this->container['tva_pays'] = $tva_pays;
-
-        return $this;
-    }
-
-    /**
-     * Gets tva_clef
-     *
-     * @return string
-     */
-    public function getTvaClef()
-    {
-        return $this->container['tva_clef'];
-    }
-
-    /**
-     * Sets tva_clef
-     *
-     * @param string $tva_clef tva_clef
-     *
-     * @return $this
-     */
-    public function setTvaClef($tva_clef)
-    {
-        $this->container['tva_clef'] = $tva_clef;
 
         return $this;
     }
