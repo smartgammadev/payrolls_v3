@@ -1,6 +1,6 @@
 <?php
 /**
- * ContractIdsTest
+ * EResultTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace EvoliaV3;
 
 /**
- * ContractIdsTest Class Doc Comment
+ * EResultTest Class Doc Comment
  *
  * @category    Class
- * @description ContractIds
+ * @description EResult
  * @package     EvoliaV3
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ContractIdsTest extends \PHPUnit_Framework_TestCase
+class EResultTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,23 +69,9 @@ class ContractIdsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "ContractIds"
+     * Test "EResult"
      */
-    public function testContractIds()
-    {
-    }
-
-    /**
-     * Test attribute "id_contrat"
-     */
-    public function testPropertyIdContrat()
-    {
-    }
-
-    /**
-     * Test attribute "id_personne"
-     */
-    public function testPropertyIdPersonne()
+    public function testEResult()
     {
     }
 }

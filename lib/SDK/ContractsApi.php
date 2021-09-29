@@ -176,7 +176,7 @@ class ContractsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EvoliaV3\Model\AppErrorResponse',
+                        '\EvoliaV3\Model\ErrorDetails',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class ContractsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EvoliaV3\Model\AppErrorResponse',
+                        '\EvoliaV3\Model\ErrorDetails',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -446,18 +446,10 @@ class ContractsApi
                     );
                     $e->setResponseObject($data);
                     break;
-                case 304:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\EvoliaV3\Model\AppErrorResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EvoliaV3\Model\AppErrorResponse',
+                        '\EvoliaV3\Model\ErrorDetails',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -465,7 +457,7 @@ class ContractsApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EvoliaV3\Model\AppErrorResponse',
+                        '\EvoliaV3\Model\ErrorDetails',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

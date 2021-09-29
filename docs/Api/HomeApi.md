@@ -11,6 +11,8 @@ Method | HTTP request | Description
 
 This endpoint is used to test the server's health
 
+Sample request:  GET {  \"version\": \"3.1.11\",  \"status\": \"OK\",  \"sqliteConnection\": \"OK\",  \"sqlServerConnection\": \"KO\"  }
+
 ### Example
 ```php
 <?php

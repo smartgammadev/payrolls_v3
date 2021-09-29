@@ -110,11 +110,12 @@ Class | Method | HTTP request | Description
  - [ClientRequest](docs/Model/ClientRequest.md)
  - [Contract](docs/Model/Contract.md)
  - [ContractChanges](docs/Model/ContractChanges.md)
- - [ContractIds](docs/Model/ContractIds.md)
  - [ContractualData](docs/Model/ContractualData.md)
+ - [EResult](docs/Model/EResult.md)
  - [ErrorDetails](docs/Model/ErrorDetails.md)
  - [HealthCheck](docs/Model/HealthCheck.md)
  - [MissionPlace](docs/Model/MissionPlace.md)
+ - [PayrollItemsPart](docs/Model/PayrollItemsPart.md)
  - [ProblemDetails](docs/Model/ProblemDetails.md)
  - [ReferenceItem](docs/Model/ReferenceItem.md)
  - [ReferencesResponse](docs/Model/ReferencesResponse.md)
@@ -125,7 +126,7 @@ Class | Method | HTTP request | Description
  - [User](docs/Model/User.md)
  - [UserLoginRequest](docs/Model/UserLoginRequest.md)
  - [UserRegistrationRequest](docs/Model/UserRegistrationRequest.md)
- - [VariablesPart](docs/Model/VariablesPart.md)
+ - [WorkDays](docs/Model/WorkDays.md)
 
 ## Documentation For Authorization
 

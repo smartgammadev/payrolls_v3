@@ -461,7 +461,7 @@ class ClientsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EvoliaV3\Model\AppErrorResponse',
+                        '\EvoliaV3\Model\ErrorDetails',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -742,7 +742,7 @@ class ClientsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\EvoliaV3\Model\AppErrorResponse',
+                        '\EvoliaV3\Model\ErrorDetails',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);

@@ -1,6 +1,6 @@
 <?php
 /**
- * ContractIds
+ * PayrollItemsPart
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \EvoliaV3\ObjectSerializer;
 
 /**
- * ContractIds Class Doc Comment
+ * PayrollItemsPart Class Doc Comment
  *
  * @category Class
  * @package  EvoliaV3
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ContractIds implements ModelInterface, ArrayAccess
+class PayrollItemsPart implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class ContractIds implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'ContractIds';
+    protected static $swaggerModelName = 'PayrollItemsPart';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,8 +56,11 @@ class ContractIds implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id_contrat' => 'int',
-'id_personne' => 'int'    ];
+        'item_ref' => 'string',
+'title' => 'string',
+'amount_paid' => 'double',
+'amount_billed' => 'double',
+'quantity' => 'int'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,8 +68,11 @@ class ContractIds implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id_contrat' => 'int32',
-'id_personne' => 'int32'    ];
+        'item_ref' => null,
+'title' => null,
+'amount_paid' => 'double',
+'amount_billed' => 'double',
+'quantity' => 'int32'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -95,8 +101,11 @@ class ContractIds implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id_contrat' => 'idContrat',
-'id_personne' => 'idPersonne'    ];
+        'item_ref' => 'itemRef',
+'title' => 'title',
+'amount_paid' => 'amountPaid',
+'amount_billed' => 'amountBilled',
+'quantity' => 'quantity'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -104,8 +113,11 @@ class ContractIds implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id_contrat' => 'setIdContrat',
-'id_personne' => 'setIdPersonne'    ];
+        'item_ref' => 'setItemRef',
+'title' => 'setTitle',
+'amount_paid' => 'setAmountPaid',
+'amount_billed' => 'setAmountBilled',
+'quantity' => 'setQuantity'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -113,8 +125,11 @@ class ContractIds implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id_contrat' => 'getIdContrat',
-'id_personne' => 'getIdPersonne'    ];
+        'item_ref' => 'getItemRef',
+'title' => 'getTitle',
+'amount_paid' => 'getAmountPaid',
+'amount_billed' => 'getAmountBilled',
+'quantity' => 'getQuantity'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -174,8 +189,11 @@ class ContractIds implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id_contrat'] = isset($data['id_contrat']) ? $data['id_contrat'] : null;
-        $this->container['id_personne'] = isset($data['id_personne']) ? $data['id_personne'] : null;
+        $this->container['item_ref'] = isset($data['item_ref']) ? $data['item_ref'] : null;
+        $this->container['title'] = isset($data['title']) ? $data['title'] : null;
+        $this->container['amount_paid'] = isset($data['amount_paid']) ? $data['amount_paid'] : null;
+        $this->container['amount_billed'] = isset($data['amount_billed']) ? $data['amount_billed'] : null;
+        $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
     }
 
     /**
@@ -187,11 +205,11 @@ class ContractIds implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['id_contrat'] === null) {
-            $invalidProperties[] = "'id_contrat' can't be null";
+        if ($this->container['item_ref'] === null) {
+            $invalidProperties[] = "'item_ref' can't be null";
         }
-        if ($this->container['id_personne'] === null) {
-            $invalidProperties[] = "'id_personne' can't be null";
+        if ($this->container['title'] === null) {
+            $invalidProperties[] = "'title' can't be null";
         }
         return $invalidProperties;
     }
@@ -209,49 +227,121 @@ class ContractIds implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id_contrat
+     * Gets item_ref
      *
-     * @return int
+     * @return string
      */
-    public function getIdContrat()
+    public function getItemRef()
     {
-        return $this->container['id_contrat'];
+        return $this->container['item_ref'];
     }
 
     /**
-     * Sets id_contrat
+     * Sets item_ref
      *
-     * @param int $id_contrat id_contrat
+     * @param string $item_ref item_ref
      *
      * @return $this
      */
-    public function setIdContrat($id_contrat)
+    public function setItemRef($item_ref)
     {
-        $this->container['id_contrat'] = $id_contrat;
+        $this->container['item_ref'] = $item_ref;
 
         return $this;
     }
 
     /**
-     * Gets id_personne
+     * Gets title
      *
-     * @return int
+     * @return string
      */
-    public function getIdPersonne()
+    public function getTitle()
     {
-        return $this->container['id_personne'];
+        return $this->container['title'];
     }
 
     /**
-     * Sets id_personne
+     * Sets title
      *
-     * @param int $id_personne id_personne
+     * @param string $title title
      *
      * @return $this
      */
-    public function setIdPersonne($id_personne)
+    public function setTitle($title)
     {
-        $this->container['id_personne'] = $id_personne;
+        $this->container['title'] = $title;
+
+        return $this;
+    }
+
+    /**
+     * Gets amount_paid
+     *
+     * @return double
+     */
+    public function getAmountPaid()
+    {
+        return $this->container['amount_paid'];
+    }
+
+    /**
+     * Sets amount_paid
+     *
+     * @param double $amount_paid amount_paid
+     *
+     * @return $this
+     */
+    public function setAmountPaid($amount_paid)
+    {
+        $this->container['amount_paid'] = $amount_paid;
+
+        return $this;
+    }
+
+    /**
+     * Gets amount_billed
+     *
+     * @return double
+     */
+    public function getAmountBilled()
+    {
+        return $this->container['amount_billed'];
+    }
+
+    /**
+     * Sets amount_billed
+     *
+     * @param double $amount_billed amount_billed
+     *
+     * @return $this
+     */
+    public function setAmountBilled($amount_billed)
+    {
+        $this->container['amount_billed'] = $amount_billed;
+
+        return $this;
+    }
+
+    /**
+     * Gets quantity
+     *
+     * @return int
+     */
+    public function getQuantity()
+    {
+        return $this->container['quantity'];
+    }
+
+    /**
+     * Sets quantity
+     *
+     * @param int $quantity quantity
+     *
+     * @return $this
+     */
+    public function setQuantity($quantity)
+    {
+        $this->container['quantity'] = $quantity;
 
         return $this;
     }

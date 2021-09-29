@@ -56,7 +56,7 @@ class ErrorDetails implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'errors' => '',
+        'errors' => 'map[string,string[]]',
 'title' => 'string',
 'type' => 'string',
 'status' => 'int',
@@ -205,9 +205,6 @@ class ErrorDetails implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['errors'] === null) {
-            $invalidProperties[] = "'errors' can't be null";
-        }
         if ($this->container['title'] === null) {
             $invalidProperties[] = "'title' can't be null";
         }
@@ -238,7 +235,7 @@ class ErrorDetails implements ModelInterface, ArrayAccess
     /**
      * Gets errors
      *
-     * @return 
+     * @return map[string,string[]]
      */
     public function getErrors()
     {
@@ -248,7 +245,7 @@ class ErrorDetails implements ModelInterface, ArrayAccess
     /**
      * Sets errors
      *
-     * @param  $errors errors
+     * @param map[string,string[]] $errors errors
      *
      * @return $this
      */

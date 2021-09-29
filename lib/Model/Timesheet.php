@@ -56,23 +56,9 @@ class Timesheet implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'contrat' => '\EvoliaV3\Model\ContractIds',
-'date_premier_jour_semaine' => 'string',
-'lundi_jour' => 'int',
-'lundi_nuit' => 'int',
-'mardi_jour' => 'int',
-'mardi_nuit' => 'int',
-'mercredi_jour' => 'int',
-'mercredi_nuit' => 'int',
-'jeudi_jour' => 'int',
-'jeudi_nuit' => 'int',
-'vendredi_jour' => 'int',
-'vendredi_nuit' => 'int',
-'samedi_jour' => 'int',
-'samedi_nuit' => 'int',
-'dimanche_jour' => 'int',
-'dimanche_nuit' => 'int',
-'rubriques_variables' => '\EvoliaV3\Model\VariablesPart[]'    ];
+        'id_contract' => 'int',
+'id_employee' => 'int',
+'work_days' => '\EvoliaV3\Model\WorkDays[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -80,23 +66,9 @@ class Timesheet implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'contrat' => null,
-'date_premier_jour_semaine' => null,
-'lundi_jour' => 'int32',
-'lundi_nuit' => 'int32',
-'mardi_jour' => 'int32',
-'mardi_nuit' => 'int32',
-'mercredi_jour' => 'int32',
-'mercredi_nuit' => 'int32',
-'jeudi_jour' => 'int32',
-'jeudi_nuit' => 'int32',
-'vendredi_jour' => 'int32',
-'vendredi_nuit' => 'int32',
-'samedi_jour' => 'int32',
-'samedi_nuit' => 'int32',
-'dimanche_jour' => 'int32',
-'dimanche_nuit' => 'int32',
-'rubriques_variables' => null    ];
+        'id_contract' => 'int32',
+'id_employee' => 'int32',
+'work_days' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -125,23 +97,9 @@ class Timesheet implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'contrat' => 'contrat',
-'date_premier_jour_semaine' => 'datePremierJourSemaine',
-'lundi_jour' => 'lundiJour',
-'lundi_nuit' => 'lundiNuit',
-'mardi_jour' => 'mardiJour',
-'mardi_nuit' => 'mardiNuit',
-'mercredi_jour' => 'mercrediJour',
-'mercredi_nuit' => 'mercrediNuit',
-'jeudi_jour' => 'jeudiJour',
-'jeudi_nuit' => 'jeudiNuit',
-'vendredi_jour' => 'vendrediJour',
-'vendredi_nuit' => 'vendrediNuit',
-'samedi_jour' => 'samediJour',
-'samedi_nuit' => 'samediNuit',
-'dimanche_jour' => 'dimancheJour',
-'dimanche_nuit' => 'dimancheNuit',
-'rubriques_variables' => 'rubriquesVariables'    ];
+        'id_contract' => 'idContract',
+'id_employee' => 'idEmployee',
+'work_days' => 'workDays'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -149,23 +107,9 @@ class Timesheet implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'contrat' => 'setContrat',
-'date_premier_jour_semaine' => 'setDatePremierJourSemaine',
-'lundi_jour' => 'setLundiJour',
-'lundi_nuit' => 'setLundiNuit',
-'mardi_jour' => 'setMardiJour',
-'mardi_nuit' => 'setMardiNuit',
-'mercredi_jour' => 'setMercrediJour',
-'mercredi_nuit' => 'setMercrediNuit',
-'jeudi_jour' => 'setJeudiJour',
-'jeudi_nuit' => 'setJeudiNuit',
-'vendredi_jour' => 'setVendrediJour',
-'vendredi_nuit' => 'setVendrediNuit',
-'samedi_jour' => 'setSamediJour',
-'samedi_nuit' => 'setSamediNuit',
-'dimanche_jour' => 'setDimancheJour',
-'dimanche_nuit' => 'setDimancheNuit',
-'rubriques_variables' => 'setRubriquesVariables'    ];
+        'id_contract' => 'setIdContract',
+'id_employee' => 'setIdEmployee',
+'work_days' => 'setWorkDays'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -173,23 +117,9 @@ class Timesheet implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'contrat' => 'getContrat',
-'date_premier_jour_semaine' => 'getDatePremierJourSemaine',
-'lundi_jour' => 'getLundiJour',
-'lundi_nuit' => 'getLundiNuit',
-'mardi_jour' => 'getMardiJour',
-'mardi_nuit' => 'getMardiNuit',
-'mercredi_jour' => 'getMercrediJour',
-'mercredi_nuit' => 'getMercrediNuit',
-'jeudi_jour' => 'getJeudiJour',
-'jeudi_nuit' => 'getJeudiNuit',
-'vendredi_jour' => 'getVendrediJour',
-'vendredi_nuit' => 'getVendrediNuit',
-'samedi_jour' => 'getSamediJour',
-'samedi_nuit' => 'getSamediNuit',
-'dimanche_jour' => 'getDimancheJour',
-'dimanche_nuit' => 'getDimancheNuit',
-'rubriques_variables' => 'getRubriquesVariables'    ];
+        'id_contract' => 'getIdContract',
+'id_employee' => 'getIdEmployee',
+'work_days' => 'getWorkDays'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -249,23 +179,9 @@ class Timesheet implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['contrat'] = isset($data['contrat']) ? $data['contrat'] : null;
-        $this->container['date_premier_jour_semaine'] = isset($data['date_premier_jour_semaine']) ? $data['date_premier_jour_semaine'] : null;
-        $this->container['lundi_jour'] = isset($data['lundi_jour']) ? $data['lundi_jour'] : null;
-        $this->container['lundi_nuit'] = isset($data['lundi_nuit']) ? $data['lundi_nuit'] : null;
-        $this->container['mardi_jour'] = isset($data['mardi_jour']) ? $data['mardi_jour'] : null;
-        $this->container['mardi_nuit'] = isset($data['mardi_nuit']) ? $data['mardi_nuit'] : null;
-        $this->container['mercredi_jour'] = isset($data['mercredi_jour']) ? $data['mercredi_jour'] : null;
-        $this->container['mercredi_nuit'] = isset($data['mercredi_nuit']) ? $data['mercredi_nuit'] : null;
-        $this->container['jeudi_jour'] = isset($data['jeudi_jour']) ? $data['jeudi_jour'] : null;
-        $this->container['jeudi_nuit'] = isset($data['jeudi_nuit']) ? $data['jeudi_nuit'] : null;
-        $this->container['vendredi_jour'] = isset($data['vendredi_jour']) ? $data['vendredi_jour'] : null;
-        $this->container['vendredi_nuit'] = isset($data['vendredi_nuit']) ? $data['vendredi_nuit'] : null;
-        $this->container['samedi_jour'] = isset($data['samedi_jour']) ? $data['samedi_jour'] : null;
-        $this->container['samedi_nuit'] = isset($data['samedi_nuit']) ? $data['samedi_nuit'] : null;
-        $this->container['dimanche_jour'] = isset($data['dimanche_jour']) ? $data['dimanche_jour'] : null;
-        $this->container['dimanche_nuit'] = isset($data['dimanche_nuit']) ? $data['dimanche_nuit'] : null;
-        $this->container['rubriques_variables'] = isset($data['rubriques_variables']) ? $data['rubriques_variables'] : null;
+        $this->container['id_contract'] = isset($data['id_contract']) ? $data['id_contract'] : null;
+        $this->container['id_employee'] = isset($data['id_employee']) ? $data['id_employee'] : null;
+        $this->container['work_days'] = isset($data['work_days']) ? $data['work_days'] : null;
     }
 
     /**
@@ -277,6 +193,15 @@ class Timesheet implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['id_contract'] === null) {
+            $invalidProperties[] = "'id_contract' can't be null";
+        }
+        if ($this->container['id_employee'] === null) {
+            $invalidProperties[] = "'id_employee' can't be null";
+        }
+        if ($this->container['work_days'] === null) {
+            $invalidProperties[] = "'work_days' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -293,409 +218,73 @@ class Timesheet implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets contrat
-     *
-     * @return \EvoliaV3\Model\ContractIds
-     */
-    public function getContrat()
-    {
-        return $this->container['contrat'];
-    }
-
-    /**
-     * Sets contrat
-     *
-     * @param \EvoliaV3\Model\ContractIds $contrat contrat
-     *
-     * @return $this
-     */
-    public function setContrat($contrat)
-    {
-        $this->container['contrat'] = $contrat;
-
-        return $this;
-    }
-
-    /**
-     * Gets date_premier_jour_semaine
-     *
-     * @return string
-     */
-    public function getDatePremierJourSemaine()
-    {
-        return $this->container['date_premier_jour_semaine'];
-    }
-
-    /**
-     * Sets date_premier_jour_semaine
-     *
-     * @param string $date_premier_jour_semaine date_premier_jour_semaine
-     *
-     * @return $this
-     */
-    public function setDatePremierJourSemaine($date_premier_jour_semaine)
-    {
-        $this->container['date_premier_jour_semaine'] = $date_premier_jour_semaine;
-
-        return $this;
-    }
-
-    /**
-     * Gets lundi_jour
+     * Gets id_contract
      *
      * @return int
      */
-    public function getLundiJour()
+    public function getIdContract()
     {
-        return $this->container['lundi_jour'];
+        return $this->container['id_contract'];
     }
 
     /**
-     * Sets lundi_jour
+     * Sets id_contract
      *
-     * @param int $lundi_jour lundi_jour
+     * @param int $id_contract id_contract
      *
      * @return $this
      */
-    public function setLundiJour($lundi_jour)
+    public function setIdContract($id_contract)
     {
-        $this->container['lundi_jour'] = $lundi_jour;
+        $this->container['id_contract'] = $id_contract;
 
         return $this;
     }
 
     /**
-     * Gets lundi_nuit
+     * Gets id_employee
      *
      * @return int
      */
-    public function getLundiNuit()
+    public function getIdEmployee()
     {
-        return $this->container['lundi_nuit'];
+        return $this->container['id_employee'];
     }
 
     /**
-     * Sets lundi_nuit
+     * Sets id_employee
      *
-     * @param int $lundi_nuit lundi_nuit
+     * @param int $id_employee id_employee
      *
      * @return $this
      */
-    public function setLundiNuit($lundi_nuit)
+    public function setIdEmployee($id_employee)
     {
-        $this->container['lundi_nuit'] = $lundi_nuit;
+        $this->container['id_employee'] = $id_employee;
 
         return $this;
     }
 
     /**
-     * Gets mardi_jour
+     * Gets work_days
      *
-     * @return int
+     * @return \EvoliaV3\Model\WorkDays[]
      */
-    public function getMardiJour()
+    public function getWorkDays()
     {
-        return $this->container['mardi_jour'];
+        return $this->container['work_days'];
     }
 
     /**
-     * Sets mardi_jour
+     * Sets work_days
      *
-     * @param int $mardi_jour mardi_jour
+     * @param \EvoliaV3\Model\WorkDays[] $work_days work_days
      *
      * @return $this
      */
-    public function setMardiJour($mardi_jour)
+    public function setWorkDays($work_days)
     {
-        $this->container['mardi_jour'] = $mardi_jour;
-
-        return $this;
-    }
-
-    /**
-     * Gets mardi_nuit
-     *
-     * @return int
-     */
-    public function getMardiNuit()
-    {
-        return $this->container['mardi_nuit'];
-    }
-
-    /**
-     * Sets mardi_nuit
-     *
-     * @param int $mardi_nuit mardi_nuit
-     *
-     * @return $this
-     */
-    public function setMardiNuit($mardi_nuit)
-    {
-        $this->container['mardi_nuit'] = $mardi_nuit;
-
-        return $this;
-    }
-
-    /**
-     * Gets mercredi_jour
-     *
-     * @return int
-     */
-    public function getMercrediJour()
-    {
-        return $this->container['mercredi_jour'];
-    }
-
-    /**
-     * Sets mercredi_jour
-     *
-     * @param int $mercredi_jour mercredi_jour
-     *
-     * @return $this
-     */
-    public function setMercrediJour($mercredi_jour)
-    {
-        $this->container['mercredi_jour'] = $mercredi_jour;
-
-        return $this;
-    }
-
-    /**
-     * Gets mercredi_nuit
-     *
-     * @return int
-     */
-    public function getMercrediNuit()
-    {
-        return $this->container['mercredi_nuit'];
-    }
-
-    /**
-     * Sets mercredi_nuit
-     *
-     * @param int $mercredi_nuit mercredi_nuit
-     *
-     * @return $this
-     */
-    public function setMercrediNuit($mercredi_nuit)
-    {
-        $this->container['mercredi_nuit'] = $mercredi_nuit;
-
-        return $this;
-    }
-
-    /**
-     * Gets jeudi_jour
-     *
-     * @return int
-     */
-    public function getJeudiJour()
-    {
-        return $this->container['jeudi_jour'];
-    }
-
-    /**
-     * Sets jeudi_jour
-     *
-     * @param int $jeudi_jour jeudi_jour
-     *
-     * @return $this
-     */
-    public function setJeudiJour($jeudi_jour)
-    {
-        $this->container['jeudi_jour'] = $jeudi_jour;
-
-        return $this;
-    }
-
-    /**
-     * Gets jeudi_nuit
-     *
-     * @return int
-     */
-    public function getJeudiNuit()
-    {
-        return $this->container['jeudi_nuit'];
-    }
-
-    /**
-     * Sets jeudi_nuit
-     *
-     * @param int $jeudi_nuit jeudi_nuit
-     *
-     * @return $this
-     */
-    public function setJeudiNuit($jeudi_nuit)
-    {
-        $this->container['jeudi_nuit'] = $jeudi_nuit;
-
-        return $this;
-    }
-
-    /**
-     * Gets vendredi_jour
-     *
-     * @return int
-     */
-    public function getVendrediJour()
-    {
-        return $this->container['vendredi_jour'];
-    }
-
-    /**
-     * Sets vendredi_jour
-     *
-     * @param int $vendredi_jour vendredi_jour
-     *
-     * @return $this
-     */
-    public function setVendrediJour($vendredi_jour)
-    {
-        $this->container['vendredi_jour'] = $vendredi_jour;
-
-        return $this;
-    }
-
-    /**
-     * Gets vendredi_nuit
-     *
-     * @return int
-     */
-    public function getVendrediNuit()
-    {
-        return $this->container['vendredi_nuit'];
-    }
-
-    /**
-     * Sets vendredi_nuit
-     *
-     * @param int $vendredi_nuit vendredi_nuit
-     *
-     * @return $this
-     */
-    public function setVendrediNuit($vendredi_nuit)
-    {
-        $this->container['vendredi_nuit'] = $vendredi_nuit;
-
-        return $this;
-    }
-
-    /**
-     * Gets samedi_jour
-     *
-     * @return int
-     */
-    public function getSamediJour()
-    {
-        return $this->container['samedi_jour'];
-    }
-
-    /**
-     * Sets samedi_jour
-     *
-     * @param int $samedi_jour samedi_jour
-     *
-     * @return $this
-     */
-    public function setSamediJour($samedi_jour)
-    {
-        $this->container['samedi_jour'] = $samedi_jour;
-
-        return $this;
-    }
-
-    /**
-     * Gets samedi_nuit
-     *
-     * @return int
-     */
-    public function getSamediNuit()
-    {
-        return $this->container['samedi_nuit'];
-    }
-
-    /**
-     * Sets samedi_nuit
-     *
-     * @param int $samedi_nuit samedi_nuit
-     *
-     * @return $this
-     */
-    public function setSamediNuit($samedi_nuit)
-    {
-        $this->container['samedi_nuit'] = $samedi_nuit;
-
-        return $this;
-    }
-
-    /**
-     * Gets dimanche_jour
-     *
-     * @return int
-     */
-    public function getDimancheJour()
-    {
-        return $this->container['dimanche_jour'];
-    }
-
-    /**
-     * Sets dimanche_jour
-     *
-     * @param int $dimanche_jour dimanche_jour
-     *
-     * @return $this
-     */
-    public function setDimancheJour($dimanche_jour)
-    {
-        $this->container['dimanche_jour'] = $dimanche_jour;
-
-        return $this;
-    }
-
-    /**
-     * Gets dimanche_nuit
-     *
-     * @return int
-     */
-    public function getDimancheNuit()
-    {
-        return $this->container['dimanche_nuit'];
-    }
-
-    /**
-     * Sets dimanche_nuit
-     *
-     * @param int $dimanche_nuit dimanche_nuit
-     *
-     * @return $this
-     */
-    public function setDimancheNuit($dimanche_nuit)
-    {
-        $this->container['dimanche_nuit'] = $dimanche_nuit;
-
-        return $this;
-    }
-
-    /**
-     * Gets rubriques_variables
-     *
-     * @return \EvoliaV3\Model\VariablesPart[]
-     */
-    public function getRubriquesVariables()
-    {
-        return $this->container['rubriques_variables'];
-    }
-
-    /**
-     * Sets rubriques_variables
-     *
-     * @param \EvoliaV3\Model\VariablesPart[] $rubriques_variables rubriques_variables
-     *
-     * @return $this
-     */
-    public function setRubriquesVariables($rubriques_variables)
-    {
-        $this->container['rubriques_variables'] = $rubriques_variables;
+        $this->container['work_days'] = $work_days;
 
         return $this;
     }

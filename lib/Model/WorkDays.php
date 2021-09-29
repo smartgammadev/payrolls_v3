@@ -1,6 +1,6 @@
 <?php
 /**
- * VariablesPart
+ * WorkDays
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \EvoliaV3\ObjectSerializer;
 
 /**
- * VariablesPart Class Doc Comment
+ * WorkDays Class Doc Comment
  *
  * @category Class
  * @package  EvoliaV3
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class VariablesPart implements ModelInterface, ArrayAccess
+class WorkDays implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class VariablesPart implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'VariablesPart';
+    protected static $swaggerModelName = 'WorkDays';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,10 +56,11 @@ class VariablesPart implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'code' => 'string',
-'libelle' => 'string',
-'taux_payee' => 'string',
-'taux_facturee' => 'string'    ];
+        'date' => '\DateTime',
+'daytime' => 'double',
+'nighttime' => 'double',
+'is_absent' => 'bool',
+'payroll_items' => '\EvoliaV3\Model\PayrollItemsPart[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -67,10 +68,11 @@ class VariablesPart implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'code' => null,
-'libelle' => null,
-'taux_payee' => null,
-'taux_facturee' => null    ];
+        'date' => 'date-time',
+'daytime' => 'double',
+'nighttime' => 'double',
+'is_absent' => null,
+'payroll_items' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -99,10 +101,11 @@ class VariablesPart implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'code' => 'code',
-'libelle' => 'libelle',
-'taux_payee' => 'tauxPayee',
-'taux_facturee' => 'tauxFacturee'    ];
+        'date' => 'date',
+'daytime' => 'daytime',
+'nighttime' => 'nighttime',
+'is_absent' => 'isAbsent',
+'payroll_items' => 'payrollItems'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -110,10 +113,11 @@ class VariablesPart implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'code' => 'setCode',
-'libelle' => 'setLibelle',
-'taux_payee' => 'setTauxPayee',
-'taux_facturee' => 'setTauxFacturee'    ];
+        'date' => 'setDate',
+'daytime' => 'setDaytime',
+'nighttime' => 'setNighttime',
+'is_absent' => 'setIsAbsent',
+'payroll_items' => 'setPayrollItems'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -121,10 +125,11 @@ class VariablesPart implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'code' => 'getCode',
-'libelle' => 'getLibelle',
-'taux_payee' => 'getTauxPayee',
-'taux_facturee' => 'getTauxFacturee'    ];
+        'date' => 'getDate',
+'daytime' => 'getDaytime',
+'nighttime' => 'getNighttime',
+'is_absent' => 'getIsAbsent',
+'payroll_items' => 'getPayrollItems'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -184,10 +189,11 @@ class VariablesPart implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['libelle'] = isset($data['libelle']) ? $data['libelle'] : null;
-        $this->container['taux_payee'] = isset($data['taux_payee']) ? $data['taux_payee'] : null;
-        $this->container['taux_facturee'] = isset($data['taux_facturee']) ? $data['taux_facturee'] : null;
+        $this->container['date'] = isset($data['date']) ? $data['date'] : null;
+        $this->container['daytime'] = isset($data['daytime']) ? $data['daytime'] : null;
+        $this->container['nighttime'] = isset($data['nighttime']) ? $data['nighttime'] : null;
+        $this->container['is_absent'] = isset($data['is_absent']) ? $data['is_absent'] : null;
+        $this->container['payroll_items'] = isset($data['payroll_items']) ? $data['payroll_items'] : null;
     }
 
     /**
@@ -199,6 +205,12 @@ class VariablesPart implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['date'] === null) {
+            $invalidProperties[] = "'date' can't be null";
+        }
+        if ($this->container['daytime'] === null) {
+            $invalidProperties[] = "'daytime' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -215,97 +227,121 @@ class VariablesPart implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets code
+     * Gets date
      *
-     * @return string
+     * @return \DateTime
      */
-    public function getCode()
+    public function getDate()
     {
-        return $this->container['code'];
+        return $this->container['date'];
     }
 
     /**
-     * Sets code
+     * Sets date
      *
-     * @param string $code code
+     * @param \DateTime $date date
      *
      * @return $this
      */
-    public function setCode($code)
+    public function setDate($date)
     {
-        $this->container['code'] = $code;
+        $this->container['date'] = $date;
 
         return $this;
     }
 
     /**
-     * Gets libelle
+     * Gets daytime
      *
-     * @return string
+     * @return double
      */
-    public function getLibelle()
+    public function getDaytime()
     {
-        return $this->container['libelle'];
+        return $this->container['daytime'];
     }
 
     /**
-     * Sets libelle
+     * Sets daytime
      *
-     * @param string $libelle libelle
+     * @param double $daytime daytime
      *
      * @return $this
      */
-    public function setLibelle($libelle)
+    public function setDaytime($daytime)
     {
-        $this->container['libelle'] = $libelle;
+        $this->container['daytime'] = $daytime;
 
         return $this;
     }
 
     /**
-     * Gets taux_payee
+     * Gets nighttime
      *
-     * @return string
+     * @return double
      */
-    public function getTauxPayee()
+    public function getNighttime()
     {
-        return $this->container['taux_payee'];
+        return $this->container['nighttime'];
     }
 
     /**
-     * Sets taux_payee
+     * Sets nighttime
      *
-     * @param string $taux_payee taux_payee
+     * @param double $nighttime nighttime
      *
      * @return $this
      */
-    public function setTauxPayee($taux_payee)
+    public function setNighttime($nighttime)
     {
-        $this->container['taux_payee'] = $taux_payee;
+        $this->container['nighttime'] = $nighttime;
 
         return $this;
     }
 
     /**
-     * Gets taux_facturee
+     * Gets is_absent
      *
-     * @return string
+     * @return bool
      */
-    public function getTauxFacturee()
+    public function getIsAbsent()
     {
-        return $this->container['taux_facturee'];
+        return $this->container['is_absent'];
     }
 
     /**
-     * Sets taux_facturee
+     * Sets is_absent
      *
-     * @param string $taux_facturee taux_facturee
+     * @param bool $is_absent is_absent
      *
      * @return $this
      */
-    public function setTauxFacturee($taux_facturee)
+    public function setIsAbsent($is_absent)
     {
-        $this->container['taux_facturee'] = $taux_facturee;
+        $this->container['is_absent'] = $is_absent;
+
+        return $this;
+    }
+
+    /**
+     * Gets payroll_items
+     *
+     * @return \EvoliaV3\Model\PayrollItemsPart[]
+     */
+    public function getPayrollItems()
+    {
+        return $this->container['payroll_items'];
+    }
+
+    /**
+     * Sets payroll_items
+     *
+     * @param \EvoliaV3\Model\PayrollItemsPart[] $payroll_items payroll_items
+     *
+     * @return $this
+     */
+    public function setPayrollItems($payroll_items)
+    {
+        $this->container['payroll_items'] = $payroll_items;
 
         return $this;
     }

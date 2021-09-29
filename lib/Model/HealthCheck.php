@@ -57,9 +57,9 @@ class HealthCheck implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'version' => 'string',
-'status' => 'string',
-'sqlite_connection' => 'string',
-'sql_server_connection' => 'string'    ];
+'status' => '\EvoliaV3\Model\EResult',
+'sqlite_connection' => '\EvoliaV3\Model\EResult',
+'sql_server_connection' => '\EvoliaV3\Model\EResult'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -253,7 +253,7 @@ class HealthCheck implements ModelInterface, ArrayAccess
     /**
      * Gets status
      *
-     * @return string
+     * @return \EvoliaV3\Model\EResult
      */
     public function getStatus()
     {
@@ -263,7 +263,7 @@ class HealthCheck implements ModelInterface, ArrayAccess
     /**
      * Sets status
      *
-     * @param string $status status
+     * @param \EvoliaV3\Model\EResult $status status
      *
      * @return $this
      */
@@ -277,7 +277,7 @@ class HealthCheck implements ModelInterface, ArrayAccess
     /**
      * Gets sqlite_connection
      *
-     * @return string
+     * @return \EvoliaV3\Model\EResult
      */
     public function getSqliteConnection()
     {
@@ -287,7 +287,7 @@ class HealthCheck implements ModelInterface, ArrayAccess
     /**
      * Sets sqlite_connection
      *
-     * @param string $sqlite_connection sqlite_connection
+     * @param \EvoliaV3\Model\EResult $sqlite_connection sqlite_connection
      *
      * @return $this
      */
@@ -301,7 +301,7 @@ class HealthCheck implements ModelInterface, ArrayAccess
     /**
      * Gets sql_server_connection
      *
-     * @return string
+     * @return \EvoliaV3\Model\EResult
      */
     public function getSqlServerConnection()
     {
@@ -311,7 +311,7 @@ class HealthCheck implements ModelInterface, ArrayAccess
     /**
      * Sets sql_server_connection
      *
-     * @param string $sql_server_connection sql_server_connection
+     * @param \EvoliaV3\Model\EResult $sql_server_connection sql_server_connection
      *
      * @return $this
      */

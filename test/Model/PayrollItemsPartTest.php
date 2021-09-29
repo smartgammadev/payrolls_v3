@@ -1,6 +1,6 @@
 <?php
 /**
- * VariablesPartTest
+ * PayrollItemsPartTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace EvoliaV3;
 
 /**
- * VariablesPartTest Class Doc Comment
+ * PayrollItemsPartTest Class Doc Comment
  *
  * @category    Class
- * @description VariablesPart
+ * @description PayrollItemsPart
  * @package     EvoliaV3
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class VariablesPartTest extends \PHPUnit_Framework_TestCase
+class PayrollItemsPartTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,37 +69,44 @@ class VariablesPartTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "VariablesPart"
+     * Test "PayrollItemsPart"
      */
-    public function testVariablesPart()
+    public function testPayrollItemsPart()
     {
     }
 
     /**
-     * Test attribute "code"
+     * Test attribute "item_ref"
      */
-    public function testPropertyCode()
+    public function testPropertyItemRef()
     {
     }
 
     /**
-     * Test attribute "libelle"
+     * Test attribute "title"
      */
-    public function testPropertyLibelle()
+    public function testPropertyTitle()
     {
     }
 
     /**
-     * Test attribute "taux_payee"
+     * Test attribute "amount_paid"
      */
-    public function testPropertyTauxPayee()
+    public function testPropertyAmountPaid()
     {
     }
 
     /**
-     * Test attribute "taux_facturee"
+     * Test attribute "amount_billed"
      */
-    public function testPropertyTauxFacturee()
+    public function testPropertyAmountBilled()
+    {
+    }
+
+    /**
+     * Test attribute "quantity"
+     */
+    public function testPropertyQuantity()
     {
     }
 }

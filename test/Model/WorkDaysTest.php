@@ -1,6 +1,6 @@
 <?php
 /**
- * TimesheetTest
+ * WorkDaysTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace EvoliaV3;
 
 /**
- * TimesheetTest Class Doc Comment
+ * WorkDaysTest Class Doc Comment
  *
  * @category    Class
- * @description Timesheet
+ * @description WorkDays
  * @package     EvoliaV3
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TimesheetTest extends \PHPUnit_Framework_TestCase
+class WorkDaysTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,30 +69,44 @@ class TimesheetTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Timesheet"
+     * Test "WorkDays"
      */
-    public function testTimesheet()
+    public function testWorkDays()
     {
     }
 
     /**
-     * Test attribute "id_contract"
+     * Test attribute "date"
      */
-    public function testPropertyIdContract()
+    public function testPropertyDate()
     {
     }
 
     /**
-     * Test attribute "id_employee"
+     * Test attribute "daytime"
      */
-    public function testPropertyIdEmployee()
+    public function testPropertyDaytime()
     {
     }
 
     /**
-     * Test attribute "work_days"
+     * Test attribute "nighttime"
      */
-    public function testPropertyWorkDays()
+    public function testPropertyNighttime()
+    {
+    }
+
+    /**
+     * Test attribute "is_absent"
+     */
+    public function testPropertyIsAbsent()
+    {
+    }
+
+    /**
+     * Test attribute "payroll_items"
+     */
+    public function testPropertyPayrollItems()
     {
     }
 }
