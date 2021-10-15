@@ -265,13 +265,6 @@ class ContractTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "contract_order"
-     */
-    public function testPropertyContractOrder()
-    {
-    }
-
-    /**
      * Test attribute "id_metier"
      */
     public function testPropertyIdMetier()

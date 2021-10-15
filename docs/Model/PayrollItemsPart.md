@@ -3,8 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**item_ref** | **string** |  | 
-**title** | **string** |  | 
+**item_ref** | **int** |  | 
+**item_title** | **string** |  | 
+**item_comment** | **string** |  | [optional] 
 **amount_paid** | **double** |  | [optional] 
 **amount_billed** | **double** |  | [optional] 
 **quantity** | **int** |  | [optional] 

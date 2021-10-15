@@ -83,7 +83,6 @@ class Contract implements ModelInterface, ArrayAccess
 'nic' => 'string',
 'mission_a_risque_l23131' => 'bool',
 'heure_de_presentation' => 'int',
-'contract_order' => 'int',
 'id_metier' => 'int',
 'type_contrat' => 'int',
 'date_effet' => '\DateTime',
@@ -91,8 +90,8 @@ class Contract implements ModelInterface, ArrayAccess
 'horaires_particulier' => 'string',
 'souplesse_debut' => '\DateTime',
 'souplesse_fin' => '\DateTime',
-'taux_paye' => 'float',
-'taux_facture' => 'float',
+'taux_paye' => 'double',
+'taux_facture' => 'double',
 'lot_facture' => 'string',
 'duree_hebdo' => 'string',
 'metier' => 'string',
@@ -137,7 +136,6 @@ class Contract implements ModelInterface, ArrayAccess
 'nic' => null,
 'mission_a_risque_l23131' => null,
 'heure_de_presentation' => 'int32',
-'contract_order' => 'int32',
 'id_metier' => 'int32',
 'type_contrat' => 'int32',
 'date_effet' => 'date-time',
@@ -145,8 +143,8 @@ class Contract implements ModelInterface, ArrayAccess
 'horaires_particulier' => null,
 'souplesse_debut' => 'date-time',
 'souplesse_fin' => 'date-time',
-'taux_paye' => 'float',
-'taux_facture' => 'float',
+'taux_paye' => 'double',
+'taux_facture' => 'double',
 'lot_facture' => null,
 'duree_hebdo' => null,
 'metier' => null,
@@ -212,7 +210,6 @@ class Contract implements ModelInterface, ArrayAccess
 'nic' => 'nic',
 'mission_a_risque_l23131' => 'missionARisqueL23131',
 'heure_de_presentation' => 'heureDePresentation',
-'contract_order' => 'contractOrder',
 'id_metier' => 'idMetier',
 'type_contrat' => 'typeContrat',
 'date_effet' => 'dateEffet',
@@ -266,7 +263,6 @@ class Contract implements ModelInterface, ArrayAccess
 'nic' => 'setNic',
 'mission_a_risque_l23131' => 'setMissionARisqueL23131',
 'heure_de_presentation' => 'setHeureDePresentation',
-'contract_order' => 'setContractOrder',
 'id_metier' => 'setIdMetier',
 'type_contrat' => 'setTypeContrat',
 'date_effet' => 'setDateEffet',
@@ -320,7 +316,6 @@ class Contract implements ModelInterface, ArrayAccess
 'nic' => 'getNic',
 'mission_a_risque_l23131' => 'getMissionARisqueL23131',
 'heure_de_presentation' => 'getHeureDePresentation',
-'contract_order' => 'getContractOrder',
 'id_metier' => 'getIdMetier',
 'type_contrat' => 'getTypeContrat',
 'date_effet' => 'getDateEffet',
@@ -426,7 +421,6 @@ class Contract implements ModelInterface, ArrayAccess
         $this->container['nic'] = isset($data['nic']) ? $data['nic'] : null;
         $this->container['mission_a_risque_l23131'] = isset($data['mission_a_risque_l23131']) ? $data['mission_a_risque_l23131'] : null;
         $this->container['heure_de_presentation'] = isset($data['heure_de_presentation']) ? $data['heure_de_presentation'] : null;
-        $this->container['contract_order'] = isset($data['contract_order']) ? $data['contract_order'] : null;
         $this->container['id_metier'] = isset($data['id_metier']) ? $data['id_metier'] : null;
         $this->container['type_contrat'] = isset($data['type_contrat']) ? $data['type_contrat'] : null;
         $this->container['date_effet'] = isset($data['date_effet']) ? $data['date_effet'] : null;
@@ -480,9 +474,6 @@ class Contract implements ModelInterface, ArrayAccess
         }
         if ($this->container['motif_embauche'] === null) {
             $invalidProperties[] = "'motif_embauche' can't be null";
-        }
-        if ($this->container['contract_order'] === null) {
-            $invalidProperties[] = "'contract_order' can't be null";
         }
         if ($this->container['type_contrat'] === null) {
             $invalidProperties[] = "'type_contrat' can't be null";
@@ -1151,30 +1142,6 @@ class Contract implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets contract_order
-     *
-     * @return int
-     */
-    public function getContractOrder()
-    {
-        return $this->container['contract_order'];
-    }
-
-    /**
-     * Sets contract_order
-     *
-     * @param int $contract_order contract_order
-     *
-     * @return $this
-     */
-    public function setContractOrder($contract_order)
-    {
-        $this->container['contract_order'] = $contract_order;
-
-        return $this;
-    }
-
-    /**
      * Gets id_metier
      *
      * @return int
@@ -1345,7 +1312,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets taux_paye
      *
-     * @return float
+     * @return double
      */
     public function getTauxPaye()
     {
@@ -1355,7 +1322,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets taux_paye
      *
-     * @param float $taux_paye taux_paye
+     * @param double $taux_paye taux_paye
      *
      * @return $this
      */
@@ -1369,7 +1336,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Gets taux_facture
      *
-     * @return float
+     * @return double
      */
     public function getTauxFacture()
     {
@@ -1379,7 +1346,7 @@ class Contract implements ModelInterface, ArrayAccess
     /**
      * Sets taux_facture
      *
-     * @param float $taux_facture taux_facture
+     * @param double $taux_facture taux_facture
      *
      * @return $this
      */

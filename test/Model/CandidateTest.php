@@ -265,6 +265,20 @@ class CandidateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "dep_naiss"
+     */
+    public function testPropertyDepNaiss()
+    {
+    }
+
+    /**
+     * Test attribute "n_comm_naiss"
+     */
+    public function testPropertyNCommNaiss()
+    {
+    }
+
+    /**
      * Test attribute "pays"
      */
     public function testPropertyPays()

@@ -56,8 +56,9 @@ class PayrollItemsPart implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'item_ref' => 'string',
-'title' => 'string',
+        'item_ref' => 'int',
+'item_title' => 'string',
+'item_comment' => 'string',
 'amount_paid' => 'double',
 'amount_billed' => 'double',
 'quantity' => 'int'    ];
@@ -68,8 +69,9 @@ class PayrollItemsPart implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'item_ref' => null,
-'title' => null,
+        'item_ref' => 'int32',
+'item_title' => null,
+'item_comment' => null,
 'amount_paid' => 'double',
 'amount_billed' => 'double',
 'quantity' => 'int32'    ];
@@ -102,7 +104,8 @@ class PayrollItemsPart implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'item_ref' => 'itemRef',
-'title' => 'title',
+'item_title' => 'itemTitle',
+'item_comment' => 'itemComment',
 'amount_paid' => 'amountPaid',
 'amount_billed' => 'amountBilled',
 'quantity' => 'quantity'    ];
@@ -114,7 +117,8 @@ class PayrollItemsPart implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'item_ref' => 'setItemRef',
-'title' => 'setTitle',
+'item_title' => 'setItemTitle',
+'item_comment' => 'setItemComment',
 'amount_paid' => 'setAmountPaid',
 'amount_billed' => 'setAmountBilled',
 'quantity' => 'setQuantity'    ];
@@ -126,7 +130,8 @@ class PayrollItemsPart implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'item_ref' => 'getItemRef',
-'title' => 'getTitle',
+'item_title' => 'getItemTitle',
+'item_comment' => 'getItemComment',
 'amount_paid' => 'getAmountPaid',
 'amount_billed' => 'getAmountBilled',
 'quantity' => 'getQuantity'    ];
@@ -190,7 +195,8 @@ class PayrollItemsPart implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['item_ref'] = isset($data['item_ref']) ? $data['item_ref'] : null;
-        $this->container['title'] = isset($data['title']) ? $data['title'] : null;
+        $this->container['item_title'] = isset($data['item_title']) ? $data['item_title'] : null;
+        $this->container['item_comment'] = isset($data['item_comment']) ? $data['item_comment'] : null;
         $this->container['amount_paid'] = isset($data['amount_paid']) ? $data['amount_paid'] : null;
         $this->container['amount_billed'] = isset($data['amount_billed']) ? $data['amount_billed'] : null;
         $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
@@ -208,8 +214,8 @@ class PayrollItemsPart implements ModelInterface, ArrayAccess
         if ($this->container['item_ref'] === null) {
             $invalidProperties[] = "'item_ref' can't be null";
         }
-        if ($this->container['title'] === null) {
-            $invalidProperties[] = "'title' can't be null";
+        if ($this->container['item_title'] === null) {
+            $invalidProperties[] = "'item_title' can't be null";
         }
         return $invalidProperties;
     }
@@ -229,7 +235,7 @@ class PayrollItemsPart implements ModelInterface, ArrayAccess
     /**
      * Gets item_ref
      *
-     * @return string
+     * @return int
      */
     public function getItemRef()
     {
@@ -239,7 +245,7 @@ class PayrollItemsPart implements ModelInterface, ArrayAccess
     /**
      * Sets item_ref
      *
-     * @param string $item_ref item_ref
+     * @param int $item_ref item_ref
      *
      * @return $this
      */
@@ -251,25 +257,49 @@ class PayrollItemsPart implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets title
+     * Gets item_title
      *
      * @return string
      */
-    public function getTitle()
+    public function getItemTitle()
     {
-        return $this->container['title'];
+        return $this->container['item_title'];
     }
 
     /**
-     * Sets title
+     * Sets item_title
      *
-     * @param string $title title
+     * @param string $item_title item_title
      *
      * @return $this
      */
-    public function setTitle($title)
+    public function setItemTitle($item_title)
     {
-        $this->container['title'] = $title;
+        $this->container['item_title'] = $item_title;
+
+        return $this;
+    }
+
+    /**
+     * Gets item_comment
+     *
+     * @return string
+     */
+    public function getItemComment()
+    {
+        return $this->container['item_comment'];
+    }
+
+    /**
+     * Sets item_comment
+     *
+     * @param string $item_comment item_comment
+     *
+     * @return $this
+     */
+    public function setItemComment($item_comment)
+    {
+        $this->container['item_comment'] = $item_comment;
 
         return $this;
     }

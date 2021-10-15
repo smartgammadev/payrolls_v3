@@ -30,6 +30,8 @@ Name | Type | Description | Notes
 **num_secu_cle** | **string** |  | [optional] 
 **lieu_naiss** | **string** |  | [optional] 
 **pays_naiss** | **string** |  | [optional] 
+**dep_naiss** | **string** |  | [optional] 
+**n_comm_naiss** | **string** |  | [optional] 
 **pays** | **string** |  | [optional] 
 **liste_agences** | **string[]** |  | [optional] 
 

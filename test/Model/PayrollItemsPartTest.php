@@ -83,9 +83,16 @@ class PayrollItemsPartTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "title"
+     * Test attribute "item_title"
      */
-    public function testPropertyTitle()
+    public function testPropertyItemTitle()
+    {
+    }
+
+    /**
+     * Test attribute "item_comment"
+     */
+    public function testPropertyItemComment()
     {
     }
 

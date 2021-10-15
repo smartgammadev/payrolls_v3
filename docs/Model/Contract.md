@@ -30,7 +30,6 @@ Name | Type | Description | Notes
 **nic** | **string** |  | [optional] 
 **mission_a_risque_l23131** | **bool** |  | [optional] 
 **heure_de_presentation** | **int** |  | [optional] 
-**contract_order** | **int** |  | 
 **id_metier** | **int** |  | [optional] 
 **type_contrat** | **int** |  | 
 **date_effet** | [**\DateTime**](\DateTime.md) |  | [optional] 
@@ -38,8 +37,8 @@ Name | Type | Description | Notes
 **horaires_particulier** | **string** |  | [optional] 
 **souplesse_debut** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **souplesse_fin** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**taux_paye** | **float** |  | [optional] 
-**taux_facture** | **float** |  | [optional] 
+**taux_paye** | **double** |  | [optional] 
+**taux_facture** | **double** |  | [optional] 
 **lot_facture** | **string** |  | [optional] 
 **duree_hebdo** | **string** |  | [optional] 
 **metier** | **string** |  | [optional] 

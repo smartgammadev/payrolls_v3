@@ -1,6 +1,6 @@
 # EvoliaV3\CandidatesApi
 
-All URIs are relative to *https://virtserver.swaggerhub.com/smartgammadev/PayrollV3/v3*
+All URIs are relative to *https://virtserver.swaggerhub.com/troopshr/EvoliaV3/v3*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

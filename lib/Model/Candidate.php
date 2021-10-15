@@ -83,6 +83,8 @@ class Candidate implements ModelInterface, ArrayAccess
 'num_secu_cle' => 'string',
 'lieu_naiss' => 'string',
 'pays_naiss' => 'string',
+'dep_naiss' => 'string',
+'n_comm_naiss' => 'string',
 'pays' => 'string',
 'liste_agences' => 'string[]'    ];
 
@@ -119,6 +121,8 @@ class Candidate implements ModelInterface, ArrayAccess
 'num_secu_cle' => null,
 'lieu_naiss' => null,
 'pays_naiss' => null,
+'dep_naiss' => null,
+'n_comm_naiss' => null,
 'pays' => null,
 'liste_agences' => null    ];
 
@@ -176,6 +180,8 @@ class Candidate implements ModelInterface, ArrayAccess
 'num_secu_cle' => 'numSecuCle',
 'lieu_naiss' => 'lieuNaiss',
 'pays_naiss' => 'paysNaiss',
+'dep_naiss' => 'depNaiss',
+'n_comm_naiss' => 'nCommNaiss',
 'pays' => 'pays',
 'liste_agences' => 'listeAgences'    ];
 
@@ -212,6 +218,8 @@ class Candidate implements ModelInterface, ArrayAccess
 'num_secu_cle' => 'setNumSecuCle',
 'lieu_naiss' => 'setLieuNaiss',
 'pays_naiss' => 'setPaysNaiss',
+'dep_naiss' => 'setDepNaiss',
+'n_comm_naiss' => 'setNCommNaiss',
 'pays' => 'setPays',
 'liste_agences' => 'setListeAgences'    ];
 
@@ -248,6 +256,8 @@ class Candidate implements ModelInterface, ArrayAccess
 'num_secu_cle' => 'getNumSecuCle',
 'lieu_naiss' => 'getLieuNaiss',
 'pays_naiss' => 'getPaysNaiss',
+'dep_naiss' => 'getDepNaiss',
+'n_comm_naiss' => 'getNCommNaiss',
 'pays' => 'getPays',
 'liste_agences' => 'getListeAgences'    ];
 
@@ -336,6 +346,8 @@ class Candidate implements ModelInterface, ArrayAccess
         $this->container['num_secu_cle'] = isset($data['num_secu_cle']) ? $data['num_secu_cle'] : null;
         $this->container['lieu_naiss'] = isset($data['lieu_naiss']) ? $data['lieu_naiss'] : null;
         $this->container['pays_naiss'] = isset($data['pays_naiss']) ? $data['pays_naiss'] : null;
+        $this->container['dep_naiss'] = isset($data['dep_naiss']) ? $data['dep_naiss'] : null;
+        $this->container['n_comm_naiss'] = isset($data['n_comm_naiss']) ? $data['n_comm_naiss'] : null;
         $this->container['pays'] = isset($data['pays']) ? $data['pays'] : null;
         $this->container['liste_agences'] = isset($data['liste_agences']) ? $data['liste_agences'] : null;
     }
@@ -1008,6 +1020,54 @@ class Candidate implements ModelInterface, ArrayAccess
     public function setPaysNaiss($pays_naiss)
     {
         $this->container['pays_naiss'] = $pays_naiss;
+
+        return $this;
+    }
+
+    /**
+     * Gets dep_naiss
+     *
+     * @return string
+     */
+    public function getDepNaiss()
+    {
+        return $this->container['dep_naiss'];
+    }
+
+    /**
+     * Sets dep_naiss
+     *
+     * @param string $dep_naiss dep_naiss
+     *
+     * @return $this
+     */
+    public function setDepNaiss($dep_naiss)
+    {
+        $this->container['dep_naiss'] = $dep_naiss;
+
+        return $this;
+    }
+
+    /**
+     * Gets n_comm_naiss
+     *
+     * @return string
+     */
+    public function getNCommNaiss()
+    {
+        return $this->container['n_comm_naiss'];
+    }
+
+    /**
+     * Sets n_comm_naiss
+     *
+     * @param string $n_comm_naiss n_comm_naiss
+     *
+     * @return $this
+     */
+    public function setNCommNaiss($n_comm_naiss)
+    {
+        $this->container['n_comm_naiss'] = $n_comm_naiss;
 
         return $this;
     }
